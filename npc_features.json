@@ -1926,7 +1926,7 @@
     ]
   },
   {
-    "id": "npcf_demolition_hammer_demolisher",
+    "id": "npcf_demolition_hammer",
     "name": "DEMOLITION HAMMER",
     "origin": {
       "type": "Class",
@@ -1942,8 +1942,8 @@
     "weapon_type": "Superheavy Melee",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "accuracy": [
       -1,
@@ -1954,8 +1954,8 @@
       "type": "Explosive",
       "damage": [
         10,
-        14,
-        16
+        10,
+        10
       ]
     }],
     "range": [{
@@ -1965,7 +1965,7 @@
     "on_hit": "Targets must succeed on a Hull save or be Stunned until the end of their next turn."
   },
   {
-    "id": "npcf_dig_in_demolisher",
+    "id": "npcf_dig_in",
     "name": "DIG IN",
     "origin": {
       "type": "Class",
@@ -1974,7 +1974,7 @@
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "It gains Resistance to all damage from the attack, but become Slowed until the end of its next turn.",
+    "effect": "This character gains Resistance to all damage from the attack, but becomes Slowed until the end of its next turn.",
     "tags": [{
         "id": "tg_round",
         "val": 1
@@ -1983,11 +1983,11 @@
         "id": "tg_reaction"
       }
     ],
-    "trigger": "An attack hits the Demolisher, but damage hasn’t been rolled yet."
+    "trigger": "An attack hits this character, and it is not Immobilized or Slowed"
   },
   {
-    "id": "npcf_shock_armor_demolisher",
-    "name": "SHOCK ARMOR",
+    "id": "npcf_dueling_armor",
+    "name": "DUELING ARMOR",
     "origin": {
       "type": "Class",
       "name": "DEMOLISHER",
@@ -1995,12 +1995,12 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Demolisher has Resistance to damage from melee weapons.",
+    "effect": "This character has Resistance to damage from melee weapons.",
     "resistance": ["Melee"],
     "tags": []
   },
   {
-    "id": "npcf_heavy_frame_demolisher",
+    "id": "npcf_heavy_frame",
     "name": "HEAVY FRAME",
     "origin": {
       "type": "Class",
@@ -2009,11 +2009,24 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Demolisher can’t be pushed, pulled, knocked Prone, or knocked back by smaller characters.",
+    "effect": "This character can't be pushed, pulled, knocked Prone, or knocked back by smaller characters.",
     "tags": []
   },
   {
-    "id": "npcf_broad_sweep_haft_demolisher",
+    "id": "npcf_collateral_damage",
+    "name": "COLLATERAL DAMAGE",
+    "origin": {
+      "type": "Class",
+      "name": "DEMOLISHER",
+      "base": true
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "When this character makes a melee attack, they may deal 10 kinetic damage to an object or deployable adjacent to their target.",
+    "tags": []
+  },
+  {
+    "id": "npcf_broad_sweep_haft",
     "name": "BROAD-SWEEP HAFT",
     "origin": {
       "type": "Class",
@@ -2022,13 +2035,17 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Demolisher swings the Demolition Hammer in a Burst 2 arc instead of attacking normally. Roll melee attacks against any characters of their choice within the affected area. On hit, targets take {4/6/8} Explosive damage and become Impaired until the end of their next turn.",
+    "effect": "This character swings the Demolition Hammer in a Burst 2 sweep instead of attacking normally. This character attacks all characters of their choice within the area with the Demolition Hammer, but on hit targets instead take 4 AP Explosive damage and become Impaired until the end of their next turn.",
     "tags": [{
       "id": "tg_full_action"
-    }]
+    },
+    {
+      "id": "tg_mod"
+    }
+  ]
   },
   {
-    "id": "npcf_kinetic_compensation_demolisher",
+    "id": "npcf_kinetic_compensation",
     "name": "KINETIC COMPENSATION",
     "origin": {
       "type": "Class",
@@ -2037,11 +2054,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Each time the Demolisher misses with the Demolition Hammer, they gain +1 Accuracy on all subsequent attacks until their next hit. This Accuracy can be gained multiple times, and stacks.",
+    "effect": "Each time this character misses with the Demolition Hammer, they gain +1 ACC on all subsequent attacks with it until their next hit. This Accuracy can be gained multiple times and stacks.",
     "tags": []
   },
   {
-    "id": "npcf_concussion_missiles_demolisher",
+    "id": "npcf_concussion_missiles",
     "name": "CONCUSSION MISSILES",
     "origin": {
       "type": "Class",
@@ -2050,34 +2067,47 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "All characters of the Demolisher’s choice in line of sight and range 5 must succeed on a Hull save or become Slowed and Impaired until the end of their next turn.",
+    "effect": "All characters of this character's choice within line of sight and Range 5 must succeed on a Hull save or become Slowed and Impaired until the end of their next turn.",
     "tags": [{
       "id": "tg_quick_action"
     }]
   },
   {
-    "id": "npcf_seismic_destroyer_demolisher",
-    "name": "SEISMIC DESTROYER",
+    "id": "npcf_breach_ram",
+    "name": "BREACH RAM",
+    "origin": {
+      "type": "Class",
+      "name": "DEMOLISHER",
+      "base": true
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "This character moves up to 6 spaces in a straight line, ignoring engagement and passing through - but not stopping in - spaces occupied by other characters. Objects in this character's path take 20 AP Kinetic damage. This character passes through any obstructions destroyed this way and continues moving until they have moved 6 spaces or fail to destroy an obstruction sufficient to stop them. Any characters in this character's path must succeed on an Agility save or be pushed out of the way as directly as possible and knocked Prone.",
+    "tags": [{
+        "id": "tg_limited",
+        "val": 1
+      },
+      {
+        "id": "tg_quick_action"
+      }
+    ]
+  },
+  {
+    "id": "npcf_superior_ram",
+    "name": "SUPERIOR RAM",
     "origin": {
       "type": "Class",
       "name": "DEMOLISHER",
       "base": false
     },
     "locked": false,
-    "type": "System",
-    "effect": "Unless they can fly, all characters in a Cone 3 or line5 area must succeed on an Agility save or be Stunned until the end of their next turn.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 6
-      },
-      {
-        "id": "tg_full_action"
-      }
-    ]
+    "type": "Trait",
+    "effect": "When using Breach Ram this character moves 4 more spaces, and targets have +1 DIFF on the Agility save.",
+    "tags": []
   },
   {
-    "id": "npcf_sap_demolisher",
-    "name": "SAP",
+    "id": "npcf_follower_count",
+    "name": "FOLLOWER COUNT",
     "origin": {
       "type": "Class",
       "name": "DEMOLISHER",
@@ -2085,16 +2115,43 @@
     },
     "locked": false,
     "type": "Tech",
-    "effect": "The Demolisher chooses a character next to them: they must succeed on an Engineering save or be Stunned until the end of their next turn.",
-    "tags": [{
-        "id": "tg_quick_tech"
+    "effect": "Quick Tech, +1 ACC, This character makes a tech attack against a character within Sensors. On a success, this character gains +1 ACC on all attacks against their target, and may Boost once per turn as a free action, so long as it moves them directly towards the target. This lasts until either character is destroyed and cannot be changed to a new target.",
+    "tags": [],
+    "tech_type": "Quick",
+    "attack_bonus":[
+      -1,
+      -1,
+      -1
+    ],
+    "accuracy":[
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "npcf_thermal_charge",
+    "name": "THERMAL CHARGE",
+    "origin": {
+      "type": "Class",
+      "name": "DEMOLISHER",
+      "base": false
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "This character may expend a charge to throw a grenade to create a Blast 2 within Range 5. Characters in the area must succeed on an Agility save or take 2 burn, half on a success. Objects, terrain, and deployables automatically take 10 AP Energy damage.",
+    "tags": [
+      {
+        "id": "tg_quick_action"
       },
       {
-        "id": "tg_recharge",
-        "val": 5
+        "id": "tg_limited",
+        "val": 1
+      },
+      {
+        "id": "tg_grenade"
       }
-    ],
-    "tech_type": "Quick"
+    ]
   },
   {
     "id": "npcf_flak_cannon_engineer",
