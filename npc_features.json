@@ -1408,7 +1408,7 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_chain_axe_berserker",
+    "id": "npcf_chain_axe",
     "name": "CHAIN AXE",
     "origin": {
       "type": "Class",
@@ -1422,15 +1422,15 @@
     "weapon_type": "Heavy Melee",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "damage": [{
       "type": "kinetic",
       "damage": [
         7,
-        9,
-        11
+        7,
+        7
       ]
     }],
     "range": [{
@@ -1440,7 +1440,7 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_stampede_defense_berserker",
+    "id": "npcf_stampede_defense",
     "name": "STAMPEDE DEFENSE",
     "origin": {
       "type": "Class",
@@ -1449,11 +1449,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Berserker has Resistance to all damage unless they are Impaired, Stunned, Immobilized, Shredded, Slowed or Exposed.",
+    "effect": "This character has resistance to all damage unless they are Impaired, Stunned, Immobilized, Shredded, Slowed, or Exposed.",
     "tags": []
   },
   {
-    "id": "npcf_aggression_berserker",
+    "id": "npcf_aggression",
     "name": "AGGRESSION",
     "origin": {
       "type": "Class",
@@ -1461,12 +1461,21 @@
       "base": true
     },
     "locked": false,
-    "type": "Trait",
-    "effect": "After taking damage for the first time each round, the Berserker must immediately attack a random adjacent character – hostile or allied – with the Chain Axe.",
-    "tags": []
+    "type": "Reaction",
+    "effect": "This character attacks a random adjacent character with the Chain Axe. This character always takes this reaction if able, even if there are no valid targets.",
+    "tags": [{
+      "id": "tg_reaction"
+    },
+    {
+      "id": "tg_round",
+      "val": 1
+    }
+  
+  ],
+    "trigger": "This character takes any damage."
   },
   {
-    "id": "npcf_avalanche_charge_berserker",
+    "id": "npcf_avalanche_charge",
     "name": "AVALANCHE CHARGE",
     "origin": {
       "type": "Class",
@@ -1474,11 +1483,11 @@
       "base": true
     },
     "locked": false,
-    "type": "Trait",
-    "effect": "The Berserker moves spaces equal to their Speed in a straight line, ignoring reactions and engagement, then attacks a random adjacent character – hostile or allied—with the Chain Axe.",
+    "type": "System",
+    "effect": "This character moves spaces equal to their Speed in a straight line, ignoring reactions and engagement, then attacks a random adjacent character with the Chain Axe.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 5
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
@@ -1486,20 +1495,20 @@
     ]
   },
   {
-    "id": "npcf_juggernaut_berserker",
+    "id": "npcf_juggernaut",
     "name": "JUGGERNAUT",
     "origin": {
       "type": "Class",
       "name": "BERSERKER",
-      "base": false
+      "base": true
     },
     "locked": false,
     "type": "Trait",
-    "effect": "When the Berserker uses Avalanche Charge, all characters adjacent to the path they follow or adjacent to their final position – hostile and allied – must succeed on a Hull save or be knocked Prone.",
+    "effect": "When this character uses Avalanche Charge, all characters adjacent to the path they follow or adjacent to their final position must succeed on a Hull save or be knocked Prone.",
     "tags": []
   },
   {
-    "id": "npcf_harpoon_cannon_berserker",
+    "id": "npcf_harpoon_cannon",
     "name": "HARPOON CANNON",
     "origin": {
       "type": "Class",
@@ -1512,16 +1521,16 @@
     "tags": [],
     "weapon_type": "Main CQB",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ],
     "damage": [{
       "type": "Kinetic",
       "damage": [
         2,
-        4,
-        6
+        2,
+        2
       ]
     }],
     "range": [{
@@ -1533,10 +1542,10 @@
         "val": 3
       }
     ],
-    "on_hit": "Targets of smaller or equal Size to the Berserker are pulled adjacent to them in a straight line, or as close as possible. If they’re larger, the Berserker is pulled adjacent to them instead. If the target ends their movement adjacent, the Berserker Grapples them."
+    "on_hit": "Targets of smaller or equal Size to this character are pulled adjacent to them in a straight line, or as close as possible. If they're larger, this character is pulled adjacent to them instead. If the target ends their movement adjacent, this character automatically Grapples them."
   },
   {
-    "id": "npcf_nail_gun_berserker",
+    "id": "npcf_nail_gun",
     "name": "NAIL GUN",
     "origin": {
       "type": "Class",
@@ -1550,15 +1559,15 @@
     "weapon_type": "Main CQB",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "damage": [{
       "type": "kinetic",
       "damage": [
         5,
-        7,
-        9
+        5,
+        5
       ]
     }],
     "range": [{
@@ -1573,20 +1582,7 @@
     "on_hit": "Target rolls an Agility save. On a failure, they are Immobilized until the end of their next turn."
   },
   {
-    "id": "npcf_retribution_berserker",
-    "name": "RETRIBUTION",
-    "origin": {
-      "type": "Class",
-      "name": "BERSERKER",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Whenever the Berserker takes damage, their next attack deals +{2/3/4} bonus damage. This bonus stacks up to +8. Bonuses are lost when the Berserker attacks, or at the end of their next turn.",
-    "tags": []
-  },
-  {
-    "id": "npcf_superhot_berserker",
+    "id": "npcf_superhot",
     "name": "SUPERHOT",
     "origin": {
       "type": "Class",
@@ -1595,7 +1591,7 @@
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "The Berserker gains Resistance to the attack’s damage and the attacker must succeed on an Engineering save or take {2/4/6} Burn.",
+    "effect": "This character gains Resistance to the attack's damage, and the attacker must succeed on an Engineering save or take 2 Burn.",
     "tags": [{
         "id": "tg_shield"
       },
@@ -1607,7 +1603,7 @@
         "id": "tg_reaction"
       }
     ],
-    "trigger": "The Berserker takes damage from a melee attack."
+    "trigger": "This characer takes damage from a melee attack."
   },
   {
     "id": "npcf_bombard_cannon_bombard",

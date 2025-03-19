@@ -610,8 +610,8 @@
     "name": "BERSERKER",
     "role": "striker",
     "info": {
-      "flavor": "Berserker mechs are built to take advantage of advanced heat-cycling systems that allow them to shunt heat - as it is generated - into pure offensive force, increasing their weapon output by orders of magnitude. The archetype, best-known for its use by Gen’Dal Merlos’s Knights of Imminent Destruction, is preferred by pure combat-focus organizations, PMCs, and deniable-asset corps in established states.",
-      "tactics": "Berserkers are excellent melee duelists that are very scary up close. Their potential is greatest when they are as close to enemy forces as possible. Due to their terrible Heat Cap and E-Defense, Berserkers are vulnerable to tech attacks. Savvy opponents will use Aggression to their own advantage, turning Berserkers against their allies, so it’s best to keep them away from friendly forces."
+      "flavor": "",
+      "tactics": "Berserkers are supremely threatening in 1v1 melee encounters, as players will likely struggle to strip their primary defensive layer and fend them off with limited activations. Their high mobility makes them a constant threat as they can push aggressively onto vulnerable targets and provide an extremely thorny situation to get out of."
     },
     "stats": {
       "armor": [
@@ -621,13 +621,13 @@
       ],
       "hp": [
         12,
-        16,
-        20
+        12,
+        12
       ],
       "evade": [
         8,
-        9,
-        10
+        8,
+        8
       ],
       "edef": [
         6,
@@ -635,9 +635,9 @@
         6
       ],
       "heatcap": [
-        6,
-        6,
-        6
+        5,
+        5,
+        5
       ],
       "speed": [
         5,
@@ -651,18 +651,18 @@
       ],
       "save": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "hull": [
         3,
-        4,
-        6
+        3,
+        3
       ],
       "agility": [
         2,
-        4,
-        4
+        2,
+        2
       ],
       "systems": [
         -2,
@@ -672,7 +672,7 @@
       "engineering": [
         -1,
         -1,
-        0
+        -1
       ],
       "size": [
         [
@@ -692,17 +692,17 @@
       ]
     },
     "base_features": [
-      "npcf_chain_axe_berserker",
-      "npcf_stampede_defense_berserker",
-      "npcf_aggression_berserker",
-      "npcf_avalanche_charge_berserker"
+      "npcf_chain_axe",
+      "npcf_stampede_defense",
+      "npcf_aggression",
+      "npcf_avalanche_charge",
+      "npcf_juggernaut"
     ],
     "optional_features": [
-      "npcf_juggernaut_berserker",
-      "npcf_harpoon_cannon_berserker",
-      "npcf_nail_gun_berserker",
-      "npcf_retribution_berserker",
-      "npcf_superhot_berserker"
+      "npcf_harpoon_cannon",
+      "npcf_nail_gun",
+      "npcf_retribution",
+      "npcf_superhot"
     ],
     "power": 100
   },
