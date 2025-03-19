@@ -1752,196 +1752,7 @@
     "tags": []
   },
   {
-    "id": "npcf_dual_shotguns_breacher",
-    "name": "DUAL SHOTGUNS",
-    "origin": {
-      "type": "Class",
-      "name": "BREACHER",
-      "base": true
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "This weapon can make two attacks at once, targeting either the same character or different ones.",
-    "tags": [],
-    "weapon_type": "Main CQB",
-    "attack_bonus": [
-      1,
-      2,
-      3
-    ],
-    "accuracy": [
-      -2,
-      -2,
-      -2
-    ],
-    "damage": [{
-      "type": "kinetic",
-      "damage": [
-        6,
-        8,
-        10
-      ]
-    }],
-    "range": [{
-        "type": "Range",
-        "val": 3
-      },
-      {
-        "type": "Threat",
-        "val": 3
-      }
-    ],
-    "on_hit": ""
-  },
-  {
-    "id": "npcf_breach_ram_breacher",
-    "name": "BREACH RAM",
-    "origin": {
-      "type": "Class",
-      "name": "BREACHER",
-      "base": true
-    },
-    "locked": false,
-    "type": "System",
-    "effect": "The Breacher moves up to 6 spaces in a straight line, ignoring engagement and passing through – but not stopping in – spaces occupied by other characters. Obstructions and objects in the Breacher’s path take {10/20/30} AP kinetic damage. The Breacher passes through any obstructions destroyed this way and continues moving until they have moved 6 spaces or fail to destroy an obstruction. Any characters in the Breacher’s path must succeed on an Agility save or be pushed out of the way as directly as possible and knocked Prone.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 6
-      },
-      {
-        "id": "tg_quick_action"
-      }
-    ]
-  },
-  {
-    "id": "npcf_break_armor_breacher",
-    "name": "BREAK ARMOR",
-    "origin": {
-      "type": "Class",
-      "name": "BREACHER",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Characters that are successfully attacked more than once in a turn by the Breacher’s Dual Shotguns become Shredded for the rest of the scene.",
-    "tags": []
-  },
-  {
-    "id": "npcf_painmaker_breacher",
-    "name": "PAINMAKER",
-    "origin": {
-      "type": "Class",
-      "name": "BREACHER",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Breacher chooses a character within range 3. Their next turn is delayed until after their target’s. At the start of the Breacher’s turn, if the target is still within range 3, the Breacher may attack them four times with Dual Shotguns – instead of twice – as a free action.",
-    "tags": [{
-      "id": "tg_full_action"
-    }]
-  },
-  {
-    "id": "npcf_superior_ram_breacher",
-    "name": "SUPERIOR RAM",
-    "origin": {
-      "type": "Class",
-      "name": "BREACHER",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "When using Breach Ram the Breacher moves 4 more spaces, and targets have +1 Difficulty on the Agility save.",
-    "tags": []
-  },
-  {
-    "id": "npcf_follower_count_breacher",
-    "name": "FOLLOWER COUNT",
-    "origin": {
-      "type": "Class",
-      "name": "BREACHER",
-      "base": false
-    },
-    "locked": false,
-    "type": "Tech",
-    "effect": "The Breacher makes a tech attack against a character within Sensors. On a success, the Breacher gains +{1/2/3} Accuracy on all attacks against their target, and may Boost once per turn as a free action so long as it moves them directly towards their target. This lasts until either character is destroyed and cannot be changed to a new target.",
-    "tags": [{
-      "id": "tg_quick_tech"
-    }],
-    "tech_type": "Quick",
-    "attack_bonus": [
-      1,
-      2,
-      3
-    ],
-    "accuracy": [
-      1,
-      1,
-      1
-    ]
-  },
-  {
-    "id": "npcf_thermal_charge_breacher",
-    "name": "THERMAL CHARGE",
-    "origin": {
-      "type": "Class",
-      "name": "BREACHER",
-      "base": false
-    },
-    "locked": false,
-    "type": "System",
-    "effect": "The Breacher may expend a charge to throw a grenade to a space within range 5. Characters in the ensuing Blast 2 explosion take {2/4/6} Burn if they fail an Agility save, half on a success. Objects, terrain, and Deployables take {10/20/30} AP kinetic damage.",
-    "tags": [{
-        "id": "tg_limited",
-        "val": 1
-      },
-      {
-        "id": "tg_grenade"
-      },
-      {
-        "id": "tg_quick_action"
-      }
-    ]
-  },
-  {
-    "id": "npcf_flechette_shot_breacher",
-    "name": "FLECHETTE SHOT",
-    "origin": {
-      "type": "Class",
-      "name": "BREACHER",
-      "base": false
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "Attacks with this weapon take the form of a Cone 3 shrapnel attack starting from the edge of the targeted space, attacking all characters within both the targeted space and the affected area. The Cone cannot change directions.",
-    "tags": [],
-    "weapon_type": "Auxiliary CQB",
-    "attack_bonus": [
-      0,
-      0,
-      0
-    ],
-    "damage": [{
-      "type": "kinetic",
-      "damage": [
-        2,
-        3,
-        4
-      ]
-    }],
-    "range": [{
-        "type": "Range",
-        "val": 3
-      },
-      {
-        "type": "Threat",
-        "val": 3
-      }
-    ],
-    "on_hit": ""
-  },
-  {
-    "id": "npcf_ram_cannon_cataphract",
+    "id": "npcf_ram_cannon",
     "name": "RAM CANNON",
     "origin": {
       "type": "Class",
@@ -1950,18 +1761,18 @@
     },
     "locked": false,
     "type": "Weapon",
-    "effect": "This lance can be used as either a ranged or melee weapon, but not both in the same turn. At T2–3, this weapon can make two attacks at a time, targeting either the same character or two different ones.",
+    "effect": "",
     "tags": [],
     "weapon_type": "Heavy Melee/Heavy Cannon",
     "attack_bonus": [
-      0,
-      0,
-      0
+      1,
+      1,
+      1
     ],
     "accuracy": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "damage": [{
       "type": "kinetic",
@@ -1983,7 +1794,7 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_trample_cataphract",
+    "id": "npcf_trample",
     "name": "TRAMPLE",
     "origin": {
       "type": "Class",
@@ -1992,11 +1803,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Cataphract ignores engagement and can pass through – but not stop in – spaces occupied by other characters, 1/turn dealing {2/3/4} kinetic damage to those characters.",
+    "effect": "This character ignores engagement and can pass through - but not stop in - spaces occupied by other characters. When this character moves through another character's space, that character takes 2 kinetic damage; a character cannot be damaged this way more than once per turn.",
     "tags": []
   },
   {
-    "id": "npcf_impale_cataphract",
+    "id": "npcf_impale",
     "name": "IMPALE",
     "origin": {
       "type": "Class",
@@ -2005,10 +1816,10 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Cataphract moves up to 8 spaces in a straight line. Pick a character that the Cataphract passed through or ended adjacent to; they make a Hull save at +1 Difficulty. On a failure, they are grappled by the Cataphract and pulled with the Cataphract to the end of their movement.",
+    "effect": "This character moves up to 8 spaces in a straight line. Pick a character that this character passed through or ended adjacent to: they make a Hull save at +1 DIFF. On a failure, they are pulled with the Cataphract to the end of their movement and grappled.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 6
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_full_action"
@@ -2016,7 +1827,7 @@
     ]
   },
   {
-    "id": "npcf_point_defense_shield_cataphract",
+    "id": "npcf_point_defense_shield",
     "name": "POINT-DEFENSE SHIELD",
     "origin": {
       "type": "Class",
@@ -2025,13 +1836,13 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Cataphract has Resistance to all damage from the closest hostile character. If multiple characters are equally close, this effect does not apply.",
+    "effect": "This character has Resistance to all damage from the closest hostile character. If multiple characters are equally close, this effect does not apply.",
     "tags": [{
       "id": "tg_shield"
     }]
   },
   {
-    "id": "npcf_electrified_lasso_cataphract",
+    "id": "npcf_electrified_lasso",
     "name": "ELECTRIFIED LASSO",
     "origin": {
       "type": "Class",
@@ -2040,38 +1851,27 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "A character in line of sight and range 5 must make a Hull save. On a failure, they are pulled as close as possible to the Cataphract; if they become adjacent, the Cataphract automatically grapples them.",
+    "effect": "A character within line of sight and range 5 must make a Hull save. On a failure, they are pulled as close as possible to this character; if they adjacent after this pull, the Cataphract automatically grapples them.",
     "tags": [{
         "id": "tg_quick_action"
-      },
-      {
-        "id": "tg_round",
-        "val": 1
       }
     ]
   },
   {
-    "id": "npcf_lance_shot_cataphract",
-    "name": "LANCE SHOT",
+    "id": "npcf_hooves",
+    "name": "HOOVES",
     "origin": {
       "type": "Class",
       "name": "CATAPHRACT",
       "base": false
     },
     "locked": false,
-    "type": "System",
-    "effect": "The Cataphract fires an electrified lance in a line5 path. All characters within the affected area must succeed on an Engineering save or become Jammed until the end of their next turn.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
-      {
-        "id": "tg_full_action"
-      }
-    ]
+    "type": "Trait",
+    "effect": "Characters that take damage from Trample are Impaired until the end of their next turn.",
+    "tags": []
   },
   {
-    "id": "npcf_electrified_bola_cataphract",
+    "id": "npcf_electrified_bola",
     "name": "ELECTRIFIED BOLA",
     "origin": {
       "type": "Class",
@@ -2080,10 +1880,10 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "A flying character in Range 10 must make an Agility save. On a failure, they land immediately and become Immobilized until the end of their next turn. This counts as falling but without damage.",
+    "effect": "A flying character in Range 10 must succeed on an Agility save. On a failure, they land immediately and become Immobilized until the end of their next turn. This counts as falling without damage.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 5
+        "id": "tg_limited",
+        "val": 2
       },
       {
         "id": "tg_quick_action"
@@ -2091,7 +1891,7 @@
     ]
   },
   {
-    "id": "npcf_capacitor_discharge_cataphract",
+    "id": "npcf_capacitor_discharge",
     "name": "CAPACITOR DISCHARGE",
     "origin": {
       "type": "Class",
@@ -2099,12 +1899,14 @@
       "base": false
     },
     "locked": false,
-    "type": "Trait",
-    "effect": "As long as the Cataphract isn’t Slowed or Immobilized, they gain Resistance to Energy damage and heat. At the end of the Cataphract’s turn, all characters adjacent to them take {2/3/4} Heat.",
-    "tags": []
+    "type": "System",
+    "effect": "Shield, As long as this character isn't Slowed or Immobilized, they gain Resistance to Energy damage and heat, and at the end of this character's turn, all adjacent characters take 2 Heat.",
+    "tags": [{
+      "id": "tg_shield"
+    }]
   },
   {
-    "id": "npcf_charge_cataphract",
+    "id": "npcf_charge",
     "name": "CHARGE",
     "origin": {
       "type": "Class",
@@ -2113,10 +1915,10 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Cataphract moves spaces equal to Speed in a straight line, ignoring reactions and engagement, then attacks a target within Range with the Ram Cannon.",
+    "effect": "This character moves spaces equal to its Speed in a straight line, ignoring reactions and engagement, then attacks a target within Range with the Ram Cannon.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 5
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"

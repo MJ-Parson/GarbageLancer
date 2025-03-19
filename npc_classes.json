@@ -807,112 +807,12 @@
     "power": 100
   },
   {
-    "id": "npcc_breacher",
-    "name": "BREACHER",
-    "role": "striker",
-    "info": {
-      "flavor": "Notoriously effective in boarding operations, the Campbell Orbital Dynamics C-O MkIII is often seen in the arsenals of suborbital planetary defense forces and their pirate counterparts. Officially, the CO designation is an abbreviation of “CombatOrbital”, but unofficially, the CO3 goes by a different name: the “Can Opener”, inspired by the callsign of Valeria Rojas-Sarnik, one of the most storied CO3 pilots.",
-      "tactics": "Breachers can deal out significant Burst damage, but they aren’t especially accurate. To boost their capabilities, use Lock On or pair them with support NPCs. The Breach Ram makes short work of cover; however, it lacks speed and range, and risks provoking reactions."
-    },
-    "stats": {
-      "armor": [
-        1,
-        1,
-        1
-      ],
-      "hp": [
-        18,
-        20,
-        22
-      ],
-      "evade": [
-        9,
-        11,
-        13
-      ],
-      "edef": [
-        7,
-        7,
-        7
-      ],
-      "heatcap": [
-        7,
-        7,
-        8
-      ],
-      "speed": [
-        3,
-        4,
-        5
-      ],
-      "sensor": [
-        5,
-        5,
-        5
-      ],
-      "save": [
-        10,
-        12,
-        14
-      ],
-      "hull": [
-        2,
-        3,
-        4
-      ],
-      "agility": [
-        0,
-        1,
-        2
-      ],
-      "systems": [
-        -1,
-        -1,
-        -1
-      ],
-      "engineering": [
-        1,
-        2,
-        3
-      ],
-      "size": [
-        [
-          1
-        ],
-        [
-          1
-        ],
-        [
-          1
-        ]
-      ],
-      "activations": [
-        1,
-        1,
-        1
-      ]
-    },
-    "base_features": [
-      "npcf_dual_shotguns_breacher",
-      "npcf_breach_ram_breacher",
-      "npcf_break_armor_breacher"
-    ],
-    "optional_features": [
-      "npcf_painmaker_breacher",
-      "npcf_superior_ram_breacher",
-      "npcf_follower_count_breacher",
-      "npcf_thermal_charge_breacher",
-      "npcf_flechette_shot_breacher"
-    ],
-    "power": 100
-  },
-  {
     "id": "npcc_cataphract",
     "name": "CATAPHRACT",
     "role": "striker",
     "info": {
-      "flavor": "Cataphract squadrons are made up of rapid-strike mechs that emphasize mobility, shock, and tenacity; it follows, then, that Cataphract archetypes are feared across the galaxy for their ability to overwhelm defenses in moments. There are few things more terrifying (or inspiring) than a squadron of Cataphracts punching through a static battle line, heavy cannons and point-defense weapons wiping out previously immovable defenders. The flagship Cataphract-class chassis is the Sine Die Systems END-44, an angular beast of a mech outfitted with SDS’s fearsome Ram Cannon. The enduring popularity of the chassis can be attributed to the success of Catherine “C-80” Need, who made their name piloting an END-44 to victory in the defense of Carina-Proximal.",
-      "tactics": "Cataphracts are mobile strikers. Trample allows them to move through enemies and get them to the rear lines, where they can use Impale to force vulnerable targets into disadvantageous positions. Position Cataphracts so that they are closer to individual hostile characters, as Point-Defense Shield doesn’t work if several enemies are an equal distance away. Note that Cataphracts still provoke reactions when they move, so use their abilities carefully."
+      "flavor": "",
+      "tactics": "Cataphracts are highly mobile duelists that leverage positioning to isolate vulnerable enemies and force them into difficult situations. Their defensive layer is ideal against a single target, so they are pressured to keep their distance from clusters of hostiles."
     },
     "stats": {
       "armor": [
@@ -922,13 +822,13 @@
       ],
       "hp": [
         15,
-        17,
-        20
+        15,
+        15
       ],
       "evade": [
         10,
-        11,
-        12
+        10,
+        10
       ],
       "edef": [
         8,
@@ -937,8 +837,8 @@
       ],
       "heatcap": [
         6,
-        7,
-        8
+        6,
+        6
       ],
       "speed": [
         8,
@@ -952,23 +852,23 @@
       ],
       "save": [
         12,
-        14,
-        16
+        12,
+        12
       ],
       "hull": [
         1,
-        2,
-        4
+        1,
+        1
       ],
       "agility": [
-        1,
-        3,
+        4,
+        4,
         4
       ],
       "systems": [
-        0,
-        0,
-        0
+        -3,
+        -3,
+        -3
       ],
       "engineering": [
         0,
@@ -993,17 +893,18 @@
       ]
     },
     "base_features": [
-      "npcf_ram_cannon_cataphract",
-      "npcf_trample_cataphract",
-      "npcf_impale_cataphract",
-      "npcf_point_defense_shield_cataphract"
+      "npcf_ram_cannon",
+      "npcf_trample",
+      "npcf_impale",
+      "npcf_point_defense_shield"
     ],
     "optional_features": [
-      "npcf_electrified_lasso_cataphract",
-      "npcf_lance_shot_cataphract",
-      "npcf_electrified_bola_cataphract",
-      "npcf_capacitor_discharge_cataphract",
-      "npcf_charge_cataphract"
+      "npcf_electrified_lasso",
+      "npcf_hooves",
+      "npcf_electrified_bola",
+      "npcf_capacitor_discharge",
+      "npcf_charge_cataphract",
+      "npcf_synthetic_muscle_netting"
     ],
     "power": 100
   },
