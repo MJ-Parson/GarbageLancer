@@ -743,7 +743,7 @@
     ]
   },
   {
-    "id": "npcf_heavy_assault_rifle_assault",
+    "id": "npcf_heavy_assault_rifle",
     "name": "HEAVY ASSAULT RIFLE",
     "origin": {
       "type": "Class",
@@ -755,20 +755,20 @@
     "effect": "",
     "tags": [{
       "id": "tg_reliable",
-      "val": "{2/3/4}"
+      "val": 2
     }],
     "weapon_type": "Main Rifle",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "damage": [{
       "type": "kinetic",
       "damage": [
         6,
-        8,
-        10
+        6,
+        6
       ]
     }],
     "range": [{
@@ -792,15 +792,15 @@
     "weapon_type": "Auxiliary Melee",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "damage": [{
       "type": "kinetic",
       "damage": [
         4,
-        6,
-        7
+        4,
+        4
       ]
     }],
     "range": [{
@@ -810,7 +810,7 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_hunker_down_assault",
+    "id": "npcf_hunker_down",
     "name": "HUNKER DOWN",
     "origin": {
       "type": "Class",
@@ -819,7 +819,7 @@
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "Gain Resistance to all damage from the attack.",
+    "effect": "Gain Resistance to all damage from the attack. This character is knocked Prone.",
     "tags": [{
         "id": "tg_round",
         "val": 1
@@ -828,10 +828,10 @@
         "id": "tg_reaction"
       }
     ],
-    "trigger": "An attack hits the Assault, but damage hasn’t been rolled yet."
+    "trigger": "A melee or ranged attack hits this character."
   },
   {
-    "id": "npcf_underslung_grenade_launcher_assault",
+    "id": "npcf_underslung_grenade_launcher",
     "name": "UNDERSLUNG GRENADE LAUNCHER",
     "origin": {
       "type": "Class",
@@ -851,15 +851,15 @@
     "weapon_type": "Auxiliary Launcher",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "damage": [{
       "type": "Explosive",
       "damage": [
         4,
-        6,
-        8
+        4,
+        4
       ]
     }],
     "range": [{
@@ -868,13 +868,13 @@
       },
       {
         "type": "Blast",
-        "val": 2
+        "val": 1
       }
     ],
     "on_hit": ""
   },
   {
-    "id": "npcf_micro_missile_barrage_assault",
+    "id": "npcf_micro_missile_barrage",
     "name": "MICRO-MISSILE BARRAGE",
     "origin": {
       "type": "Class",
@@ -883,19 +883,22 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Assault launches a Line 8 volley of micro-missiles. All characters within the affected area must succeed on a Hull save or take {6/8/10} kinetic damage. On a successful save, they take half damage.",
+    "effect": "This character launches a Line 8 volley of micro-missiles. All characters within the affected area must succeed on a Hull save or take 6 Kinetic damage. On a successful save, they take half damage. This system regains one charge when this character reloads all weapons.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 6
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
+      },
+      {
+        "id": "tg_loading"
       }
     ]
   },
   {
-    "id": "npcf_high_impact_rounds_assault",
-    "name": "HIGH IMPACT ROUNDS",
+    "id": "npcf_high_impact_rounds",
+    "name": "HIGH-IMPACT ROUNDS",
     "origin": {
       "type": "Class",
       "name": "ASSAULT",
@@ -903,13 +906,13 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "These high-caliber rounds can only be used with the Heavy Assault Rifle. When firing with these rounds, the Assault’s attacks become AP and deal +4 kinetic damage, but the Heavy Assault Rifle must be reloaded before it is used again (as though it was Loading).",
+    "effect": "Mod, These high-caliber rounds can only be used with the Heavy Assault Rifle. When firing with these rounds, this character's attacks become AP and deal +4 bonus Kinetic damage, but the Heavy Assault Rifle must be reloaded before it is used again (as though it was Loading).",
     "tags": [{
       "id": "tg_mod"
     }]
   },
   {
-    "id": "npcf_auto_targeting_assault",
+    "id": "npcf_auto_targeting",
     "name": "AUTO-TARGETING",
     "origin": {
       "type": "Class",
@@ -918,11 +921,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Assault ignores cover when attacking, although they still require line of sight.",
+    "effect": "This character ignores cover when attacking, although they still require line of sight.",
     "tags": []
   },
   {
-    "id": "npcf_rank_discipline_assault",
+    "id": "npcf_rank_discipline",
     "name": "RANK DISCIPLINE",
     "origin": {
       "type": "Class",
@@ -931,7 +934,7 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Assault gains +1 Accuracy on all attacks, checks, and saves while adjacent to at least one allied character with the Mech tag.",
+    "effect": "This character gains +1 ACC on all attacks, checks, and saves while adjacent to at least one allied character with the Mech tag.",
     "tags": []
   },
   {
