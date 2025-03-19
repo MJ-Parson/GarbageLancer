@@ -246,7 +246,7 @@
     "tags": []
   },
   {
-    "id": "npcf_regenerative_shielding_aegis",
+    "id": "npcf_regenerative_shielding",
     "name": "REGENERATIVE SHIELDING",
     "origin": {
       "type": "Class",
@@ -255,12 +255,12 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Aegis has Immunity to Impaired and Slowed and can’t be critically hit.",
-    "immunity": ["Impaired", "Slowed", "Critical Hits"],
+    "effect": "This character has Immunity to Impaired and Slowed.",
+    "immunity": ["Impaired", "Slowed"],
     "tags": []
   },
   {
-    "id": "npcf_adaptive_shielding_aegis",
+    "id": "npcf_adaptive_shielding",
     "name": "ADAPTIVE SHIELDING",
     "origin": {
       "type": "Class",
@@ -268,25 +268,19 @@
       "base": false
     },
     "locked": false,
-    "type": "Trait",
-    "effect": "The first time each round an ally affected by Defense Net takes damage, all allies within the Net gain Resistance to the damage type taken. This lasts until the end of the Aegis’s next turn.",
-    "tags": []
-  },
-  {
-    "id": "npcf_guardian_aegis",
-    "name": "GUARDIAN",
-    "origin": {
-      "type": "Class",
-      "name": "AEGIS",
-      "base": false
+    "type": "Reaction",
+    "trigger": "An ally within this character's Defense Net takes damage.",
+    "effect": "All allies within the Defense Net gain Resistance to the damage type take until the end of this character's next turn or until they leave the Defense Net. If multiple damage types are taken, choose one as the triggering type.",
+    "tags": [{
+      "id": "tg_reaction"
     },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Allied characters can use the Aegis for hard cover.",
-    "tags": []
+    {
+      "id": "tg_round",
+      "val": 1
+    }]
   },
   {
-    "id": "npcf_ring_of_fire_aegis",
+    "id": "npcf_ring_of_fire",
     "name": "RING OF FIRE",
     "origin": {
       "type": "Class",
@@ -295,11 +289,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Any hostile characters that start their turn inside the area affected by the Defense Net or that enter it for the first time in a round take 2 heat and become Shredded until they leave the area.",
+    "effect": "Any hostile character that ends their turn inside the area affected by Defense Net take 2 heat and become Shredded until they leave the area.",
     "tags": []
   },
   {
-    "id": "npcf_hardlight_cover_system_aegis",
+    "id": "npcf_hardlight_cover_system",
     "name": "HARDLIGHT COVER SYSTEM",
     "origin": {
       "type": "Class",
@@ -308,13 +302,13 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "As a quick action, deploy a line3 hardlight wall. The wall is immune to damage and effects and grants hard cover. Characters that receive this cover gain Resistance to damage from Line, Blast, Burst, and Cone attacks.",
+    "effect": "As a quick action, this character deploys a Line 3 obstruction 3 spaces high in any location within Sensors and at least partially within this character's Line of Sight. The wall is immune to damage and effects, blocks line of sight, and grants hard cover. Characters adjacent to this wall gain Resistance to damage from Line, Blast, Burst, and Cone attacks. All Hardlight Covers dissipate at the end of the scene or when this character is destroyed.",
     "tags": [{
         "id": "tg_deployable"
       },
       {
-        "id": "tg_recharge",
-        "val": 5
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_shield"
@@ -325,7 +319,7 @@
     ]
   },
   {
-    "id": "npcf_ha_blackwall_system_aegis",
+    "id": "npcf_ha_blackwall_system",
     "name": "HA BLACKWALL SYSTEM",
     "origin": {
       "type": "Class",

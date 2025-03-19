@@ -188,14 +188,14 @@
     "base_features": [
       "npcf_light_laser",
       "npcf_defense_net",
-      "npcf_regenerative_shielding_aegis"
+      "npcf_regenerative_shielding",
+      "npcf_restoration_pulse"
     ],
     "optional_features": [
-      "npcf_adaptive_shielding_aegis",
-      "npcf_guardian_aegis",
-      "npcf_ring_of_fire_aegis",
-      "npcf_hardlight_cover_system_aegis",
-      "npcf_ha_blackwall_system_aegis"
+      "npcf_adaptive_shielding",
+      "npcf_ring_of_fire",
+      "npcf_hardlight_cover_system",
+      "npcf_ha_blackwall_system"
     ],
     "power": 100
   },
