@@ -1136,7 +1136,7 @@
     ]
   },
   {
-    "id": "npcf_rotary_grenade_launcher_bastion",
+    "id": "npcf_rotary_grenade_launcher",
     "name": "ROTARY GRENADE LAUNCHER",
     "origin": {
       "type": "Class",
@@ -1156,15 +1156,15 @@
     "weapon_type": "Main Launcher",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "damage": [{
       "type": "Explosive",
       "damage": [
         4,
-        6,
-        8
+        4,
+        4
       ]
     }],
     "range": [{
@@ -1179,7 +1179,7 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_heavy_assault_shield_bastion",
+    "id": "npcf_heavy_assault_shield",
     "name": "HEAVY ASSAULT SHIELD",
     "origin": {
       "type": "Class",
@@ -1196,15 +1196,15 @@
     "weapon_type": "Heavy Melee",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "damage": [{
       "type": "Kinetic",
       "damage": [
         3,
-        6,
-        9
+        3,
+        3
       ]
     }],
     "range": [{
@@ -1214,8 +1214,8 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_friendly_interdiction_bastion",
-    "name": "FRIENDLY INTERDICTION",
+    "id": "npcf_entrenched",
+    "name": "ENTRENCHED",
     "origin": {
       "type": "Class",
       "name": "BASTION",
@@ -1223,13 +1223,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Bastion and one allied character adjacent to it gain Resistance to all damage dealt by one character within line of sight. The Bastion may choose a new allied character or target as a protocol. The allied character loses Resistance if they break adjacency.",
-    "tags": [{
-      "id": "tg_protocol"
-    }]
+    "effect": "This character is immune to knockback, push, pull, and Prone inflicted by smaller characters. Additionally, this character has Resistance to all damage originating from characters beyond range 3.",
+    "tags": []
   },
   {
-    "id": "npcf_guardian_bastion",
+    "id": "npcf_guardian",
     "name": "GUARDIAN",
     "origin": {
       "type": "Class",
@@ -1238,11 +1236,37 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Allied characters can use the Bastion for hard cover.",
+    "effect": "Allied characters can use this character for hard cover.",
     "tags": []
   },
   {
-    "id": "npcf_near_threat_denial_system_bastion",
+    "id": "npcf_moderator.blok",
+    "name": "MODERATOR.BLOK",
+    "origin": {
+      "type": "Class",
+      "name": "BASTION",
+      "base": true
+    },
+    "locked": false,
+    "type": "Tech",
+    "effect": "This character makes a tech attack against a target within Sensors. On a hit, the target takes 2 heat each time they make an attack until the end of their next turn.",
+    "tags": [{
+      "id": "tg_quick_tech"
+    }],
+    "tech_type": "Quick",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "accuracy": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "npcf_near_threat_denial_system",
     "name": "NEAR-THREAT DENIAL SYSTEM",
     "origin": {
       "type": "Class",
@@ -1251,11 +1275,11 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "When characters within range 3 attack the Bastion, they take {2/3/4} AP Explosive damage before rolling.",
+    "effect": "When a character within range 3 attacks an allied character of this character, they take 2 AP Explosive damage before rolling.",
     "tags": []
   },
   {
-    "id": "npcf_siege_guardian_bastion",
+    "id": "npcf_siege_guardian",
     "name": "SIEGE GUARDIAN",
     "origin": {
       "type": "Class",
@@ -1264,12 +1288,12 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Allied characters gain Resistance to damage from Blast, Burst, Line, and Cone attacks while they’re adjacent to the Bastion.",
+    "effect": "Allied characters gain Resistance to damage from Blast, Burst, Line, and Cone attacks while they're adjacent to this character.",
     "tags": []
   },
   {
-    "id": "npcf_pause_engine_bastion",
-    "name": "“PAUSE” ENGINE",
+    "id": "npcf_power_knuckle",
+    "name": "POWER KNUCKLE",
     "origin": {
       "type": "Class",
       "name": "BASTION",
@@ -1277,27 +1301,24 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Bastion and one adjacent allied character are temporarily shielded by a flickering pane of portable blinkspace, gaining Immunity to all damage and effects until the start of the Bastion’s next turn. The allied character loses Immunity if it breaks adjacency. At the start of their Bastion’s next turn, they become Stunned until the start of their following turn.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
+    "effect": "A character within range 2 must pass a Hull save or take 4 Kinetic damage, be pushed 5 spaces directly away from this character, and be knocked Prone.",
+    "tags": [
       {
-        "id": "tg_full_action"
+        "id": "tg_quick_action"
       }
     ]
   },
   {
-    "id": "npcf_fearless_defender_bastion",
+    "id": "npcf_fearless_defender",
     "name": "FEARLESS DEFENDER",
     "origin": {
       "type": "Class",
       "name": "BASTION",
-      "base": false
+      "base": true
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "The Bastion can move to an adjacent space and take the damage instead.",
+    "effect": "Effect: This character can move to an adjacent space and take the damage instead before the target's armor or resistance is applied.",
     "tags": [{
         "id": "tg_round",
         "val": 1
@@ -1306,22 +1327,85 @@
         "id": "tg_reaction"
       }
     ],
-    "trigger": "An allied character in range 5 of the Bastion takes damage, and the Bastion isn’t Immobilized, Slowed, Stunned or otherwise cannot move."
+    "trigger": "An allied character within range 5 of this character takes damage, and this character isn't Slowed, Immobilized, Stunned, or otherwise cannot move."
   },
   {
-    "id": "npcf_deathcounter_bastion",
-    "name": "DEATHCOUNTER",
+    "id": "npcf_crushing_embrace",
+    "name": "CRUSHING EMBRACE",
     "origin": {
       "type": "Class",
       "name": "BASTION",
       "base": false
     },
     "locked": false,
-    "type": "System",
-    "effect": "The first time the Bastion is successfully hit by a ranged or melee attack each round, all damage is reduced to 0.",
+    "type": "Trait",
+    "effect": "A character adjacent to this character must succeed on an Agility save or automatically be grappled by this character and become Jammed until they are no longer grappled. This character can only grapply one character this way at a time.",
     "tags": [{
-      "id": "tg_shield"
+      "id": "tg_quick_action"
     }]
+  },
+  {
+    "id": "npcf_retribution",
+    "name": "RETRIBUTION",
+    "origin": {
+      "type": "Class",
+      "name": "BASTION",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "Whenever this character takes damage from a hostile source, their next attack deals +2 bonus damage. This damage stacks up to +8. Bonuses are lost when this character attacks or at the end of their turn.",
+    "tags":[]
+  },
+  {
+    "id": "npcf_bolstered_siege_armor",
+    "name": "BOLSTERED SIEGE ARMOR",
+    "origin": {
+      "type": "Class",
+      "name": "BASTION",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "This character has +3 armor against ranged attacks originating beyond range 3.",
+    "tags": []
+  },
+  {
+    "id": "npcf_drum_shotgun",
+    "name": "DRUM SHOTGUN",
+    "origin": {
+      "type": "Class",
+      "name": "BASTION",
+      "base": false
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "",
+    "tags": [],
+    "weapon_type": "Heavy CQB",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "kinetic",
+      "damage": [
+        5,
+        5,
+        5
+      ]
+    }],
+    "range": [{
+        "type": "Range",
+        "val": 5
+      },
+      {
+        "type": "Threat",
+        "val": 3
+      }
+    ],
+    "on_hit": ""
   },
   {
     "id": "npcf_chain_axe_berserker",
@@ -2398,179 +2482,6 @@
     "locked": false,
     "type": "Trait",
     "effect": "When the Engineer uses Deployable Turret, they can choose one of these modifications for their turrets:<ul><li>Inferno: The turret’s attacks become Cone 3, {2/3/4} Burn.</li><li>Hellstorm: The turret’s attacks become range 15, Blast 1, {2/3/4} Explosive damage.</li><li>Hunter: The turret’s attacks gain Reliable 1.</li><li>Primed: When either the turret or Engineer is destroyed, the turret explodes in a Burst 1 area. Characters within the affected area must succeed on an Agility save or take {7/9/11} Explosive damage.</li></ul>",
-    "tags": []
-  },
-  {
-    "id": "npcf_drum_shotgun_goliath",
-    "name": "DRUM SHOTGUN",
-    "origin": {
-      "type": "Class",
-      "name": "GOLIATH",
-      "base": true
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "At T2, this weapon can make two attacks at a time, targeting either the same character or two different ones. At T3, it can make three attacks at a time.",
-    "tags": [],
-    "weapon_type": "Heavy CQB",
-    "attack_bonus": [
-      2,
-      4,
-      6
-    ],
-    "damage": [{
-      "type": "kinetic",
-      "damage": [
-        5,
-        5,
-        5
-      ]
-    }],
-    "range": [{
-        "type": "Range",
-        "val": 5
-      },
-      {
-        "type": "Threat",
-        "val": 3
-      }
-    ],
-    "on_hit": ""
-  },
-  {
-    "id": "npcf_crush_targeting_goliath",
-    "name": "CRUSH TARGETING",
-    "origin": {
-      "type": "Class",
-      "name": "GOLIATH",
-      "base": true
-    },
-    "locked": false,
-    "type": "Tech",
-    "effect": "A character within line of sight and Sensors gains +3 difficulty to attack against any character other than the Goliath until the start of the Goliath’s next turn.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 4
-      },
-      {
-        "id": "tg_quick_tech"
-      }
-    ],
-    "tech_type": "Quick"
-  },
-  {
-    "id": "npcf_heavy_frame_goliath",
-    "name": "HEAVY FRAME",
-    "origin": {
-      "type": "Class",
-      "name": "GOLIATH",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Goliath can’t be pushed, pulled, knocked Prone, or knocked back by smaller characters.",
-    "tags": []
-  },
-  {
-    "id": "npcf_guardian_goliath",
-    "name": "GUARDIAN",
-    "origin": {
-      "type": "Class",
-      "name": "GOLIATH",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Allied characters can use the Goliath for hard cover.",
-    "tags": []
-  },
-  {
-    "id": "npcf_siege_armor_goliath",
-    "name": "SIEGE ARMOR",
-    "origin": {
-      "type": "Class",
-      "name": "GOLIATH",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Goliath has Resistance to all damage from attacks that originate beyond range 3.",
-    "tags": []
-  },
-  {
-    "id": "npcf_power_knuckle_goliath",
-    "name": "POWER KNUCKLE",
-    "origin": {
-      "type": "Class",
-      "name": "GOLIATH",
-      "base": false
-    },
-    "locked": false,
-    "type": "System",
-    "effect": "A character within range 2 must pass a Hull save or take {4/5/6} Kinetic damage, be pushed 5 spaces directly away from the Goliath, and knocked Prone.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
-      {
-        "id": "tg_quick_action"
-      }
-    ]
-  },
-  {
-    "id": "npcf_pin_goliath",
-    "name": "PIN",
-    "origin": {
-      "type": "Class",
-      "name": "GOLIATH",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "A character within range 2 becomes Immobilized and Impaired until they either damage the Goliath, the Goliath is Stunned or destroyed, or the Goliath targets another character with this effect. The Goliath is Immobilized for the duration of this effect.",
-    "tags": [{
-      "id": "tg_quick_action"
-    }]
-  },
-  {
-    "id": "npcf_crushing_embrace_goliath",
-    "name": "CRUSHING EMBRACE",
-    "origin": {
-      "type": "Class",
-      "name": "GOLIATH",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "A character adjacent to the Goliath must succeed on an Agility save or automatically be grappled by the Goliath and become Jammed until they are no longer grappled. The Goliath can only grapple one character this way at a time.",
-    "tags": [{
-      "id": "tg_quick_action"
-    }]
-  },
-  {
-    "id": "npcf_watchful_guardian_goliath",
-    "name": "WATCHFUL GUARDIAN",
-    "origin": {
-      "type": "Class",
-      "name": "GOLIATH",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Allied characters that benefit from the cover provided by the Goliath gain Resistance to all damage.",
-    "tags": []
-  },
-  {
-    "id": "npcf_retribution_goliath",
-    "name": "RETRIBUTION",
-    "origin": {
-      "type": "Class",
-      "name": "GOLIATH",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Whenever the Goliath takes damage, their next attack deals +{2/3/4} bonus damage. This bonus stacks up to +8. Bonuses are lost when the Goliath attacks, or at the end of their next turn.",
     "tags": []
   },
   {
