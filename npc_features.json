@@ -1606,7 +1606,7 @@
     "trigger": "This characer takes damage from a melee attack."
   },
   {
-    "id": "npcf_bombard_cannon_bombard",
+    "id": "npcf_bombard_cannon",
     "name": "BOMBARD CANNON",
     "origin": {
       "type": "Class",
@@ -1625,9 +1625,9 @@
     ],
     "weapon_type": "Superheavy Cannon",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ],
     "accuracy": [
       -1,
@@ -1638,8 +1638,8 @@
       "type": "Explosive",
       "damage": [
         5,
-        7,
-        8
+        5,
+        5
       ]
     }],
     "range": [{
@@ -1654,8 +1654,8 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_cluster_munitions_bombard",
-    "name": "CLUSTER MUNITIONS",
+    "id": "npcf_active_bombardment",
+    "name": "ACTIVE BOMBARDMENT",
     "origin": {
       "type": "Class",
       "name": "BOMBARD",
@@ -1663,11 +1663,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Bombard’s attacks deal +{2/3/4} damage to all targets for each target beyond the first.",
+    "effect": "After attacking with the Bombard Cannon, this character continues to barrage the targeted area with additional shelling until the end of their next turn. Characters that enter the area for the first time in a round or end their turn there take 4 Explosive damage. Additionally, characters within the area take double damage from this character's Bombard cannon.",
     "tags": []
   },
   {
-    "id": "npcf_earthshaker_shells_bombard",
+    "id": "npcf_earthshaker_shells",
     "name": "EARTHSHAKER SHELLS",
     "origin": {
       "type": "Class",
@@ -1676,10 +1676,10 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "When attacking with the Bombard Cannon, the Bombard may also fire a special earthshaker shell. In addition to any damage, characters within Burst 3 of the targeted space must succeed on a Hull save or be knocked Prone. Debris or broken earth is thrown up by the impact, creating two Size 1 segments of hard cover in free spaces of the Bombard’s choice (within the affected area).",
+    "effect": "After attacking with the Bombard Cannon, this character may also fire a special earthshaker shell. In addition to the attack, characters within Burst 3 of the targeted space must succeed on a Hull save or be knocked Prone. Debris or broken earth is thrown up by the impact, creating two Size 1 segments of hard cover in free spaces of this character's choice within the Burst 3.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 6
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_free_action"
@@ -1687,8 +1687,8 @@
     ]
   },
   {
-    "id": "npcf_siege_armor_bombard",
-    "name": "SIEGE ARMOR",
+    "id": "npcf_reactive_plating",
+    "name": "REACTIVE PLATING",
     "origin": {
       "type": "Class",
       "name": "BOMBARD",
@@ -1696,11 +1696,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Bombard has Resistance to all damage from attacks that originate beyond range 3.",
+    "effect": "When this character is hit by a ranged or melee attack, it gains 1 mark of Expended Plating that can be tracked with a d6. If the attack was a ranged attack, this character rolls a d6: if the result is greater than or equal to the number of marks, it has resistance to all damage from the attack.",
     "tags": []
   },
   {
-    "id": "npcf_high_impact_shells_bombard",
+    "id": "npcf_high_impact_shells",
     "name": "HIGH-IMPACT SHELLS",
     "origin": {
       "type": "Class",
@@ -1709,11 +1709,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "On a hit, the Bombard Cannon knocks targets 3 spaces away from the Bombard.",
+    "effect": "On a hit, the Bombard Cannon knocks targets 3 spaces away from this character.",
     "tags": []
   },
   {
-    "id": "npcf_bunker_buster_bombard",
+    "id": "npcf_bunker_buster",
     "name": "BUNKER BUSTER",
     "origin": {
       "type": "Class",
@@ -1722,73 +1722,12 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Bombard Cannon deals {10/15/20} AP Explosive damage to objects and terrain in the affected area, no roll required.",
+    "effect": "The Bombard Cannon automatically deals 10 AP Explosive damage to objects and terrain in the affected area.",
     "tags": []
   },
   {
-    "id": "npcf_flare_drone_bombard",
-    "name": "FLARE DRONE",
-    "origin": {
-      "type": "Class",
-      "name": "BOMBARD",
-      "base": false
-    },
-    "locked": false,
-    "type": "System",
-    "effect": "Flare Drone (Size 1/2, HP {10/20/30}, Evasion 10, E-Defense 10, Tags: Drone)<br>This drone can be deployed to a space within line of sight and range 25, where it hovers in place and begins projecting bright light in a Burst 2 area. All characters in the affected area – including those that move into the affected area or start their turn within it – lose Invisible and Hidden, and cannot Hide or turn Invisible within the area. Additionally, the Bombard gains +1 Accuracy to attacks against characters within the affected area.<br>The drone can take damage from the Bombard’s attacks, and the Bombard can only have one drone deployed at a time; if a new drone is deployed, the old one disintegrates.",
-    "tags": [{
-        "id": "tg_drone"
-      },
-      {
-        "id": "tg_quick_action"
-      }
-    ]
-  },
-  {
-    "id": "npcf_repeater_cannon_bombard",
-    "name": "REPEATER CANNON",
-    "origin": {
-      "type": "Class",
-      "name": "BOMBARD",
-      "base": false
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "",
-    "tags": [{
-        "id": "tg_knockback",
-        "val": 3
-      },
-      {
-        "id": "tg_loading"
-      },
-      {
-        "id": "tg_ordnance"
-      }
-    ],
-    "weapon_type": "Main Cannon",
-    "attack_bonus": [
-      1,
-      2,
-      3
-    ],
-    "damage": [{
-      "type": "Explosive",
-      "damage": [
-        3,
-        4,
-        5
-      ]
-    }],
-    "range": [{
-      "type": "Cone",
-      "val": 5
-    }],
-    "on_hit": ""
-  },
-  {
-    "id": "npcf_cluster_seeker_bombs_bombard",
-    "name": "CLUSTER-SEEKER BOMBS",
+    "id": "npcf_ruined_earth",
+    "name": "RUINED EARTH",
     "origin": {
       "type": "Class",
       "name": "BOMBARD",
@@ -1796,7 +1735,20 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "When the Bombard attacks with the Bombard Cannon, three characters of their choice within range 3 of the targeted space take {2/3/4} Explosive damage, hit or miss.",
+    "effect": "The Bombard Cannon's Blast becomes difficult terrain for the rest of the scene.",
+    "tags": []
+  },
+  {
+    "id": "npcf_war_crime_shells",
+    "name": "WAR CRIME SHELLS",
+    "origin": {
+      "type": "Class",
+      "name": "BOMBARD",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "The damage from Active Bombardment becomes Burn instead of Explosive.",
     "tags": []
   },
   {

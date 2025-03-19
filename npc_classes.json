@@ -711,8 +711,8 @@
     "name": "BOMBARD",
     "role": "artillery",
     "info": {
-      "flavor": "Alta All-Theater Ballistics’ archetypal Bombard chassis and their licensed facsimiles are a common sight in flashpoints across the galaxy. Built for staying power across long-uptime deployments, Bombard-type mechs are an accessible solution for armed forces looking to quickly deploy artillery to a theater. Chassis configured to the parameters of this class are usually positioned in fortified positions miles behind the line; one especially asymmetrical deployment strategy involves placing Bombard batteries above the theater of operations – typically on a local moon, locked-orbit natural satellite, or on a purpose-built orbital platform. From their vantage point, the battery can then rain shells down upon the world below, far removed from the dangers of combat.",
-      "tactics": "Bombards are very long-range artillery mechs designed to punish characters that stay close together to take advantage of adjacency bonuses. They are relatively fragile up close, but resilient at a distance, so place them far back to maximize their effectiveness. Bombards’ Earthshaker Shells are great for preventing enemy movement and providing cover, but can harm allies as well."
+      "flavor": "",
+      "tactics": "Bombards are long-range artillery pieces with extremely limited mobility. They aim to pressure characters off of points or to deny routes of ingress by laying down large blasts that continue to deal damage to characters that move into them or end their turn there. With the additional damage from Active Bombardment, players will be punished heavily for remaining in one place for too long."
     },
     "stats": {
       "armor": [
@@ -721,29 +721,29 @@
         0
       ],
       "hp": [
-        10,
-        13,
-        16
+        12,
+        12,
+        12
       ],
       "evade": [
         7,
-        8,
-        8
+        7,
+        7
       ],
       "edef": [
         12,
-        14,
-        16
+        12,
+        12
       ],
       "heatcap": [
-        8,
-        8,
-        8
+        6,
+        6,
+        6
       ],
       "speed": [
         2,
         2,
-        3
+        2
       ],
       "sensor": [
         15,
@@ -752,13 +752,13 @@
       ],
       "save": [
         11,
-        13,
-        16
+        11,
+        11
       ],
       "hull": [
         0,
-        1,
-        1
+        0,
+        0
       ],
       "agility": [
         -1,
@@ -793,17 +793,16 @@
       ]
     },
     "base_features": [
-      "npcf_bombard_cannon_bombard",
-      "npcf_cluster_munitions_bombard",
+      "npcf_bombard_cannon",
+      "npcf_active_bombardment",
       "npcf_earthshaker_shells_bombard",
-      "npcf_siege_armor_bombard"
+      "npcf_reactive_plating"
     ],
     "optional_features": [
-      "npcf_high_impact_shells_bombard",
-      "npcf_bunker_buster_bombard",
-      "npcf_flare_drone_bombard",
-      "npcf_repeater_cannon_bombard",
-      "npcf_cluster_seeker_bombs_bombard"
+      "npcf_high_impact_shells",
+      "npcf_bunker_buster",
+      "npcf_ruined_earth",
+      "npcf_war_crime_shells"
     ],
     "power": 100
   },
