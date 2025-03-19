@@ -204,39 +204,39 @@
     "name": "ARCHER",
     "role": "controller",
     "info": {
-      "flavor": "The basis of the Archer archetype, Ursa Major’s Gatekeeper Key-II, was popularized by Ichabod Carden’s heroic actions in the Battle of Terramoto. Archer-archetype mechs sacrifice armor for powerful targeting and superpositional maneuvering systems, making them especially popular with pilots who prefer to have control over the precise destination of each shot.",
+      "flavor": "",
       "tactics": "Archers excel at inflicting “choice punishment” on their enemies – they make characters choose between taking certain actions or letting the Archer attack them. Use Archers to lock down mobile or hard-hitting PCs or to cover for more vulnerable allies. Keep in mind that Archers are most effective when they can get fairly close to their targets, but they aren’t especially durable."
     },
     "stats": {
       "armor": [
         0,
         0,
-        1
+        0
       ],
       "hp": [
         16,
-        20,
-        20
+        16,
+        16
       ],
       "evade": [
-        8,
-        10,
-        12
-      ],
-      "edef": [
-        8,
-        10,
-        12
-      ],
-      "heatcap": [
         8,
         8,
         8
       ],
+      "edef": [
+        10,
+        10,
+        10
+      ],
+      "heatcap": [
+        5,
+        5,
+        5
+      ],
       "speed": [
         5,
         5,
-        6
+        5
       ],
       "sensor": [
         15,
@@ -245,8 +245,8 @@
       ],
       "save": [
         11,
-        13,
-        16
+        11,
+        11
       ],
       "hull": [
         -1,
@@ -286,17 +286,17 @@
       ]
     },
     "base_features": [
-      "npcf_light_machine_gun_archer",
-      "npcf_suppress_archer",
-      "npcf_moving_target_archer",
-      "npcf_superior_sentinel_archer"
+      "npcf_light_machine_gun",
+      "npcf_suppress",
+      "npcf_moving_target",
+      "npcf_superior_sentinel"
     ],
     "optional_features": [
-      "npcf_blinding_shells_archer",
-      "npcf_impending_threat_archer",
-      "npcf_covering_fire_archer",
-      "npcf_rapid_response_archer",
-      "npcf_hail_of_fire_archer"
+      "npcf_blinding_shells",
+      "npcf_called_shot",
+      "npcf_covering_fire",
+      "npcf_got_your_back",
+      "npcf_hail_of_fire"
     ],
     "power": 100
   },

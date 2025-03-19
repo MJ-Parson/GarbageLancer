@@ -57,10 +57,13 @@
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "This character performs a barrel roll, flying 6 spaces in any direction and causing the attack to miss. This movement ignores engagement and does not provoke reactions. This system recharges whenever this unit reloads all weapons.",
+    "effect": "This character performs a barrel roll, flying 6 spaces in any direction and causing the attack to miss. This movement ignores engagement and does not provoke reactions. This system gains one charge whenever this character reloads all weapons.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 7
+        "id": "tg_limited",
+        "val": 1
+      },
+      {
+        "id": "tg_loading"
       },
       {
         "id": "tg_reaction"
@@ -78,10 +81,13 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "If this unit is flying when they Move or Boost, they may drop a bomb on one space below or adjacent to the path taken, creating a Blast 1 explosion. Characters within the affected area must succeed on an Agility save or take 6 Explosive damage and be knocked Prone.",
+    "effect": "If this unit is flying when they Move or Boost, they may drop a bomb on one space below or adjacent to the path taken, creating a Blast 1 explosion. Characters within the affected area must succeed on an Agility save or take 6 Explosive damage and be knocked Prone. This system gains one charge whenever this character reloads all weapons.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 7
+        "id": "tg_limited",
+        "val": 1
+      },
+      {
+        "id": "tg_loading"
       },
       {
         "id": "tg_free_action"
@@ -339,7 +345,7 @@
     ]
   },
   {
-    "id": "npcf_light_machine_gun_archer",
+    "id": "npcf_light_machine_gun",
     "name": "LIGHT MACHINE GUN",
     "origin": {
       "type": "Class",
@@ -351,20 +357,20 @@
     "effect": "",
     "tags": [{
       "id": "tg_reliable",
-      "val": "{3/4/5}"
+      "val": 3
     }],
     "weapon_type": "Main Cannon",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ],
     "damage": [{
       "type": "kinetic",
       "damage": [
         5,
-        7,
-        10
+        5,
+        5
       ]
     }],
     "range": [{
@@ -374,7 +380,7 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_suppress_archer",
+    "id": "npcf_suppress",
     "name": "SUPPRESS",
     "origin": {
       "type": "Class",
@@ -383,7 +389,7 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Archer chooses a target within line of sight and Range 10: they become Impaired and the Archer gains the Moving Target reaction.<br>This effect lasts until the Archer uses Moving Target; the target damages the Archer or leaves the Archer’s line of sight; the Archer is Stunned, Jammed, or destroyed; the Archer chooses a new target for this action; or, the Archer ends it as a free action.",
+    "effect": "This character chooses a target within line of sight and Range 10: they become Impaired and this character gains the Moving Target reaction. This effect lasts until this character uses Moving Target, this character takes any damage, the target leaves this character's range or line of sight, or this character ends it as a free action. This character may only have one target suppressed at a time.",
     "tags": [{
         "id": "tg_quick_action"
       },
@@ -394,7 +400,7 @@
     "trigger": ""
   },
   {
-    "id": "npcf_moving_target_archer",
+    "id": "npcf_moving_target",
     "name": "MOVING TARGET",
     "origin": {
       "type": "Class",
@@ -403,14 +409,14 @@
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "Interrupt with a single weapon’s attack.",
+    "effect": "This character immediately attacks the target with a single weapon.",
     "tags": [{
       "id": "tg_reaction"
     }],
-    "trigger": "The Archer’s Suppress target starts to move."
+    "trigger": "A character supressed by this character begins a movement."
   },
   {
-    "id": "npcf_superior_sentinel_archer",
+    "id": "npcf_superior_sentinel",
     "name": "SUPERIOR SENTINEL",
     "origin": {
       "type": "Class",
@@ -419,11 +425,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Archer gains +1 Accuracy on all attacks made as reactions (e.g., Overwatch).",
+    "effect": "This character gains +1 ACC and Reliable 3 on all weapon attacks made as reactions.",
     "tags": []
   },
   {
-    "id": "npcf_blinding_shells_archer",
+    "id": "npcf_blinding_shells",
     "name": "BLINDING SHELLS",
     "origin": {
       "type": "Class",
@@ -432,15 +438,15 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "After the Archer makes a successful attack, they force their target to make an Engineering save. On a failure, the target only has line of sight to adjacent spaces until their next turn ends.",
+    "effect": "1/round, after this character makes a successful weapon attack, their target must make an Engineering save. On a failure, the target only has line of sight to adjacent spaces until the end of their next turn.",
     "tags": [{
       "id": "tg_round",
       "val": 1
     }]
   },
   {
-    "id": "npcf_impending_threat_archer",
-    "name": "IMPENDING THREAT",
+    "id": "npcf_called_shot",
+    "name": "CALLED SHOT",
     "origin": {
       "type": "Class",
       "name": "ARCHER",
@@ -448,7 +454,7 @@
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "The character must choose: lose the triggering action/movement, or continue but let the Archer immediately attack them with a single weapon.",
+    "effect": "This character declares an action that it has flawlessly predicted. If the target takes the called action this turn, this character may immediately interrupt the action with a weapon attack as a reaction that ignores the normal limitation on number of reactions per turn.",
     "tags": [{
         "id": "tg_round",
         "val": 1
@@ -457,10 +463,10 @@
         "id": "tg_reaction"
       }
     ],
-    "trigger": "A hostile character in line of sight and Range 10 from the Archer moves or takes action."
+    "trigger": "A character within line of sight and Range 10 starts their turn."
   },
   {
-    "id": "npcf_covering_fire_archer",
+    "id": "npcf_covering_fire",
     "name": "COVERING FIRE",
     "origin": {
       "type": "Class",
@@ -469,21 +475,24 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Archer chooses a Blast 3 area within line of sight and Range 10 and gains the Got Your Back reaction.",
+    "effect": "This character chooses a Blast 3 area within line of and Range 10 and gains the Got Your Back reaction. This zone lasts until the end of this character's next turn. This system gains one charge whenever this character reloads all weapons.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 4
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
       },
       {
         "id": "tg_reaction"
+      },
+      {
+        "id": "tg_loading"
       }
     ]
   },
   {
-    "id": "npcf_got_your_back_archer",
+    "id": "npcf_got_your_back",
     "name": "GOT YOUR BACK",
     "origin": {
       "type": "Class",
@@ -492,35 +501,17 @@
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "The Archer may attack that character.",
+    "effect": "This character makes a single weapon attack against the target.",
     "tags": [{
       "id": "tg_reaction"
-    }],
-    "trigger": "A character in the area makes an attack."
-  },
-  {
-    "id": "npcf_rapid_response_archer",
-    "name": "RAPID RESPONSE",
-    "origin": {
-      "type": "Class",
-      "name": "ARCHER",
-      "base": false
     },
-    "locked": false,
-    "type": "Reaction",
-    "effect": "The Archer may Boost.",
-    "tags": [{
-        "id": "tg_round",
-        "val": 1
-      },
-      {
-        "id": "tg_reaction"
-      }
-    ],
-    "trigger": "An enemy character in line of sight moves."
+    {
+      "id": "tg_unlimited"
+    }],
+    "trigger": "An enemy within the Blast 3 created by Covering Fire makes an attack."
   },
   {
-    "id": "npcf_hail_of_fire_archer",
+    "id": "npcf_hail_of_fire",
     "name": "HAIL OF FIRE",
     "origin": {
       "type": "Class",
@@ -529,16 +520,19 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Archer chooses an enemy character within Range 10: they become Immobilized and Impaired until the end of their next turn, until the Archer is Stunned or Jammed, or until the target allows the Archer to attack them with a single weapon as a reaction.",
+    "effect": "This character chooses another character within Range 10: they become Immobilized and Impaired until the end of their next turn, until this character is Stunned or Jammed, until this character loses line of sight to them, or until the target allows this character to attack them with a single weapon as a reaction.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 4
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
       },
       {
         "id": "tg_reaction"
+      },
+      {
+        "id": "tg_loading"
       }
     ],
     "trigger": ""
