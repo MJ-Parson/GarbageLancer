@@ -938,7 +938,7 @@
     "tags": []
   },
   {
-    "id": "npcf_graviton_lance_barricade",
+    "id": "npcf_graviton_lance",
     "name": "GRAVITON LANCE",
     "origin": {
       "type": "Class",
@@ -947,18 +947,18 @@
     },
     "locked": false,
     "type": "Weapon",
-    "effect": "At T2–3, this weapon can make two attacks at once, hitting one character twice or two characters once.",
+    "effect": "",
     "tags": [],
     "weapon_type": "Main Cannon",
     "attack_bonus": [
       1,
-      2,
-      3
-    ],
-    "accuracy": [
-      1,
       1,
       1
+    ],
+    "accuracy": [
+      0,
+      0,
+      0
     ],
     "damage": [{
       "type": "Energy",
@@ -975,7 +975,7 @@
     "on_hit": "Target is Slowed until the end of their next turn."
   },
   {
-    "id": "npcf_mobile_printer_barricade",
+    "id": "npcf_mobile_printer",
     "name": "MOBILE PRINTER",
     "origin": {
       "type": "Class",
@@ -984,18 +984,14 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Barricade prints a Size 2 cube in a free and adjacent area. The cube provides hard cover and is a single object with 20 HP and Evasion 5.",
+    "effect": "This character prints a Size 2 object in a free and adjacent area. The object blocks line of sight, provides hard cover, and has 20 HP and 5 Evasion.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
-      {
         "id": "tg_protocol"
       }
     ]
   },
   {
-    "id": "npcf_shock_plating_barricade",
+    "id": "npcf_shock_plating",
     "name": "SHOCK PLATING",
     "origin": {
       "type": "Class",
@@ -1004,11 +1000,11 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Barricade has Resistance to kinetic damage.",
+    "effect": "This character has Resistance to kinetic damage.",
     "tags": []
   },
   {
-    "id": "npcf_bulwark_mods_barricade",
+    "id": "npcf_bulwark_mods",
     "name": "BULWARK MODS",
     "origin": {
       "type": "Class",
@@ -1017,11 +1013,27 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Barricade ignores difficult terrain and dangerous terrain.",
+    "effect": "This character ignores difficult terrain and dangerous terrain.",
     "tags": []
   },
   {
-    "id": "npcf_drag_down_barricade",
+    "id": "npcf_total_strength_suite",
+    "name": "TOTAL STRENGTH SUITE",
+    "origin": {
+      "type": "Class",
+      "name": "BARRICADE",
+      "base": true
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "This character may pick up and throw an adjacent Size 2 or smaller object to a free space within Range 5 and line of sight. Any characters adjacent to the object after it is thrown must pass an Agility saving throw or take 4 Kinetic damage and be knocked back 1 space.",
+    "tags": [{
+      "id": "tg_quick_action"
+    }
+    ]
+  },
+  {
+    "id": "npcf_drag_down",
     "name": "DRAG DOWN",
     "origin": {
       "type": "Class",
@@ -1030,15 +1042,16 @@
     },
     "locked": false,
     "type": "Tech",
-    "effect": "The Barricade makes a tech attack against a character within Sensors. On a success, they take 2 AP Energy damage per space that they voluntarily move until the end of their next turn.",
+    "effect": "This character makes a tech attack against a character within Sensors. On a success, they take 2 heat per space they voluntarily move until the end of their next turn, up to 8 total heat.",
     "tags": [{
       "id": "tg_quick_tech"
-    }],
+    }
+  ],
     "tech_type": "Quick",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "accuracy": [
       1,
@@ -1047,7 +1060,7 @@
     ]
   },
   {
-    "id": "npcf_seismic_repulsor_barricade",
+    "id": "npcf_seismic_repulsor",
     "name": "SEISMIC REPULSOR",
     "origin": {
       "type": "Class",
@@ -1056,10 +1069,10 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "All non-flying characters within a Burst 3 area must pass a Hull save or be knocked 3 spaces back from the Barricade and knocked Prone. The affected area becomes difficult terrain for the rest of the scene.",
+    "effect": "All non-flying characters within a Burst 3 must pass a Hull save or be knocked 3 spaces back from this character and knocked Prone. The affected area becomes difficult terrain for the rest of the scene.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 6
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
@@ -1067,7 +1080,7 @@
     ]
   },
   {
-    "id": "npcf_extrudite_barricade",
+    "id": "npcf_extrudite",
     "name": "EXTRUDITE",
     "origin": {
       "type": "Class",
@@ -1076,11 +1089,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Barricade can print two separate cubes at a time with Mobile Printer, instead of one.",
+    "effect": "This character may print two separate objects at a time with Mobile Printer.",
     "tags": []
   },
   {
-    "id": "npcf_hunger_pursuit_limpets_barricade",
+    "id": "npcf_hunger_pursuit_limpets",
     "name": "HUNGER/PURSUIT LIMPETS",
     "origin": {
       "type": "Class",
@@ -1089,10 +1102,10 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Barricade rapidly prints and deploys a field of tiny, mobile mines in a free Size 4 area adjacent to them. The affected area becomes difficult terrain; additionally, hostile characters that enter the area for the first time in a round or start their turn there must succeed on a Systems save or be Slowed until the end of their next turn.",
+    "effect": "Quick Action, Limited 1, The character rapidly prints and deploys a field of tiny, mobile mines in a Blast 2 area that includes them. The affected area becomes difficult terrain; additionally, hostile characters that start their turn in the area or enter it for the first time in a round must succeed on a Systems save or be Slowed until the end of their next turn.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 6
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
@@ -1100,7 +1113,7 @@
     ]
   },
   {
-    "id": "npcf_titan_snare_drone_barricade",
+    "id": "npcf_titan_snare_drone",
     "name": "TITAN-SNARE DRONE",
     "origin": {
       "type": "Class",
@@ -1109,7 +1122,7 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "Snare Drone (Size 1/2, HP {5/10/15}, Evasion {10/12/14}, E-Defense {10/12/14}, Tags: Drone)<br>This drone can be printed and deployed to any free adjacent space. When hostile characters move into or start their turn within range 3 of the drone, it emits a pulse, and they become Immobilized until the drone is destroyed.",
+    "effect": "Size 1/2, HP 5, Evasion 10, E-def 10, This drone can be printed and deployed to any free adjacent space. Whenever a hostile character ends a movement or starts their turn within range 3 of the drone, it emits a pulse, and they become Immobilized until the drone is destroyed; while any character is Immobilized this way, the Titan-Snare drone cannot be moved by any means. This system deactivates if this character is destroyed.",
     "tags": [{
         "id": "tg_drone"
       },

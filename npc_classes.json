@@ -405,8 +405,8 @@
     "name": "BARRICADE",
     "role": "controller",
     "info": {
-      "flavor": "Veld Systems’ Keeper Pattern 5 is a common guard mech made famous after the platform’s performance during the Battle of Sing Rama Sing. During the battle, Audrey Reimaus of the Seraphs’ Company used a Keeper P5 to singlehandedly secure Rama City’s main uplift tower, thus guaranteeing an evacuation corridor for the city’s civilian population.",
-      "tactics": "Barricades are at their best when locking down fast-moving targets. They can use their Mobile Printer to create hard cover for allies or to prevent melee mechs from moving through an area."
+      "flavor": "",
+      "tactics": "Barricades are one of the few enemies capable of easily reshaping the battlefield's terrain. Combined with their ability to slow maneuverable opponents, they can significantly gum up the playing field, making them particularly dangerous in movement-heavy sitreps."
     },
     "stats": {
       "armor": [
@@ -416,28 +416,28 @@
       ],
       "hp": [
         12,
-        16,
-        20
+        12,
+        12
       ],
       "evade": [
         6,
-        7,
-        8
+        6,
+        6
       ],
       "edef": [
         9,
-        11,
-        13
+        9,
+        9
       ],
       "heatcap": [
-        10,
-        11,
-        12
+        8,
+        8,
+        8
       ],
       "speed": [
         3,
         3,
-        4
+        3
       ],
       "sensor": [
         15,
@@ -446,13 +446,13 @@
       ],
       "save": [
         12,
-        15,
-        18
+        12,
+        12
       ],
       "hull": [
-        0,
         1,
-        2
+        1,
+        1
       ],
       "agility": [
         -2,
@@ -462,12 +462,12 @@
       "systems": [
         1,
         1,
-        2
+        1
       ],
       "engineering": [
         3,
-        5,
-        6
+        3,
+        3
       ],
       "size": [
         [
@@ -487,17 +487,18 @@
       ]
     },
     "base_features": [
-      "npcf_graviton_lance_barricade",
-      "npcf_mobile_printer_barricade",
-      "npcf_shock_plating_barricade",
-      "npcf_bulwark_mods_barricade"
+      "npcf_graviton_lance",
+      "npcf_mobile_printer",
+      "npcf_shock_plating",
+      "npcf_bulwark_mods",
+      "npcf_total_strength_suite"
     ],
     "optional_features": [
-      "npcf_drag_down_barricade",
-      "npcf_seismic_repulsor_barricade",
-      "npcf_extrudite_barricade",
-      "npcf_hunger_pursuit_limpets_barricade",
-      "npcf_titan_snare_drone_barricade"
+      "npcf_drag_down",
+      "npcf_seismic_repulsor",
+      "npcf_extrudite",
+      "npcf_hunger_pursuit_limpets",
+      "npcf_titan_snare_drone"
     ],
     "power": 100
   },
@@ -513,7 +514,7 @@
       "armor": [
         3,
         3,
-        4
+        3
       ],
       "hp": [
         10,
