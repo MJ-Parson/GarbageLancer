@@ -1222,8 +1222,8 @@
     "name": "HORNET",
     "role": "controller",
     "info": {
-      "flavor": "SatriaBarong’s Espada range of half-frame mechs has long been a popular choice in the chassis racing circuit; notably, Espadas are the mechs of choice for the vaunted SatriaBarong–ShimanoLUX chassis racing team. Recently, SatriaBarong – with the blessing of SSC – has moved to create a mil-spec, de-licensed variant of the Espada without the ShimanoLUX branding, giving rise to the Hornet archetype, a platform open for other companies to adapt and improve. The most notable of these competitors is Chandrasekhar & Herschel, the primary sponsor of the new Blueshift Grand Prix racing circuit.",
-      "tactics": "Hornets are small, fast controllers that are extremely hard to hit and incredibly annoying. They deal limited damage, but their ability to inflict mobility-reducing conditions is great for locking down enemy strikers. Fortunately for their enemies, Hornets have a low E-Defense that makes them vulnerable to smart weaponry and tech attacks."
+      "flavor": "",
+      "tactics": "Hornets are small, fast, and fragile controllers that are excellent for harassing strikers that primarily target Evasion. Their low E-Defence and HP make them very vulnerable to Smart and Reliable weapons, as well as player control options."
     },
     "stats": {
       "armor": [
@@ -1238,33 +1238,33 @@
       ],
       "evade": [
         16,
-        18,
-        20
+        16,
+        16
       ],
       "edef": [
         6,
-        7,
-        8
+        6,
+        6
       ],
       "heatcap": [
         5,
-        6,
-        7
+        5,
+        5
       ],
       "speed": [
         6,
-        8,
-        10
+        6,
+        6
       ],
       "sensor": [
         5,
         5,
-        10
+        5
       ],
       "save": [
         12,
-        14,
-        16
+        12,
+        12
       ],
       "hull": [
         -2,
@@ -1273,13 +1273,13 @@
       ],
       "agility": [
         2,
-        4,
-        6
+        2,
+        2
       ],
       "systems": [
         2,
-        3,
-        4
+        2,
+        2
       ],
       "engineering": [
         0,
@@ -1304,17 +1304,17 @@
       ]
     },
     "base_features": [
-      "npcf_stinger_pistol_hornet",
-      "npcf_ssc_total_suite_hornet",
-      "npcf_weave_hornet",
-      "npcf_impale_systems_hornet"
+      "npcf_stinger_pistol",
+      "npcf_ssc_total_suite",
+      "npcf_weave",
+      "npcf_impale_systems"
     ],
     "optional_features": [
-      "npcf_adapt_evade_disengage_hornet",
-      "npcf_umbral_interdiction_hornet",
-      "npcf_supersonic_hornet",
-      "npcf_hex_missiles_hornet",
-      "npcf_lock_hold_javelins_hornet"
+      "npcf_adapt_evade_disengage",
+      "npcf_umbral_interdiction",
+      "npcf_exile",
+      "npcf_hex_missiles",
+      "npcf_lock_hold_javelins"
     ],
     "power": 100
   },
