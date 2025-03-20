@@ -1389,13 +1389,13 @@
       ],
       "size": [
         [
-          0.5
+          1
         ],
         [
-          0.5
+          1
         ],
         [
-          0.5
+          1
         ]
       ],
       "activations": [
@@ -1415,6 +1415,104 @@
       "npcf_devouring_shard",
       "npcf_empower_shroud",
       "npcf_ripper_claws"
+    ],
+    "power": 100
+  },
+  {
+    "id": "npcc_enshrouded",
+    "name": "ENSHROUDED",
+    "role": "defender",
+    "info": {
+      "flavor": "",
+      "tactics": "Enshrouded are units that focus on entrenching in a specific spot and threating a significant area around them. Their weapon cannot be used unless this character Immobilizes itself, so it is most effective at defending a position or denying a point of ingress."
+    },
+    "stats": {
+      "armor": [
+        0,
+        0,
+        0
+      ],
+      "hp": [
+        12,
+        12,
+        12
+      ],
+      "evade": [
+        8,
+        8,
+        8
+      ],
+      "edef": [
+        8,
+        8,
+        8
+      ],
+      "heatcap": [
+        6,
+        6,
+        6
+      ],
+      "speed": [
+        4,
+        4,
+        4
+      ],
+      "sensor": [
+        10,
+        10,
+        10
+      ],
+      "save": [
+        11,
+        11,
+        11
+      ],
+      "hull": [
+        1,
+        1,
+        1
+      ],
+      "agility": [
+        0,
+        0,
+        0
+      ],
+      "systems": [
+        2,
+        2,
+        2
+      ],
+      "engineering": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "activations": [
+        1,
+        1,
+        1
+      ]
+    },
+    "base_features": [
+      "npcf_enshroud",
+      "npcf_displacer_blunderbus"
+    ],
+    "optional_features": [
+      "npcf_skysnatcher",
+      "npcf_ablative_shroud",
+      "npcf_spooky_shift",
+      "npcf_abyssal_grasp"
     ],
     "power": 100
   },

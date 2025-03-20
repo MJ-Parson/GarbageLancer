@@ -2979,6 +2979,130 @@
   ]
   },
   {
+    "id": "npcf_enshroud",
+    "name": "ENSHROUD",
+    "origin": {
+      "type": "Class",
+      "name": "ENSHROUDED",
+      "base": true
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "This character becomes Immobilized, Invisible, and Hidden, and does not lose Hidden when taking hostile actions. It may end these effects at any time on its turn as a Quick Action, but cannot clear Immobilized by any means until it does so.",
+    "tags": [{
+      "id": "tg_quick_action"
+    }
+  ]
+  },
+  {
+    "id": "npcf_displacer_blunderbus",
+    "name": "DISPLACER BLUNDERBUS",
+    "origin": {
+      "type": "Class",
+      "name": "ENSHROUDED",
+      "base": true
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "This weapon may only be fired while this character is under the effects of Enshroud.",
+    "tags": [],
+    "weapon_type": "Heavy CQB",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "accuracy": [
+      0,
+      0,
+      0
+    ],
+    "damage": [{
+      "type": "Kinetic",
+      "damage": [
+        7,
+        7,
+        7
+      ]
+    }],
+    "range": [
+      {
+        "type": "Range",
+        "val": 5
+      },
+      {
+        "type": "Threat",
+        "val": 3
+      }
+    ],
+    "on_hit": "The target is pulled 2 spaces directly toward this character."
+  },
+  {
+    "id": "npcf_skysnatcher",
+    "name": "SKYSNATCHER",
+    "origin": {
+      "type": "Class",
+      "name": "ENSHROUDED",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "This character's Displacer Blunderbus has Threat 5 against flying targets.",
+    "tags": []
+  },
+  {
+    "id": "npcf_ablative_shroud",
+    "name": "ABLATIVE SHROUD",
+    "origin": {
+      "type": "Class",
+      "name": "ENSHROUDED",
+      "base": false
+    },
+    "locked": false,
+    "type": "Reaction",
+    "effect": "Enshroud immediately ends, and this character gains resistance to the triggering damage.",
+    "tags": [
+      {
+        "id": "tg_reaction"
+      },
+      {
+        "id": "tg_round",
+        "val": 1
+      }
+    ],
+    "trigger": "This character takes damage while under the effects of Enshroud."
+  },
+  {
+    "id": "npcf_spooky_shift",
+    "name": "SPOOKY SHIFT",
+    "origin": {
+      "type": "Class",
+      "name": "ENSHROUDED",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "While this character is under the effects of Enshroud, it may teleport 3 spaces as a Protocol. This is treated as involuntary movement.",
+    "tags": [
+      {
+        "id": "tg_protocol"
+      }
+    ]
+  },
+  {
+    "id": "npcf_abyssal_grasp",
+    "name": "ABYSSAL GRASP",
+    "origin": {
+      "type": "Class",
+      "name": "ENSHROUDED",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "When a hostile character is pulled adjacent to this character as the result of this character's Overwatch attack, that character loses all remaining movement, even if they would normally ignore engagement.",
+    "tags": []
+  },
+  {
     "id": "npcf_warp_sensors_mirage",
     "name": "WARP SENSORS",
     "origin": {
