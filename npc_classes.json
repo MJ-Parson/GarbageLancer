@@ -1319,6 +1319,106 @@
     "power": 100
   },
   {
+    "id": "npcc_lurker",
+    "name": "LURKER",
+    "role": "striker",
+    "info": {
+      "flavor": "",
+      "tactics": "Lurkers are a creeping striker that crawls across the field, creating Shroud Zones that act as their primary defensive layer. They are very dangerous if they manage to engage a player while within a Shroud Zone, but they lack mobility and favor entrenching in a general location and lashing out at enemies that get too close."
+    },
+    "stats": {
+      "armor": [
+        0,
+        0,
+        0
+      ],
+      "hp": [
+        12,
+        12,
+        12
+      ],
+      "evade": [
+        10,
+        10,
+        10
+      ],
+      "edef": [
+        6,
+        6,
+        6
+      ],
+      "heatcap": [
+        5,
+        5,
+        5
+      ],
+      "speed": [
+        3,
+        3,
+        3
+      ],
+      "sensor": [
+        10,
+        10,
+        10
+      ],
+      "save": [
+        11,
+        11,
+        11
+      ],
+      "hull": [
+        2,
+        2,
+        2
+      ],
+      "agility": [
+        2,
+        2,
+        2
+      ],
+      "systems": [
+        0,
+        0,
+        0
+      ],
+      "engineering": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        [
+          0.5
+        ],
+        [
+          0.5
+        ],
+        [
+          0.5
+        ]
+      ],
+      "activations": [
+        1,
+        1,
+        1
+      ]
+    },
+    "base_features": [
+      "npcf_scouring_whip",
+      "npcf_umbral_shroud",
+      "npcf_umbral_shift"
+    ],
+    "optional_features": [
+      "npcf_consume_shroud",
+      "npcf_defensive_shroud",
+      "npcf_devouring_shard",
+      "npcf_empower_shroud",
+      "npcf_ripper_claws"
+    ],
+    "power": 100
+  },
+  {
     "id": "npcc_mirage",
     "name": "MIRAGE",
     "role": "support",

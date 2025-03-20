@@ -2794,6 +2794,191 @@
   ]
   },
   {
+    "id": "npcf_scouring_whip",
+    "name": "SCOURING WHIP",
+    "origin": {
+      "type": "Class",
+      "name": "LURKER",
+      "base": true
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "This weapon gains Threat 3 and +1 ACC when used within a Shroud Zone.",
+    "tags": [],
+    "weapon_type": "Heavy Melee",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "accuracy": [
+      0,
+      0,
+      0
+    ],
+    "damage": [{
+      "type": "Kinetic",
+      "damage": [
+        8,
+        8,
+        8
+      ]
+    }],
+    "range": [{
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "on_hit": "The target is pulled adjacent to this character, or as close as possible."
+  },
+  {
+    "id": "npcf_ripper_claws",
+    "name": "RIPPER CLAWS",
+    "origin": {
+      "type": "Class",
+      "name": "LURKER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "This weapon deals double damage when used within a Shroud Zone.",
+    "tags": [],
+    "weapon_type": "Heavy Melee",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "accuracy": [
+      0,
+      0,
+      0
+    ],
+    "damage": [{
+      "type": "Kinetic",
+      "damage": [
+        5,
+        5,
+        5
+      ]
+    }],
+    "range": [{
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "on_hit": ""
+  },
+  {
+    "id": "npcf_umbral_shroud",
+    "name": "UMBRAL SHROUD",
+    "origin": {
+      "type": "Class",
+      "name": "LURKER",
+      "base": true
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "At the start of combat, when they arrive as reinforcements, or 1/round as a Quick Action, this character can create a rippling storm of nanites - a Shroud Zone - in a free Blast 1 area within Range 5. Shroud Zones provide soft cover. Additionally, when this character enters a Shroud Zone, it becomes Invisible and gains Resistance to all damage and heat until it is no longer in a Shroud Zone. When a hostile character enters a Shroud Zone, they become Shredded and Impaired until they are no longer in a Shroud Zone. Shroud Zones can only be targeted by tech attacks and weapons that target E-Defense or have a Blast, Burst, Cone, or Line template. They have Evasion 12, E-Defense 6, and disperse upon any successful attack. This character cannot place another Shroud Zone if it has 3 or more Shroud Zones already active, but it may dismiss one or more Shroud Zones as a free action on its turn. Shroud Zones can overlap each other, but their effects do not stack.",
+    "tags": [{
+      "id": "tg_quick_action"
+    }
+  ]
+  },
+  {
+    "id": "npcf_umbral_shift",
+    "name": "UMBRAL SHIFT",
+    "origin": {
+      "type": "Class",
+      "name": "LURKER",
+      "base": true
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "Quick Action, This character teleports to a Shroud Zone within line of sight.",
+    "tags": [{
+      "id": "tg_quick_action"
+    }
+  ]
+  },
+  {
+    "id": "npcf_consume_shroud",
+    "name": "CONSUME SHROUD",
+    "origin": {
+      "type": "Class",
+      "name": "LURKER",
+      "base": false
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "This character consumes a Shroud Zone they are inside or adjacent to, clearing all conditions, gaining 4 Overshield, and then moving spaces equal to their Speed. They cannot consume a Shroud Zone they created in the same round.",
+    "tags": [{
+      "id": "tg_quick_action"
+    },
+    {
+      "id": "tg_limited",
+      "val": 2
+    }
+  ]
+  },
+  {
+    "id": "npcf_defensive_shroud",
+    "name": "DEFENSIVE SHROUD",
+    "origin": {
+      "type": "Class",
+      "name": "LURKER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Reaction",
+    "effect": "It creates a Shroud Zone centered on its location. It still may not generate more than 3 Shroud Zones.",
+    "tags": [{
+      "id": "tg_reaction"
+    },
+    {
+      "id": "tg_round",
+      "val": 1
+    }
+  ],
+    "trigger": "This character takes damage or heat while they are not in a Shroud Zone."
+  },
+  {
+    "id": "npcf_devouring_shard",
+    "name": "DEVOURING SHARD",
+    "origin": {
+      "type": "Class",
+      "name": "LURKER",
+      "base": false
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "While inside a Shroud Zone, this character can spew out a Cone 3 torrent of razor sharp nanites as a quick action. Characters within the affected area must pass an Engineering save or take 4 AP Energy damage. On a success, they take half damage.",
+    "tags": [{
+      "id": "tg_quick_action"
+    }
+  ]
+  },
+  {
+    "id": "npcf_empower_shroud",
+    "name": "EMPOWER SHROUD",
+    "origin": {
+      "type": "Class",
+      "name": "LURKER",
+      "base": false
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "This character expands a Shroud Zone they currently occupy to Blast 2. This can cause it to envelop other characters. In addition, it now takes two successful attacks to disperse the effect.",
+    "tags": [{
+      "id": "tg_quick_action"
+    },
+    {
+      "id": "tg_limited",
+      "val": 1
+    }
+  ]
+  },
+  {
     "id": "npcf_warp_sensors_mirage",
     "name": "WARP SENSORS",
     "origin": {
