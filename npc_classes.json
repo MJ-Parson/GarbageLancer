@@ -1620,8 +1620,8 @@
     "name": "PRIEST",
     "role": "support",
     "info": {
-      "flavor": "Priest-archetype mechs are found among the ranks of technozealot cults, transhumanist movements, and states or corporations that prioritize technological supremacy. These frames are configured to network their sensitive core systems with sympathetic mechs, creating digital super-constructs in order to establish and maintain total theater control. The use of Priest-archetype chassis and strategies were pioneered by a small, esoteric group known as the Messengers of MAIA. Ostensibly a courier group, the Messengers push all systems – synthetic and organic – to their theoretical limits. They even go so far as to share sensory input between linked pilots – an experience known to produce hyper-perception fugues and other ascendant mental states.",
-      "tactics": "Priests are powerful support mechs that function best when partnered with another character they can empower with Investiture. Use their Dispersal Shield to protect vulnerable targets and Investiture to empower an allied striker or defender. Enemies can disarm Investiture by separating Priests from their partners, at which point both become vulnerable to conditions."
+      "flavor": "",
+      "tactics": "Priests are all-in support mechs that seek to partner with more dangerous foes, empowering them with Investiture. Doing so significantly reduces their positional flexibility, but can make for incredibly dangerous foes, particularly when paired with the priest's other tools for mitigating incoming damage."
     },
     "stats": {
       "armor": [
@@ -1631,8 +1631,8 @@
       ],
       "hp": [
         10,
-        13,
-        16
+        10,
+        10
       ],
       "evade": [
         10,
@@ -1641,8 +1641,8 @@
       ],
       "edef": [
         12,
-        15,
-        18
+        12,
+        12
       ],
       "heatcap": [
         10,
@@ -1652,7 +1652,7 @@
       "speed": [
         5,
         5,
-        6
+        5
       ],
       "sensor": [
         10,
@@ -1661,8 +1661,8 @@
       ],
       "save": [
         11,
-        13,
-        15
+        11,
+        11
       ],
       "hull": [
         -1,
@@ -1676,13 +1676,13 @@
       ],
       "systems": [
         2,
-        4,
-        6
+        2,
+        2
       ],
       "engineering": [
         2,
-        3,
-        4
+        2,
+        2
       ],
       "size": [
         [
@@ -1702,17 +1702,16 @@
       ]
     },
     "base_features": [
-      "npcf_abjure_priest",
-      "npcf_hardened_target_priest",
-      "npcf_investiture_priest",
-      "npcf_dispersal_shield_priest"
+      "npcf_abjure",
+      "npcf_hardened_target",
+      "npcf_investiture",
+      "npcf_dispersal_shield"
     ],
     "optional_features": [
-      "npcf_greater_investiture_priest",
-      "npcf_empowered_shield_priest",
-      "npcf_sanctuary_priest",
-      "npcf_fortress_priest",
-      "npcf_fractal_assault_priest"
+      "npcf_greater_investiture",
+      "npcf_empowered_shield",
+      "npcf_sanctuary",
+      "npcf_death_before_surrender"
     ],
     "power": 100
   },
