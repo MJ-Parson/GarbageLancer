@@ -1521,8 +1521,8 @@
     "name": "MIRAGE",
     "role": "support",
     "info": {
-      "flavor": "Mirage-class mechs are often found in the employ of HORIZON-aligned militant groups. With no originating manufacturer, they are one of the few open-source non-HORUS pattern groups available to cells that know where to look. Mirages deploy advanced liturgicode to wrap themselves and their allies in veils of illusion and misdirection. While it’s clear that the warping effects that surround these mechs are caused by sensor distortion, they are powerful enough to affect even organic systems – exercise caution when engaging.",
-      "tactics": "Mirages are potent support mechs, able to teleport their allies around at will and shut down ranged attackers with Warp Sensors. They can make allied characters Invisible, but become vulnerable while doing so. These strengths come at a price: weapons and systems that ignore cover – such as Seeking weapons – can get around Warp Sensors, and Mirages don’t deal any damage on their own."
+      "flavor": "",
+      "tactics": "Mirages are support characters that are capable of shuffling their allies around the field, frustrating positioning efforts of players. Their Warp Sensors action can further mitigate incoming damage, but Mirage lacks any weaponry and cannot operate well outside of their specific niche."
     },
     "stats": {
       "armor": [
@@ -1532,18 +1532,18 @@
       ],
       "hp": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "evade": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "edef": [
         12,
-        15,
-        18
+        12,
+        12
       ],
       "heatcap": [
         6,
@@ -1552,18 +1552,18 @@
       ],
       "speed": [
         5,
-        6,
-        7
+        5,
+        5
       ],
       "sensor": [
         15,
         15,
-        20
+        15
       ],
       "save": [
         11,
-        14,
-        17
+        11,
+        11
       ],
       "hull": [
         -2,
@@ -1572,130 +1572,28 @@
       ],
       "agility": [
         1,
-        2,
-        3
+        1,
+        1
       ],
       "systems": [
         2,
-        3,
-        4
+        2,
+        2
       ],
       "engineering": [
-        1,
-        2,
-        3
-      ],
-      "size": [
-        [
-          0.5
-        ],
-        [
-          0.5
-        ],
-        [
-          0.5
-        ]
-      ],
-      "activations": [
-        1,
-        1,
-        1
-      ]
-    },
-    "base_features": [
-      "npcf_warp_sensors_mirage",
-      "npcf_reality_flicker_mirage",
-      "npcf_dataveil_mirage",
-      "npcf_glitch_scanners_mirage",
-      "npcf_blip_mirage"
-    ],
-    "optional_features": [
-      "npcf_illusory_subroutines_mirage",
-      "npcf_warp_targeting_mirage",
-      "npcf_metafold_shove_mirage",
-      "npcf_manifest_false_idols_mirage",
-      "npcf_multiplicity_mirage"
-    ],
-    "power": 100
-  },
-  {
-    "id": "npcc_operator",
-    "name": "OPERATOR",
-    "role": "artillery",
-    "info": {
-      "flavor": "Operators are known-unknowns, rarely encountered on the front lines, but this should not be mistaken for fragility. Operators are dangerous and deadly in every way. Like their mechs, Operators’ bodies are loaded with the most advanced tech available. When they die in combat, it’s not unknown for their bodies – and their mechs — to self-immolate, rendering any technology and data into ash.",
-      "tactics": "Operators are elite and extremely mobile artillery mechs. They aren’t particularly hardy, but can use Trace Drive to teleport around the battlefield and put themselves in advantageous positions: on top of obstructions or terrain, or in cover – anywhere they can snipe at enemies with their highly accurate Raptor Plasma Rifles."
-    },
-    "stats": {
-      "armor": [
         0,
         0,
         0
       ],
-      "hp": [
-        10,
-        12,
-        15
-      ],
-      "evade": [
-        10,
-        12,
-        14
-      ],
-      "edef": [
-        10,
-        12,
-        14
-      ],
-      "heatcap": [
-        8,
-        8,
-        8
-      ],
-      "speed": [
-        5,
-        5,
-        5
-      ],
-      "sensor": [
-        10,
-        10,
-        10
-      ],
-      "save": [
-        10,
-        12,
-        14
-      ],
-      "hull": [
-        2,
-        3,
-        4
-      ],
-      "agility": [
-        2,
-        3,
-        4
-      ],
-      "systems": [
-        2,
-        3,
-        4
-      ],
-      "engineering": [
-        2,
-        3,
-        4
-      ],
       "size": [
         [
-          1
+          0.5
         ],
         [
-          1
+          0.5
         ],
         [
-          1
+          0.5
         ]
       ],
       "activations": [
@@ -1705,17 +1603,15 @@
       ]
     },
     "base_features": [
-      "npcf_raptor_plasma_rifle_operator",
-      "npcf_trace_drive_operator",
-      "npcf_step_operator",
-      "npcf_self_erasure_operator"
+      "npcf_warp_sensors",
+      "npcf_trace_drive",
+      "npcf_dataveil",
+      "npcf_glitch_scanners",
+      "npcf_blip"
     ],
     "optional_features": [
-      "npcf_fade_generator_operator",
-      "npcf_telefrag_operator",
-      "npcf_fortress_operator",
-      "npcf_skirmisher_operator",
-      "npcf_nova_missiles_operator"
+      "npcf_metafold_shove_mirage",
+      "npcf_multiplicity_mirage"
     ],
     "power": 100
   },

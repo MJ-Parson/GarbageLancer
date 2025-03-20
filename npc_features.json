@@ -3103,7 +3103,7 @@
     "tags": []
   },
   {
-    "id": "npcf_warp_sensors_mirage",
+    "id": "npcf_warp_sensors",
     "name": "WARP SENSORS",
     "origin": {
       "type": "Class",
@@ -3112,24 +3112,24 @@
     },
     "locked": false,
     "type": "Tech",
-    "effect": "The Mirage makes a tech attack against a target within Sensors. On a success, they take {2/3/4} Heat and all attacks they make until the end of their next turn treat their targets as having soft cover.",
+    "effect": "This character makes a tech attack against a target within Sensors. On a hit, the target takes 2 Heat and all attacks they make until the end of their next turn treat their targets as having hard cover.",
     "tags": [{
       "id": "tg_quick_tech"
     }],
     "tech_type": "Quick",
     "attack_bonus": [
-      2,
-      4,
-      6
-    ],
-    "accuracy": [
       1,
       1,
       1
+    ],
+    "accuracy": [
+      0,
+      0,
+      0
     ]
   },
   {
-    "id": "npcf_reality_flicker_mirage",
+    "id": "npcf_trace_drive",
     "name": "REALITY FLICKER",
     "origin": {
       "type": "Class",
@@ -3138,11 +3138,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Mirage teleports when they make a standard move.",
+    "effect": "Instead of taking their standard movement, this character may teleport up to their speed in any direction.",
     "tags": []
   },
   {
-    "id": "npcf_dataveil_mirage",
+    "id": "npcf_dataveil",
     "name": "DATAVEIL",
     "origin": {
       "type": "Class",
@@ -3151,11 +3151,11 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "By default, the Mirage is Invisible and can transfer this status to another character within line of sight as a quick action. When they do so, the Mirage ceases to be Invisible, and only regains the status when they transfer it back as a quick action or transfer it to another character; otherwise, this effect lasts until the Mirage is destroyed.",
+    "effect": "This character is Invisible and can transfer this status to another character within Sensors and line of sight as a quick action. When it does so, this character ceases to be Invisible, and only regains the status when they transfer it back as quick action or their target is destroyed. This effect lasts until this character is destroyed or until it is transferred to another character.",
     "tags": []
   },
   {
-    "id": "npcf_glitch_scanners_mirage",
+    "id": "npcf_glitch_scanners",
     "name": "GLITCH SCANNERS",
     "origin": {
       "type": "Class",
@@ -3163,19 +3163,15 @@
       "base": true
     },
     "locked": false,
-    "type": "Trait",
-    "effect": "The Mirage’s advanced electronic countermeasures play havoc with enemy systems, causing them to register false positives on the battlefield. They may teleport up to two allied characters within Sensors, moving them 5 spaces in any direction – revealing their “true” locations. This movement ignores engagement and doesn’t provoke reactions.<br>The Mirage also gains the Blip reaction.",
+    "type": "System",
+    "effect": "This character's advanced electronic countermeasures play havoc with enemy systems, causing them to register false positives on the battlefield. They may target up to two characters within Sensors who are not Immobilized, Slowed, Jammed, or Stunned, allowing them to teleport up to 5 spaces in any direction, revealing their 'true' locations.",
     "tags": [{
         "id": "tg_quick_action"
-      },
-      {
-        "id": "tg_reaction"
       }
-    ],
-    "trigger": ""
+    ]
   },
   {
-    "id": "npcf_blip_mirage",
+    "id": "npcf_blip",
     "name": "BLIP",
     "origin": {
       "type": "Class",
@@ -3184,7 +3180,7 @@
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "The Mirage may teleport one allied character within Sensors 5 spaces in any direction.",
+    "effect": "This character may allow one allied character within Sensors to teleport up to 5 spaces in any direction as a reaction.",
     "tags": [{
         "id": "tg_round",
         "val": 1
@@ -3193,44 +3189,10 @@
         "id": "tg_reaction"
       }
     ],
-    "trigger": "A hostile character takes action in line of sight."
+    "trigger": "A hostile character takes any action in line of sight."
   },
   {
-    "id": "npcf_illusory_subroutines_mirage",
-    "name": "ILLUSORY SUBROUTINES",
-    "origin": {
-      "type": "Class",
-      "name": "MIRAGE",
-      "base": false
-    },
-    "locked": false,
-    "type": "Tech",
-    "effect": "The Mirage makes a tech attack against a target within Sensors. On a success, the target treats all characters allied to the Mirage as Invisible until the start of their next turn.",
-    "tags": [{
-      "id": "tg_quick_tech"
-    }],
-    "tech_type": "Quick",
-    "attack_bonus": [
-      2,
-      4,
-      6
-    ]
-  },
-  {
-    "id": "npcf_warp_targeting_mirage",
-    "name": "WARP TARGETING",
-    "origin": {
-      "type": "Class",
-      "name": "MIRAGE",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "All allied characters within range 50 benefit from soft cover. If the Mirage takes damage, this effect ends until the start of their next turn.",
-    "tags": []
-  },
-  {
-    "id": "npcf_metafold_shove_mirage",
+    "id": "npcf_metafold_shove",
     "name": "METAFOLD SHOVE",
     "origin": {
       "type": "Class",
@@ -3239,37 +3201,16 @@
     },
     "locked": false,
     "type": "Tech",
-    "effect": "The Mirage makes a tech attack against a hostile character within range 5. On a success, the target swaps position with an allied character within the Mirage’s line of sight and chosen by the Mirage, both teleporting. Flying characters can’t be swapped with characters that aren’t flying, and vice versa.",
+    "effect": "This character makes a tech attack against a hostile character within Range 5. On a hit, this character swaps the positions of the target with one of this character's allies within line of sight, both teleporting. Flying characters can't be swapped with characters that aren't flying and vice versa. If either teleport would not be legal for any reason, both fail.",
     "tags": [{
       "id": "tg_quick_tech"
     }],
     "tech_type": "Quick",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ]
-  },
-  {
-    "id": "npcf_manifest_false_idols_mirage",
-    "name": "MANIFEST FALSE IDOLS",
-    "origin": {
-      "type": "Class",
-      "name": "MIRAGE",
-      "base": false
-    },
-    "locked": false,
-    "type": "Tech",
-    "effect": "The Mirage creates three Size 1 data constructs in free spaces within line of sight and range 5. These constructs provide soft cover but can be passed through. When hostile characters pass through a construct, the construct disappears and they must succeed on a Systems save or take 2 heat and become Jammed until the end of their next turn. At any point during the Mirage’s turn, they can teleport an allied character within line of sight to the location of a data construct as a quick action, causing the construct to disappear, as long as there is space to do so.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
-      {
-        "id": "tg_full_tech"
-      }
-    ],
-    "tech_type": "Full"
   },
   {
     "id": "npcf_multiplicity_mirage",
@@ -3280,196 +3221,12 @@
       "base": false
     },
     "locked": false,
-    "type": "Reaction",
-    "effect": "The attacker must make a Systems save. On a failure, the Mirage’s ally gains Immunity to the attack’s damage and effects and may teleport up to 5 spaces in the direction of their choice.",
-    "tags": [{
-        "id": "tg_round",
-        "val": 1
-      },
-      {
-        "id": "tg_reaction"
-      }
-    ],
-    "trigger": "A allied character in line of sight is hit."
-  },
-  {
-    "id": "npcf_raptor_plasma_rifle_operator",
-    "name": "RAPTOR PLASMA RIFLE",
-    "origin": {
-      "type": "Class",
-      "name": "OPERATOR",
-      "base": true
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "At T2, this weapon can make two attacks at a time, targeting either the same character or two different ones. At T3, it can make three attacks at a time.",
-    "tags": [],
-    "weapon_type": "Heavy Rifle",
-    "attack_bonus": [
-      2,
-      4,
-      6
-    ],
-    "accuracy": [
-      2,
-      2,
-      2
-    ],
-    "damage": [{
-      "type": "Energy",
-      "damage": [
-        7,
-        7,
-        7
-      ]
-    }],
-    "range": [{
-      "type": "Range",
-      "val": 20
-    }],
-    "on_hit": ""
-  },
-  {
-    "id": "npcf_trace_drive_operator",
-    "name": "TRACE DRIVE",
-    "origin": {
-      "type": "Class",
-      "name": "OPERATOR",
-      "base": true
-    },
-    "locked": false,
     "type": "System",
-    "effect": "The Operator teleports when they make their standard move.",
-    "tags": []
-  },
-  {
-    "id": "npcf_step_operator",
-    "name": "STEP",
-    "origin": {
-      "type": "Class",
-      "name": "OPERATOR",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Operator teleports to a free space within line of sight and range 50.",
+    "effect": "This character may create multiple duplicates of a target, interfering with targeting subroutines. As a quick action, this character may give an allied character within Sensors a Multiplicity Mark. As a reaction to being hit by a ranged or melee attack, that character may expend their Multiplicity Mark to gain immunity to that attack and teleport up to 5 spaces in any direction. They cannot take this reaction while Slowed or Immobilized and must teleport at least 1 space.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
-      {
         "id": "tg_quick_action"
       }
     ]
-  },
-  {
-    "id": "npcf_self_erasure_operator",
-    "name": "SELF-ERASURE",
-    "origin": {
-      "type": "Class",
-      "name": "OPERATOR",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "When the Operator’s mech is destroyed, it immediately self-immolates in a wave of superheated plasma. All characters adjacent to the Operator when this takes place must succeed on an Agility save or take {4/6/8} Energy damage. On a success, they take half damage. This mech is then removed from the battlefield – it is utterly annihilated.",
-    "tags": []
-  },
-  {
-    "id": "npcf_fade_generator_operator",
-    "name": "FADE GENERATOR",
-    "origin": {
-      "type": "Class",
-      "name": "OPERATOR",
-      "base": false
-    },
-    "locked": false,
-    "type": "System",
-    "effect": "At the end of the Operator’s turn, they become Invisible until the start of their next turn. This immediately ceases if they take damage or make a reaction.",
-    "tags": []
-  },
-  {
-    "id": "npcf_telefrag_operator",
-    "name": "TELEFRAG",
-    "origin": {
-      "type": "Class",
-      "name": "OPERATOR",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Operator teleports into a space occupied by another character within line of sight and range 15. The target must succeed on an Agility save or take {4/8/12} AP Energy damage and become Jammed until the end of their next turn. On a successful save, they take half damage and aren’t Jammed. Succeed or fail, the Operator takes 1d6 AP Energy damage and is placed into a free space next to the target.",
-    "tags": [{
-      "id": "tg_full_action"
-    }]
-  },
-  {
-    "id": "npcf_fortress_operator",
-    "name": "FORTRESS",
-    "origin": {
-      "type": "Class",
-      "name": "OPERATOR",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Operator gains +3 Accuracy on Systems saves, and tech attacks against them receive +3 difficulty.",
-    "tags": []
-  },
-  {
-    "id": "npcf_skirmisher_operator",
-    "name": "SKIRMISHER",
-    "origin": {
-      "type": "Class",
-      "name": "OPERATOR",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Once per turn, at any point during the Operator’s turn, they may Boost as a free action.",
-    "tags": [{
-      "id": "tg_turn",
-      "val": 1
-    }]
-  },
-  {
-    "id": "npcf_nova_missiles_operator",
-    "name": "NOVA MISSILES",
-    "origin": {
-      "type": "Class",
-      "name": "OPERATOR",
-      "base": false
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "",
-    "tags": [{
-      "id": "tg_seeking"
-    }],
-    "weapon_type": "Auxiliary Launcher",
-    "attack_bonus": [
-      1,
-      2,
-      3
-    ],
-    "damage": [{
-      "type": "Energy",
-      "damage": [
-        4,
-        6,
-        8
-      ]
-    }],
-    "range": [{
-        "type": "Range",
-        "val": 15
-      },
-      {
-        "type": "Blast",
-        "val": 1
-      }
-    ],
-    "on_hit": ""
   },
   {
     "id": "npcf_abjure_priest",
