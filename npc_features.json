@@ -2361,7 +2361,7 @@
     "tags": []
   },
   {
-    "id": "npcf_hunter_killer_nexus_hive",
+    "id": "npcf_hunter_killer_nexus",
     "name": "HUNTER-KILLER NEXUS",
     "origin": {
       "type": "Class",
@@ -2370,7 +2370,7 @@
     },
     "locked": false,
     "type": "Weapon",
-    "effect": "At T2, this weapon can make two attacks at a time, targeting either the same character or two different ones. At T3, it can make three attacks at a time.",
+    "effect": "",
     "tags": [{
         "id": "tg_smart"
       },
@@ -2380,26 +2380,26 @@
     ],
     "weapon_type": "Main Nexus",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ],
     "damage": [{
-      "type": "Burn",
+      "type": "Energy",
       "damage": [
-        3,
-        3,
-        3
+        1,
+        1,
+        1
       ]
     }],
     "range": [{
       "type": "Range",
       "val": 8
     }],
-    "on_hit": ""
+    "on_hit": "Target takes 1 Heat for each condition currently affecting them."
   },
   {
-    "id": "npcf_drone_barrage_hive",
+    "id": "npcf_drone_barrage",
     "name": "DRONE BARRAGE",
     "origin": {
       "type": "Class",
@@ -2408,19 +2408,24 @@
     },
     "locked": false,
     "type": "Tech",
-    "effect": "The Hive makes a tech attack against a character within Sensors. On a success, the target chooses one: they become Immobilized and Impaired until the end of their next turn, or they immediately move up to 5 spaces in a direction chosen by the Hive. This movement ignores engagement and does not provoke reactions.",
+    "effect": "This character makes a tech attack against a character within Sensors. On a success, the target chooses one: they become Immobilized and Impaired until the end of their next turn, or they immediately move up to 5 spaces in a direction chosen by this character. This movement is involuntary ignores engagement and does not provoke reactions.",
     "tags": [{
       "id": "tg_quick_tech"
     }],
     "tech_type": "Quick",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
+    ],
+    "accuracy":[
+      1,
+      1,
+      1
     ]
   },
   {
-    "id": "npcf_razor_swarms_hive",
+    "id": "npcf_razor_swarms",
     "name": "RAZOR SWARMS",
     "origin": {
       "type": "Class",
@@ -2429,13 +2434,11 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Hive deploys a Blast 1 razor swarm in a free area within Sensors. Allied characters gain soft cover as long as they are at least partially within the affected area. Hostile characters start their turn at least partially within the area or move into it for the first time in a round take {2/4/6} Burn. The Hive can deploy any number of razor swarms, each of which persists for the rest of the scene or until the Hive is destroyed.",
-    "tags": [{
-        "id": "tg_drone"
-      },
+    "effect": "This character deploys a Blast 1 razor swarm in a free area within Sensors. Allied characters gain soft cover as long as they are at least partially within the affected area. Hostile characters that start their turn in the area or move into it for the first time in a round take 2 Burn. This character can deploy any number of razor swarms, which persist until the end of the scene or until this character is destroyed. After using this system, this character regains 1 use of Shadow Swarms.",
+    "tags": [
       {
-        "id": "tg_recharge",
-        "val": 4
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
@@ -2443,7 +2446,28 @@
     ]
   },
   {
-    "id": "npcf_electro_nanite_cloud_hive",
+    "id": "npcf_shadow_swarms",
+    "name": "SHADOW SWARMS",
+    "origin": {
+      "type": "Class",
+      "name": "HIVE",
+      "base": true
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "This character deploys a Burst 2 shadow swarm that lasts until the end of this character's next turn. Allied characters gain soft cover as long as they are at least partially within the affected area. Hostile characters are Slowed and Impaired as long as they are in the affected area. After using this system, this character regains 1 use of Razor Swarms.",
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 1
+      },
+      {
+        "id": "tg_quick_action"
+      }
+    ]
+  },
+  {
+    "id": "npcf_electro_nanite_cloud",
     "name": "ELECTRO-NANITE CLOUD",
     "origin": {
       "type": "Class",
@@ -2452,11 +2476,11 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "At the start of their turn, hostile characters within range 3 take 2 Burn; additionally, until they move beyond range 3, they make all System checks and saves, and all tech attacks, at +{1/2/3} difficulty.",
+    "effect": "At the start of their turn, hostile characters within Range 3 must make a Systems save or become Impaired until the end of their next turn, then take 1 burn per condition affecting them.",
     "tags": []
   },
   {
-    "id": "npcf_motile_swarm_hive",
+    "id": "npcf_motile_swarm",
     "name": "MOTILE SWARM",
     "origin": {
       "type": "Class",
@@ -2465,12 +2489,14 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "At the start of the Hive’s turn, they may move all razor swarms up to 2 spaces in any direction, including into spaces occupied by other characters.",
-    "tags": []
+    "effect": "As a protocol, this character may move any number of Razor Swarms and Shadow Swarms up to 2 spaces in any direction, including into spaces occupied by other characters and other Razor and Shadow Swarms.",
+    "tags": [{
+      "id": "tg_protocol"
+    }]
   },
   {
-    "id": "npcf_driving_swarm_hive",
-    "name": "DRIVING SWARM",
+    "id": "npcf_clinging_swarms",
+    "name": "CLINGING SWARMS",
     "origin": {
       "type": "Class",
       "name": "HIVE",
@@ -2478,11 +2504,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Whenever characters take Burn from a razor swarm, they must succeed on a Systems save or immediately move 4 spaces in a direction chosen by the Hive after taking damage. This movement ignores engagement and does not provoke reactions.",
+    "effect": "Whenever characters take Burn from a Razor Swarm, they must succeed on a Systems save. If they fail, they become Impaired until the end of their next turn; if they are already Impaired, they are instead Slowed for the same duration.",
     "tags": []
   },
   {
-    "id": "npcf_grind_maniple_hive",
+    "id": "npcf_grind_maniple",
     "name": "GRIND MANIPLE",
     "origin": {
       "type": "Class",
@@ -2491,15 +2517,15 @@
     },
     "locked": false,
     "type": "Tech",
-    "effect": "The Hive releases a swarm of tiny, hard to hit drones that make a tech attack against a hostile character within Sensors and line of sight. On hit, the drones clamp on, causing them to take 2 Burn each time they take any action or reaction until the end of their next turn.",
+    "effect": "This character makes a tech attack against a target within Sensors. On a hit, until the end of the target's next turn they take 1 Burn for each condition affecting them each time they take a Quick Action, Full Action, or Overcharge.",
     "tags": [{
       "id": "tg_quick_tech"
     }],
     "tech_type": "Quick",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ],
     "accuracy": [
       1,
@@ -2508,7 +2534,7 @@
     ]
   },
   {
-    "id": "npcf_seeker_cloud_hive",
+    "id": "npcf_seeker_cloud",
     "name": "SEEKER CLOUD",
     "origin": {
       "type": "Class",
@@ -2524,8 +2550,8 @@
     "weapon_type": "Main Nexus",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "accuracy": [
       1,
@@ -2536,15 +2562,15 @@
       "type": "kinetic",
       "damage": [
         3,
-        4,
-        5
+        3,
+        3
       ]
     }],
     "range": [{
       "type": "Cone",
       "val": 5
     }],
-    "on_hit": ""
+    "on_hit": "Target receives Lock On."
   },
   {
     "id": "npcf_stinger_pistol_hornet",
