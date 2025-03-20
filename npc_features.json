@@ -2154,8 +2154,8 @@
     ]
   },
   {
-    "id": "npcf_flak_cannon_engineer",
-    "name": "FLAK CANNON",
+    "id": "npcf_really_big_wrench",
+    "name": "REALLY BIG WRENCH",
     "origin": {
       "type": "Class",
       "name": "ENGINEER",
@@ -2163,33 +2163,34 @@
     },
     "locked": false,
     "type": "Weapon",
-    "effect": "This weapon has +2 Accuracy against flying targets.",
+    "effect": "",
     "tags": [{
-      "id": "tg_smart"
+      "id": "tg_knockback",
+      "val": 2
     }],
-    "weapon_type": "Heavy Cannon",
+    "weapon_type": "Heavy Melee",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "damage": [{
       "type": "kinetic",
       "damage": [
-        3,
-        4,
+        5,
+        5,
         5
       ]
     }],
     "range": [{
-      "type": "Range",
-      "val": 15
+      "type": "Threat",
+      "val": 1
     }],
     "on_hit": ""
   },
   {
-    "id": "npcf_deployable_turret_engineer",
-    "name": "DEPLOYABLE TURRET",
+    "id": "npcf_sentry_turret",
+    "name": "SENTRY TURRET",
     "origin": {
       "type": "Class",
       "name": "ENGINEER",
@@ -2197,18 +2198,25 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "Deployable Turret (Size 1/2, HP {5/8/10}, Evasion 10, E-Defense 10, Tags: Drone)<br>One of these self-constructing turrets can be deployed to any free, adjacent space. On the Engineer’s turn, deployed turrets attack the nearest hostile character within Range 10. They attack at +{1/2/3} and deal {4/5/6} Kinetic damage. The Engineer may have six turrets deployed at one time, all of which are disabled if the Engineer is destroyed.",
+    "effect": "Quick Action, Drone, Loading, Deployable, Sentry Turret (Size 1/2, HP 5, Evasion 10, E-Defense 10). This character constructs a turret in a free, adjacent space. At the end of each of this character's turns, deployed turrets attack the nearest hostile character within Range 10. They attack at +1 and deal 4 Kinetic damage. Each turret has Threat 3 and its own reaction that can only be used to overwatch. This character may have up to six turrets deployed at a time, all of which are disabled if this character is destroyed. This character regains one use of this system whenever they reload all weapons.",
     "tags": [{
         "id": "tg_drone"
       },
       {
         "id": "tg_quick_action"
+      },
+      {
+        "id": "tg_loading"
+      },
+      {
+        "id": "tg_limited",
+        "val": 1
       }
     ]
   },
   {
-    "id": "npcf_engineers_mark_engineer",
-    "name": "ENGINEER’S MARK",
+    "id": "npcf_that_one!",
+    "name": "THAT ONE!",
     "origin": {
       "type": "Class",
       "name": "ENGINEER",
@@ -2216,7 +2224,7 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Until the end of the Engineer’s next turn, the Engineer’s Deployable Turrets will attack a target of their choice (within Range) instead of attacking the nearest hostile character.",
+    "effect": "A character within Line of Sight gains an Engineer's Mark until the end of this character's next turn. When a Sentry Turret attacks, it will attack the closest character with an Engineer's Mark instead of the closest hostile character; if no characters with an Engineer's Mark are within Range and Line of Sight, the turret instead attacks the closest hostile character normally. This trait automatically recharges when this character stabilizes.",
     "tags": [{
         "id": "tg_recharge",
         "val": 6
@@ -2227,7 +2235,27 @@
     ]
   },
   {
-    "id": "npcf_power_deployer_engineer",
+    "id": "npcf_well_there's_your_problem",
+    "name": "WELL THERE'S YOUR PROBLEM",
+    "origin": {
+      "type": "Class",
+      "name": "ENGINEER",
+      "base": true
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "When this character stabilizes, its adjacent Sentry Turrets gain 5 overshield.",
+    "tags": [{
+        "id": "tg_recharge",
+        "val": 6
+      },
+      {
+        "id": "tg_quick_action"
+      }
+    ]
+  },
+  {
+    "id": "npcf_power_deployer",
     "name": "POWER DEPLOYER",
     "origin": {
       "type": "Class",
@@ -2236,11 +2264,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Engineer can deploy two turrets at a time with Deployable Turrets. If they do so, the system counts as Recharge 4+ until it next recharges.",
+    "effect": "This character can deploy two turrets at a time with Sentry Turret.",
     "tags": []
   },
   {
-    "id": "npcf_skyshield_protocol_engineer",
+    "id": "npcf_skyshield_protocol",
     "name": "SKYSHIELD PROTOCOL",
     "origin": {
       "type": "Class",
@@ -2249,11 +2277,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Deployable Turrets gain +2 Accuracy against flying targets.",
+    "effect": "Sentry Turrets gain +2 Accuracy against flying targets.",
     "tags": []
   },
   {
-    "id": "npcf_shepherd_field_engineer",
+    "id": "npcf_shepherd_field",
     "name": "SHEPHERD FIELD",
     "origin": {
       "type": "Class",
@@ -2261,13 +2289,15 @@
       "base": false
     },
     "locked": false,
-    "type": "Trait",
-    "effect": "Drones, objects, and pieces of cover gain Resistance to all damage while next to the Engineer.",
-    "tags": []
+    "type": "System",
+    "effect": "Drones and objects adjacent to this character gain Resistance to all damage.",
+    "tags": [{
+      "id": "tg_shield"
+    }]
   },
   {
-    "id": "npcf_mobile_turrets_engineer",
-    "name": "MOBILE TURRETS",
+    "id": "npcf_turret_leggies",
+    "name": "TURRET LEGGIES",
     "origin": {
       "type": "Class",
       "name": "ENGINEER",
@@ -2275,12 +2305,12 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "At the start of the Engineer’s turn, they can move all deployable turrets up to 3 spaces in any direction.",
+    "effect": "At the start of this character's turn, Sentry Turrets may move up to 3 spaces. This movement provokes reactions normally.",
     "tags": []
   },
   {
-    "id": "npcf_arsenal_engineer",
-    "name": "ARSENAL",
+    "id": "npcf_self_destruct_sequence",
+    "name": "SELF-DESTRUCT SEQUENCE",
     "origin": {
       "type": "Class",
       "name": "ENGINEER",
@@ -2288,7 +2318,46 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "When the Engineer uses Deployable Turret, they can choose one of these modifications for their turrets:<ul><li>Inferno: The turret’s attacks become Cone 3, {2/3/4} Burn.</li><li>Hellstorm: The turret’s attacks become range 15, Blast 1, {2/3/4} Explosive damage.</li><li>Hunter: The turret’s attacks gain Reliable 1.</li><li>Primed: When either the turret or Engineer is destroyed, the turret explodes in a Burst 1 area. Characters within the affected area must succeed on an Agility save or take {7/9/11} Explosive damage.</li></ul>",
+    "effect": "Sentry Turrets detonate in a Burst 1 area when either they or this character are destroyed. Characters within the are must succeed on an Agility save or take 7 Explosive damage.",
+    "tags": []
+  },
+  {
+    "id": "npcf_inferno_turrets",
+    "name": "INFERNO TURRETS",
+    "origin": {
+      "type": "Class",
+      "name": "ENGINEER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "Sentry Turrets may attack as a Cone 3 that deals 2 Burn instead of their normal attack.",
+    "tags": []
+  },
+  {
+    "id": "npcf_hellstorm_turrets",
+    "name": "HELLSTORM TURRETS",
+    "origin": {
+      "type": "Class",
+      "name": "ENGINEER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "Sentry Turrets may attack as a Range 15 Blast 1 that deals 2 Explosive damage instead of their normal attack.",
+    "tags": []
+  },
+  {
+    "id": "npcf_spray_and_pray_sentries",
+    "name": "SPRAY AND PRAY SENTRIES",
+    "origin": {
+      "type": "Class",
+      "name": "ENGINEER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "Sentry Turret attacks gain Reliable 1",
     "tags": []
   },
   {

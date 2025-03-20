@@ -1015,10 +1015,10 @@
   {
     "id": "npcc_engineer",
     "name": "ENGINEER",
-    "role": "striker",
+    "role": "defender",
     "info": {
-      "flavor": "Various types of localized Engineer-class mechs are common throughout the galaxy, unique to the worlds or theaters in which they operate. The Engineer has long existed as an archetype, but it remained largely undefined until a full design doctrine was laid out by Corrida Isolde-Nollet, an Armory civil service director on Ras Shamra. In all cases, the mission of Engineers is the same: defend, maintain, secure. Engineers operate best in the middle or rear of the battle line, coordinating the defense of important positions and overseeing comprehensive deployment of all operational assets. Remember: if you can’t get to the enemy, you lose.",
-      "tactics": "Engineers’ Deployable Turrets make them potent force multipliers, as they can deploy one every turn. If enemies don’t deal with an Engineer's turrets quickly, their potential damage quickly skyrockets – even more when they target characters with Engineer’s Mark. Without Engineer’s Mark, turrets attack the nearest target, which players can use to control who takes damage."
+      "flavor": "",
+      "tactics": "Engineers are snowballing characters that reinforced positions with autonomous turrets that attack the nearest enemy and can overwatch enemies that get too close. They lack their own ranged options, so are highly reliant on their turrets and allies to give them the space to operate without being harrassed."
     },
     "stats": {
       "armor": [
@@ -1033,18 +1033,18 @@
       ],
       "evade": [
         7,
-        9,
-        11
+        7,
+        7
       ],
       "edef": [
         10,
         10,
-        12
+        10
       ],
       "heatcap": [
-        10,
-        12,
-        14
+        8,
+        8,
+        8
       ],
       "speed": [
         3,
@@ -1058,13 +1058,13 @@
       ],
       "save": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "hull": [
-        -1,
-        -1,
-        -1
+        2,
+        2,
+        2
       ],
       "agility": [
         -1,
@@ -1072,14 +1072,14 @@
         -1
       ],
       "systems": [
-        1,
-        2,
-        3
+        -1,
+        -1,
+        -1
       ],
       "engineering": [
         3,
-        4,
-        6
+        3,
+        3
       ],
       "size": [
         [
@@ -1099,16 +1099,20 @@
       ]
     },
     "base_features": [
-      "npcf_flak_cannon_engineer",
-      "npcf_deployable_turret_engineer",
-      "npcf_engineers_mark_engineer"
+      "npcf_really_big_wrench",
+      "npcf_sentry_turret",
+      "npcf_that_one!",
+      "npcf_well_there's_your_problem"
     ],
     "optional_features": [
-      "npcf_power_deployer_engineer",
-      "npcf_skyshield_protocol_engineer",
-      "npcf_shepherd_field_engineer",
-      "npcf_mobile_turrets_engineer",
-      "npcf_arsenal_engineer"
+      "npcf_skyshield_protocol",
+      "npcf_power_deployer",
+      "npcf_shepherd_field",
+      "npcf_turret_leggies",
+      "npcf_self_destruct_sequence",
+      "npcf_inferno_turrets",
+      "npcf_hellstorm_turrets",
+      "npcf_spray_and_pray_sentries"
     ],
     "power": 100
   },
