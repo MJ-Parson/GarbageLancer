@@ -4453,31 +4453,31 @@
     ],
     "weapon_type": "Superheavy Rifle",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ],
     "accuracy": [
-      2,
-      2,
-      2
+      1,
+      1,
+      1
     ],
     "damage": [{
       "type": "kinetic",
       "damage": [
         10,
-        15,
-        20
+        10,
+        10
       ]
     }],
     "range": [{
       "type": "Range",
-      "val": 25
+      "val": 20
     }],
     "on_hit": ""
   },
   {
-    "id": "npcf_snipers_mark_sniper",
+    "id": "npcf_snipers_mark_",
     "name": "SNIPER’S MARK",
     "origin": {
       "type": "Class",
@@ -4486,7 +4486,7 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "A character within line of sight and range 25 gains the Sniper’s Mark. Against targets with the Sniper’s Mark, the Anti-Materiel Rifle deals 1 structure damage instead of its usual damage.<br>Characters know when they have the Sniper’s Mark. They ignore it and take damage normally if they are in cover or Prone. On their turn, characters with the Sniper’s Mark may drop Prone as a free action.<br>The Sniper can only mark one character at a time but can transfer the Sniper’s Mark to another character as a full action.",
+    "effect": "A character within line of sight and range 25 gains the Sniper's Mark. When attacking a character with a Sniper's Mark, this unit's Anti-Materiel Rifle instead deals 1 Structure damage instead of its normal damage. This effect is ignored if the attack is affected by cover or if the target is Prone. Characters with a Sniper's Mark may drop Prone on their turn as a Free Action. Only one character may be marked by this system at a time.",
     "tags": [{
       "id": "tg_full_action"
     }]
@@ -4501,12 +4501,12 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Sniper can climb and remain stationary on any surface without penalty, including overhanging and vertical surfaces.",
+    "effect": "This character can climb and remain stationary on any surface without penalty, including overhanging and vertical surfaces.",
     "tags": []
   },
   {
-    "id": "npcf_selective_loader_sniper",
-    "name": "SELECTIVE LOADER",
+    "id": "npcf_spicy_bullets",
+    "name": "SPICY BULLETS",
     "origin": {
       "type": "Class",
       "name": "SNIPER",
@@ -4514,11 +4514,11 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Sniper can choose a special ammunition type before attacking with the Anti-Materiel Rifle. Attacks made with this ammunition function as usual, with an additional effect on a successful attack.<br>The Sniper may choose from the following:<ul><li>Electromagnetic: Targets must must pass an Systems save or become Jammed until the end of their next turn.</li><li>Flare: Targets lose Hide or Invisible and cannot gain those statuses until the end of their next turn.</li><li>Impact: Targets must pass an Hull save or be knocked Prone.</li><li>Molten: Targets must pass an Engineering save or become Shredded until the end of their next turn.</li></ul>",
+    "effect": "This character can choose a special ammunition type before attacking with the Anti-Materiel Rifle. Attacks made with this ammunition are made at +1 DIFF, with an additional effect on a succesful attack. This character may choose one of the following:<ul><li>- Electromagnetic: Targets become Jammed until the end of their next turn unless they pass a Systems save.</li><li>- Flare: Targets lose Invisible and Hide and cannot gain either status until the end of their next turn.</li><li>- Impact: Targets are knocked Prone unless they pass a Hull save.</li><li>- Molten: Targets become Shredded until the end of their next turn unless they pass an Engineering save.</li></ul>",
     "tags": []
   },
   {
-    "id": "npcf_defensive_grapple_sniper",
+    "id": "npcf_defensive_grapple",
     "name": "DEFENSIVE GRAPPLE",
     "origin": {
       "type": "Class",
@@ -4527,7 +4527,7 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Sniper pulls themselves to any point within range 5 with a grappling hook as though they are flying. The Sniper also has the Relocation reaction.",
+    "effect": "This character may grapple to a point within 5 spaces, flying to their destination. Unlike normal flight, this movement does not ignore obstructions, but must still be in a straight line. If this movement is interrupted (such as from an Overwatch), it immediately ends and this character begins falling if they are not on solid ground. Additionally, this character gains the following Reaction: 1/round, Trigger: An enemy ends a movement within 5 spaces of this unit. Effect: This character may use Defensive Grapple.",
     "tags": [{
         "id": "tg_recharge",
         "val": 4
@@ -4542,28 +4542,7 @@
     "trigger": ""
   },
   {
-    "id": "npcf_relocation_sniper",
-    "name": "RELOCATION",
-    "origin": {
-      "type": "Class",
-      "name": "SNIPER",
-      "base": false
-    },
-    "locked": false,
-    "type": "Reaction",
-    "effect": "The Sniper uses Defensive Grapple.",
-    "tags": [{
-        "id": "tg_round",
-        "val": 1
-      },
-      {
-        "id": "tg_reaction"
-      }
-    ],
-    "trigger": "An enemy character in line of sight moves."
-  },
-  {
-    "id": "npcf_shroud_charge_sniper",
+    "id": "npcf_shroud_charge",
     "name": "SHROUD CHARGE",
     "origin": {
       "type": "Class",
@@ -4572,10 +4551,10 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Sniper sets off a charge, creating a Burst 3 area of smoke, haze, or some other kind of concealing shroud. The Sniper gains soft cover within the affected area, and characters other than the Sniper cannot draw line of sight into or out of the area. Characters partially within the area have line of sight to characters within and outside the area.<br>This effect lasts until the end of the Sniper’s next turn, or until the Sniper uses this system again.",
+    "effect": "This character creates a Burst 3 area of smoke, haze, or some other kind of concealing shroud. This character gains soft cover within the affected area, and characters other than it cannot draw line of sight into or out of the area. Characters partially within the area are unaffected. This effect lasts until the end of this unit's next turn, or until it uses this system again.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 5
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
@@ -4583,28 +4562,23 @@
     ]
   },
   {
-    "id": "npcf_moving_target_sniper",
-    "name": "MOVING TARGET",
+    "id": "npcf_smooth_loader",
+    "name": "SMOOTH LOADER",
     "origin": {
       "type": "Class",
       "name": "SNIPER",
       "base": false
     },
     "locked": false,
-    "type": "Reaction",
-    "effect": "The Sniper interrupts the movement. The character must either give up the triggering action/ movement, or be immediately attacked by the Sniper using the Anti-materiel Rifle. If the rifle isn’t loaded, the Sniper instead reloads it.",
+    "type": "Trait",
+    "effect": "Protocol, If this character did not move (including involuntary movement) since the beginning of its last turn, it may reload its Anti-Materiel Rifle.",
     "tags": [{
-        "id": "tg_round",
-        "val": 1
-      },
-      {
-        "id": "tg_reaction"
+        "id": "tg_protocol"
       }
-    ],
-    "trigger": "A character in line of sight and range 20 moves."
+    ]
   },
   {
-    "id": "npcf_deadmetal_rounds_sniper",
+    "id": "npcf_deadmetal_rounds",
     "name": "DEADMETAL ROUNDS",
     "origin": {
       "type": "Class",
@@ -4613,7 +4587,7 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Sniper loads the Anti-Materiel Rifle with a special, over-penetrating round: the next attack they make with it becomes line 20.",
+    "effect": "This character loads the Anti-Materiel Rifle with a special, over-penetrating round. The next attack they make with it becomes Line 20 and gains Arcing. If this character does not have line of sight to a character targeted by this attack, it treats that character as Invisible for the attack and the target gains resistance to any resulting damage.",
     "tags": [{
       "id": "tg_quick_action"
     }]
