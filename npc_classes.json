@@ -2713,6 +2713,106 @@
     "power": 100
   },
   {
+    "id": "npcc_stormwing",
+    "name": "STORMWING",
+    "role": "striker",
+    "info": {
+      "flavor": "",
+      "tactics": "Stormwings are quick, evasive skirmishers that dip in and out of the fray to pick apart softer targets. Their weapons struggle against armored targets, so they are most efficient when targeting characters that rely on evasion or positioning as their primary defensive tools."
+    },
+    "stats": {
+      "armor": [
+        1,
+        1,
+        1
+      ],
+      "hp": [
+        15,
+        15,
+        15
+      ],
+      "evade": [
+        10,
+        10,
+        10
+      ],
+      "edef": [
+        8,
+        8,
+        8
+      ],
+      "heatcap": [
+        6,
+        6,
+        6
+      ],
+      "speed": [
+        5,
+        5,
+        5
+      ],
+      "sensor": [
+        10,
+        10,
+        10
+      ],
+      "save": [
+        10,
+        10,
+        10
+      ],
+      "hull": [
+        -2,
+        -2,
+        -2
+      ],
+      "agility": [
+        3,
+        3,
+        3
+      ],
+      "systems": [
+        1,
+        1,
+        1
+      ],
+      "engineering": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "activations": [
+        1,
+        1,
+        1
+      ]
+    },
+    "base_features": [
+      "npcf_smg",
+      "npcf_flanker",
+      "npcf_thunderbolt_jumpjets",
+      "npcf_very_active_camo"
+    ],
+    "optional_features": [
+      "npcf_harpy_turbojets",
+      "npcf_full_spectrum_overload",
+      "npcf_reflex_heavy_pistol_system",
+      "npcf_shroud_charge"
+    ],
+    "power": 100
+  },
+  {
     "id": "npcc_witch",
     "name": "WITCH",
     "role": "controller",

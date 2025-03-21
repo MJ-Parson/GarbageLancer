@@ -4858,7 +4858,7 @@
     },
     "locked": false,
     "type": "Weapon",
-    "effect": "Aux Melee, Threat 1, 2 AP Kinetic damage, On hit: the target clears one Condition or Status, or ends the effect of a tech action on the target of the Support's choice. This effect always applies after damage and the Support must always choose an option if able.",
+    "effect": "",
     "tags": [
       {
         "id": "tg_ap"
@@ -4881,6 +4881,188 @@
     "range": [{
       "type": "Threat",
       "val": 1
+    }],
+    "on_hit": "The target clears one Condition or Status, or ends the effect of a tech action on the target of the Support's choice. This effect always applies after damage and the Support must always choose an option if able."
+  },
+  {
+    "id": "npcf_smg",
+    "name": "SMG",
+    "origin": {
+      "type": "Class",
+      "name": "STORMWING",
+      "base": true
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "This weapon does not suffer Difficulty from being fired while this character is Engaged.",
+    "tags": [
+      {
+        "id": "tg_reliable",
+        "val": 2
+      }
+    ],
+    "weapon_type": "Main CQB",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "Kinetic",
+      "damage": [
+        5,
+        5,
+        5
+      ]
+    }],
+    "range": [
+      {
+        "type": "Range",
+        "val": 5
+      },
+      {
+      "type": "Threat",
+      "val": 2
+      }
+  ],
+    "on_hit": ""
+  },
+  {
+    "id": "npcf_flanker",
+    "name": "FLANKER",
+    "origin": {
+      "type": "Class",
+      "name": "STORMWING",
+      "base": true
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "During its turn, this character gains +1 ACC on all attacks made against characters who treated this character as Invisible at the beginning of its turn or who did not have line of sight to it at the beginning of its turn.",
+    "tags": []
+  },
+  {
+    "id": "npcf_thunderbolt_jumpjets",
+    "name": "THUNDERBOLT JUMPJETS",
+    "origin": {
+      "type": "Class",
+      "name": "STORMWING",
+      "base": true
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "This character can fly when it Boosts, but must end its turn standing on a surface or it will fall. If it provokes attacks from reactions while Boosting, those attacks suffer +1 DIFF",
+    "tags": []
+  },
+  {
+    "id": "npcf_very_active_camo",
+    "name": "VERY ACTIVE CAMO",
+    "origin": {
+      "type": "Class",
+      "name": "STORMWING",
+      "base": true
+    },
+    "locked": false,
+    "type": "Tech",
+    "effect": "This character makes a tech attack against a character within Sensors. On a hit, the target treats this character as Invisible until the start of this character's next turn. This effect can trigger the Flanker trait.",
+    "tags": [
+      {
+        "id": "tg_quick_tech"
+      }
+    ],
+    "tech_type": "Quick",
+    "attack_bonus":[
+      1,
+      1,
+      1
+    ],
+    "accuracy":[
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "npcf_harpy_turbojets",
+    "name": "HARPY TURBOJETS",
+    "origin": {
+      "type": "Class",
+      "name": "STORMWING",
+      "base": false
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "When this character Boosts, it may use this system to double its speed for that boost.",
+    "tags": [{
+      "id": "tg_heat_self",
+      "val": 3
+    }]
+  },
+  {
+    "id": "npcf_full_spectrum_overload",
+    "name": "FULL-SPECTRUM OVERLOAD",
+    "origin": {
+      "type": "Class",
+      "name": "STORMWING",
+      "base": false
+    },
+    "locked": false,
+    "type": "Tech",
+    "effect": "This character makes a tech attack against a character within Sensors. On a hit, the target takes 2 heat and loses the ability to make reactions until the end of its next turn.",
+    "tags": [
+      {
+        "id": "tg_quick_tech"
+      }
+    ],
+    "tech_type": "Quick",
+    "attack_bonus":[
+      1,
+      1,
+      1
+    ],
+    "accuracy":[
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "npcf_reflex_heavy_pistol_system",
+    "name": "REFLEX HEAVY PISTOL SYSTEM",
+    "origin": {
+      "type": "Class",
+      "name": "STORMWING",
+      "base": false
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "When this character Skirmishes with its SMG, it can also make an attack with this weapon.",
+    "tags": [
+      {
+        "id": "tg_knockback",
+        "val": 1
+      }
+    ],
+    "weapon_type": "Main CQB",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "Kinetic",
+      "damage": [
+        2,
+        2,
+        2
+      ]
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 5
+    },
+    {
+    "type": "Threat",
+    "val": 2
     }],
     "on_hit": ""
   },
