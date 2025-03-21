@@ -1721,7 +1721,7 @@
     "role": "defender",
     "info": {
       "flavor": "",
-      "tactics": "Pyros are slow, tough, and threatening defenders that interfere with ranged attacks coming in from a specific direction. They are quite threatening up close, so they serve largely as a deterrent to ingress on their position, although they lack tools that interefere with player movement."
+      "tactics": "Pyros are slow, tough, and threatening defenders that interfere with ranged attacks with their Firebreak Shield once they entrench in a position. They are quite threatening up close, so they serve largely as a deterrent to ingress on their position, although they lack tools that interefere with player movement and are quite susceptible to player abilities that upset their positioning."
     },
     "stats": {
       "armor": [
@@ -1820,8 +1820,8 @@
     "name": "RAINMAKER",
     "role": "artillery",
     "info": {
-      "flavor": "The tongue-in-cheek “Rainmaker” nickname describes mechs and pilots that specialize in the use of rockets and missiles. Favored by flexible combat units, Rainmakers are mobile platforms loaded with ordnance and capable of handling engagements at any range, against any target.",
-      "tactics": "Rainmakers are one part artillery and one part controller. Their Javelin Rockets force characters to avoid certain areas or take guaranteed damage. They can also dish out delayed damage through optional systems like Hound Missiles and Atlas Missiles. Like other artillery mechs, Rainmakers are relatively vulnerable on their own."
+      "flavor": "",
+      "tactics": "Rainmakers are more precise area-denial artillery pieces than Bombards, featuring the ability to mark spaces that punish characters for moving into them or remaining close enough to be knocked back into them on their following turn. Their limited speed and defensive options make them vulnerable to counter-artillery and aggressive enemy strikers."
     },
     "stats": {
       "armor": [
@@ -1831,23 +1831,23 @@
       ],
       "hp": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "evade": [
         8,
-        10,
-        12
+        8,
+        8
       ],
       "edef": [
         8,
-        10,
-        12
-      ],
-      "heatcap": [
-        8,
         8,
         8
+      ],
+      "heatcap": [
+        6,
+        6,
+        6
       ],
       "speed": [
         3,
@@ -1861,8 +1861,8 @@
       ],
       "save": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "hull": [
         0,
@@ -1871,18 +1871,18 @@
       ],
       "agility": [
         0,
-        1,
-        1
+        0,
+        0
       ],
       "systems": [
         2,
-        3,
-        3
+        2,
+        2
       ],
       "engineering": [
         0,
         0,
-        1
+        0
       ],
       "size": [
         [
@@ -1902,16 +1902,14 @@
       ]
     },
     "base_features": [
-      "npcf_missile_pods_rainmaker",
-      "npcf_javelin_rockets_rainmaker",
-      "npcf_huntsman_rainmaker"
+      "npcf_missile_pods",
+      "npcf_delayed_blasts",
+      "npcf_huntsman",
+      "npcf_hades_missiles"
     ],
     "optional_features": [
-      "npcf_hades_missiles_rainmaker",
       "npcf_hound_missiles_rainmaker",
-      "npcf_endless_rain_rainmaker",
-      "npcf_volley_rainmaker",
-      "npcf_atlas_missiles_rainmaker"
+      "npcf_endless_rain_rainmaker"
     ],
     "power": 100
   },

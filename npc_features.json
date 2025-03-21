@@ -3549,7 +3549,7 @@
     ]
   },
   {
-    "id": "npcf_missile_pods_rainmaker",
+    "id": "npcf_missile_pods",
     "name": "MISSILE PODS",
     "origin": {
       "type": "Class",
@@ -3558,31 +3558,30 @@
     },
     "locked": false,
     "type": "Weapon",
-    "effect": "This weapon can attack 1-3 characters at a time.",
+    "effect": "",
     "tags": [{
         "id": "tg_arcing"
       },
       {
-        "id": "tg_reliable",
-        "val": "{2/3/3}"
-      },
-      {
         "id": "tg_knockback",
         "val": 1
+      },
+      {
+        "id": "tg_ordnance"
       }
     ],
     "weapon_type": "Main Launcher",
     "attack_bonus": [
       2,
-      4,
-      6
+      2,
+      2
     ],
     "damage": [{
       "type": "Explosive",
       "damage": [
         4,
-        5,
-        6
+        4,
+        4
       ]
     }],
     "range": [{
@@ -3592,8 +3591,8 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_javelin_rockets_rainmaker",
-    "name": "JAVELIN ROCKETS",
+    "id": "npcf_delayed_blasts",
+    "name": "DELAYED BLASTS",
     "origin": {
       "type": "Class",
       "name": "RAINMAKER",
@@ -3601,13 +3600,13 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Rainmaker chooses 3 free spaces within line of sight and range 20 that are not adjacent to each other. All characters know which spaces have been chosen. The Rainmaker fires a volley of auto-targeting rockets into the air: the next time a hostile character moves through, starts their turn in, or passes above one of the chosen spaces – no more than 10 spaces up – they are hit by a rocket, taking {5/6/7} kinetic damage. Each space can only be triggered once.<br>This effect lasts until the start of the Rainmaker’s next turn.",
+    "effect": "This character chooses 3 free spaces within line of sight and range 20 that are not adjacent to each other. The next time a character moves through or passes above one of the chosen spaces, they take 5 Explosive damage. Each space can only be triggered once and lasts until the end of this character's next turn or until it is destroyed.",
     "tags": [{
       "id": "tg_quick_action"
     }]
   },
   {
-    "id": "npcf_huntsman_rainmaker",
+    "id": "npcf_huntsman",
     "name": "HUNTSMAN",
     "origin": {
       "type": "Class",
@@ -3616,11 +3615,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Against characters with Lock On, the Rainmaker’s weapons gain Smart, Seeking, and AP.",
+    "effect": "When consuming Lock On, this character's weapons gain Smart, Seeking, and Armor-Piercing",
     "tags": []
   },
   {
-    "id": "npcf_hades_missiles_rainmaker",
+    "id": "npcf_hades_missiles",
     "name": "HADES MISSILES",
     "origin": {
       "type": "Class",
@@ -3629,10 +3628,10 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "All characters in a Cone 3 area starting within range 20 of the Rainmaker take {4/6/8} Energy damage and 2 heat, half if they pass an Agility save. This system doesn’t need line of sight, just a possible route to the target.",
+    "effect": "This character chooses a free Blast 1 area within line of sight and range 20. That area becomes Dangerous Terrain dealing Burn until the end of the scene.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 5
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
@@ -3640,7 +3639,7 @@
     ]
   },
   {
-    "id": "npcf_hound_missiles_rainmaker",
+    "id": "npcf_hound_missiles",
     "name": "HOUND MISSILES",
     "origin": {
       "type": "Class",
@@ -3649,13 +3648,13 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "Hound Missile (Size 1/2, HP {10/15/20}, Evasion 10, E-Defense 10, Tags: Drone).<br>The Rainmaker deploys the Hound Missile in an adjacent space and picks a target in range 20 and line of sight. At the start of the Rainmaker’s turns the missile flies 3 spaces towards its target, 6 if the target has Lock On. It moves directly, maneuvering round cover and terrain if needed. When it collides with a character or reaches its target, it creates a Burst 1 explosion. Characters in the affected area take {16/20/24} Energy damage, half if they pass an Agility save.",
+    "effect": "Size 1/2, HP 10, Evasion 10, E-Defense 10, This character deploys a Hound Missile in an adjacent space and picks a target within range 20 and line of sight. At the start of this character's turn, the missile flies 3 spaces toward its target, or 6 spaces if they have Lock On. It moves as directly as possible, but maneuvers around cover and terrain if needed. When it collides with a character or reaches its target, it creates a Burst 1 explosion. Characters in the affected area take 16 Energy damage or half on a successful Agility save.",
     "tags": [{
         "id": "tg_drone"
       },
       {
-        "id": "tg_recharge",
-        "val": 6
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
@@ -3663,7 +3662,7 @@
     ]
   },
   {
-    "id": "npcf_endless_rain_rainmaker",
+    "id": "npcf_endless_rain",
     "name": "ENDLESS RAIN",
     "origin": {
       "type": "Class",
@@ -3672,48 +3671,8 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Rainmaker picks 6 spaces for Javelin Rockets, not 3.",
+    "effect": "This character picks 6 spaces for Delayed Blasts instead of 3.",
     "tags": []
-  },
-  {
-    "id": "npcf_volley_rainmaker",
-    "name": "VOLLEY",
-    "origin": {
-      "type": "Class",
-      "name": "RAINMAKER",
-      "base": false
-    },
-    "locked": false,
-    "type": "System",
-    "effect": "Pick characters in range 20 and line of sight. They take {4/6/8} Explosive damage, half if they pass an Agility save.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
-      {
-        "id": "tg_full_action"
-      }
-    ]
-  },
-  {
-    "id": "npcf_atlas_missiles_rainmaker",
-    "name": "ATLAS MISSILES",
-    "origin": {
-      "type": "Class",
-      "name": "RAINMAKER",
-      "base": false
-    },
-    "locked": false,
-    "type": "System",
-    "effect": "The Rainmaker chooses a space of ground in line of sight and Range 30, obvious to all characters with line of sight to the space. The Rainmaker launches a missile that lands at the end of the next round making a Blast 2 explosion; affected characters take {16/20/24} Explosive damage, half if they pass an Agility save.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 6
-      },
-      {
-        "id": "tg_full_action"
-      }
-    ]
   },
   {
     "id": "npcf_carbon_fiber_sword_ronin",
