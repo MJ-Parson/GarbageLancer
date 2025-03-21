@@ -2628,18 +2628,18 @@
       ],
       "hp": [
         15,
-        18,
-        22
+        15,
+        15
       ],
       "evade": [
         8,
-        10,
-        12
+        8,
+        8
       ],
       "edef": [
         8,
-        10,
-        12
+        8,
+        8
       ],
       "heatcap": [
         8,
@@ -2658,8 +2658,8 @@
       ],
       "save": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "hull": [
         1,
@@ -2668,18 +2668,18 @@
       ],
       "agility": [
         -2,
-        -1,
-        -1
+        -2,
+        -2
       ],
       "systems": [
-        0,
         1,
-        2
+        1,
+        1
       ],
       "engineering": [
         2,
-        4,
-        6
+        2,
+        2
       ],
       "size": [
         [
@@ -2699,16 +2699,16 @@
       ]
     },
     "base_features": [
-      "npcf_sealant_gun_support",
-      "npcf_restock_drone_support",
-      "npcf_nano_repair_cloud_support"
+      "npcf_sealant_gun",
+      "npcf_restock_drone",
+      "npcf_nano_repair_cloud",
+      "npcf_rideable_chassis"
     ],
     "optional_features": [
-      "npcf_remote_reboot_support",
-      "npcf_empowered_cloud_support",
-      "npcf_remote_cloud_support",
-      "npcf_defensive_pulse_support",
-      "npcf_latch_drone_support"
+      "npcf_surgery_suite",
+      "npcf_empowered_cloud",
+      "npcf_remote_cloud",
+      "npcf_energy_tether"
     ],
     "power": 100
   },

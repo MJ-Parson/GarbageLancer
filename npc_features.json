@@ -4095,7 +4095,7 @@
     "tags": []
   },
   {
-    "id": "npcf_lay_mines_seeder",
+    "id": "npcf_lay_mines",
     "name": "LAY MINES",
     "origin": {
       "type": "Class",
@@ -4104,7 +4104,7 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "<p>This character deploys a minefield into a free Blast 1 area centered within range 3. All characters are aware of this area. This minefield arms at the end of the current turn, and is immediately triggered when any character moves into any of its spaces for the first time. When triggered, the mines have one of the four following effects, determined when they are placed:</p> <p>- Stun Mine: Characters in the area must pass an Engineering save or become Stunned until the start of their next turn. </p> <p>- Explosive Mine: Characters in the area take 8 Explosive damage or half if they pass an Agility save. </p> <p>- Sealant Mine: Characters in the area must pass a Hull save or become Immobilized until the end of the their next turn, then Slowed until the end of their subsequent turn. If Immobilized is cleared by some other method, the target does not become Slowed.</p> <p>- Shock Mine: Characters in the area must pass a Systems save or become Jammed until the end of their next turn, then Impaired until the end of their subsequent turn. If Jammed is cleared by some other method, the target does not become Impaired. </p> <p> Minefields may be disarmed by making a Systems check as a Quick Action in an adjacent space or by making any attack with a Blast, Burst, Cone, or Line template that includes at least one space of the minefield, the latter of which immediately causes the minefield to detonate. </p> <p> Any system or trait that interacts with mines also interacts with this terrain.",
+    "effect": "This character deploys a minefield into a free Blast 1 area centered within range 3. All characters are aware of this area. This minefield arms at the end of the current turn, and is immediately triggered when any character moves into any of its spaces for the first time. When triggered, the mines have one of the four following effects, determined when they are placed:<ul><li> Stun Mine: Characters in the area must pass an Engineering save or become Stunned until the start of their next turn.</li><li> Explosive Mine: Characters in the area take 8 Explosive damage or half if they pass an Agility save.</li><li> Sealant Mine: Characters in the area must pass a Hull save or become Immobilized until the end of the their next turn, then Slowed until the end of their subsequent turn. If Immobilized is cleared by some other method, the target does not become Slowed.</li><li> Shock Mine: Characters in the area must pass a Systems save or become Jammed until the end of their next turn, then Impaired until the end of their subsequent turn. If Jammed is cleared by some other method, the target does not become Impaired.</li></ul><p> Minefields may be disarmed by making a Systems check as a Quick Action in an adjacent space or by making any attack with a Blast, Burst, Cone, or Line template that includes at least one space of the minefield, the latter of which immediately causes the minefield to detonate. </ Any system or trait that interacts with mines also interacts with this terrain.</p>",
     "tags": [{
         "id": "tg_mine"
       },
@@ -4514,7 +4514,7 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "This character can choose a special ammunition type before attacking with the Anti-Materiel Rifle. Attacks made with this ammunition are made at +1 DIFF, with an additional effect on a succesful attack. This character may choose one of the following:<ul><li>- Electromagnetic: Targets become Jammed until the end of their next turn unless they pass a Systems save.</li><li>- Flare: Targets lose Invisible and Hide and cannot gain either status until the end of their next turn.</li><li>- Impact: Targets are knocked Prone unless they pass a Hull save.</li><li>- Molten: Targets become Shredded until the end of their next turn unless they pass an Engineering save.</li></ul>",
+    "effect": "This character can choose a special ammunition type before attacking with the Anti-Materiel Rifle. Attacks made with this ammunition are made at +1 DIFF, with an additional effect on a succesful attack. This character may choose one of the following:<ul><li> Electromagnetic: Targets become Jammed until the end of their next turn unless they pass a Systems save.</li><li> Flare: Targets lose Invisible and Hide and cannot gain either status until the end of their next turn.</li><li> Impact: Targets are knocked Prone unless they pass a Hull save.</li><li> Molten: Targets become Shredded until the end of their next turn unless they pass an Engineering save.</li></ul>",
     "tags": []
   },
   {
@@ -4715,7 +4715,7 @@
     "tags": []
   },
   {
-    "id": "npcf_sealant_gun_support",
+    "id": "npcf_sealant_gun",
     "name": "SEALANT GUN",
     "origin": {
       "type": "Class",
@@ -4724,13 +4724,13 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Support chooses a character within line of sight and Range 5, allied or hostile:<ul><li>Allied: The target clears all Burn, but becomes Slowed until the end of their next turn.</li><li>Hostile: The target must succeed on an Agility save or become Slowed until the end of their next turn. Succeed or fail, a Burst 1 area around them becomes difficult terrain for the rest of the scene.</li></ul>",
+    "effect": "This character targets a character within range 5 and line of sight:<ul><li> Allied: The target clears all Burn, but becomes Slowed until the end of their next turn.</li><li> Hostile: The target is Slowed unless they pass an Agility save. A Burst 1 area around the target becomes difficult terrain until the end of the scene.</li></ul>",
     "tags": [{
       "id": "tg_quick_action"
     }]
   },
   {
-    "id": "npcf_restock_drone_support",
+    "id": "npcf_restock_drone",
     "name": "RESTOCK DRONE",
     "origin": {
       "type": "Class",
@@ -4739,13 +4739,13 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "Restock Drone (Size 1/2, HP {5/8/10}, Evasion {10/12/14}, E-Defense {10/12/14}, Tags: Drone)<br>This drone can be deployed hovering in a space within range 5. The next time an allied character moves through or next to the drone, it clamps on and discharges its reserves, letting them regain {5/10/15} HP.",
+    "effect": "Restock Drone (Size 0.5, 5 HP, 10 Evasion, 10 E-Def) This drone can be deployed hovering to a free space within range 5. The next time an allied character moves through or next to the drone, it clamps on and discharges its reserves, letting that ally regain 5 HP and destroying the drone. If the target's HP would go over its maximum, it gains the difference as Overshield.",
     "tags": [{
         "id": "tg_drone"
       },
       {
-        "id": "tg_recharge",
-        "val": 5
+        "id": "tg_turn",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
@@ -4753,7 +4753,7 @@
     ]
   },
   {
-    "id": "npcf_nano_repair_cloud_support",
+    "id": "npcf_nano_repair_cloud",
     "name": "NANO-REPAIR CLOUD",
     "origin": {
       "type": "Class",
@@ -4762,31 +4762,28 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "While they are adjacent to the Support, allied characters roll twice on all saves and mech skill checks and choose the higher result.",
+    "effect": "While adjacent to this unit, allies roll twice on all saves and mech skill checks and choose either result.",
     "tags": []
   },
   {
-    "id": "npcf_remote_reboot_support",
-    "name": "REMOTE REBOOT",
+    "id": "npcf_rideable_chassis",
+    "name": "RIDEABLE CHASSIS",
     "origin": {
       "type": "Class",
       "name": "SUPPORT",
-      "base": false
+      "base": true
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Support clears any two of the following conditions currently affecting an allied character in range 5: Impaired, Jammed, Stunned, and Slowed.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 6
-      },
+    "effect": "This character places a smaller, adjacent, allied character onto its back. The ally shares this unit's space, mirrors this unit's movement (this movement does not provoke reactions), and the ally may end this effect by moving off of the chassis as part of any movement, placing themselves in an adjacent space first. If either character is knocked Prone, Stunned, Immobilized, or destroyed, the rider lands Prone in an adjacent space, ending the effect.",
+    "tags": [
       {
-        "id": "tg_full_action"
+        "id": "tg_quick_action"
       }
     ]
   },
   {
-    "id": "npcf_empowered_cloud_support",
+    "id": "npcf_empowered_cloud",
     "name": "EMPOWERED CLOUD",
     "origin": {
       "type": "Class",
@@ -4799,7 +4796,7 @@
     "tags": []
   },
   {
-    "id": "npcf_remote_cloud_support",
+    "id": "npcf_remote_cloud",
     "name": "REMOTE CLOUD",
     "origin": {
       "type": "Class",
@@ -4808,53 +4805,84 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Support releases a Blast 2 nanite cloud within range 5. Allied characters that start their turn in the area or move into it for the first time on their turn regain {2/4/6} HP. The cloud disperses at the start of the Support’s next turn.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 6
-      },
+    "effect": "Full Action, This character releases a Blast 2 nanite cloud within range 5. Allied characters that start their turn in the area or move into it for the first time on their turn regain 2 HP. This cloud lasts until the beginning of this unit's next turn.",
+    "tags": [
       {
         "id": "tg_full_action"
       }
     ]
   },
   {
-    "id": "npcf_defensive_pulse_support",
-    "name": "DEFENSIVE PULSE",
+    "id": "npcf_energy_tether",
+    "name": "ENERGY TETHER",
     "origin": {
       "type": "Class",
       "name": "SUPPORT",
       "base": false
     },
     "locked": false,
-    "type": "System",
-    "effect": "All allied characters within range 3 clear Jammed and<br>Lock On.",
-    "tags": [{
-      "id": "tg_full_action"
-    }]
+    "type": "Weapon",
+    "effect": "If this weapon is used to target an ally, it automatically hits, and, instead of dealing any damage, creates a tethered link to that character, causing them to gain 3 overshield. At the start of this unit's turn, that character gains another 3 overshield (this overshield does not stack). If the target is no longer within range 10 or line of sight at the end of any turn, the tether is broken.",
+    "tags": [
+      {
+        "id": "tg_ap"
+      }
+    ],
+    "weapon_type": "Main Rifle",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "Energy",
+      "damage": [
+        2,
+        2,
+        2
+      ]
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 10
+    }],
+    "on_hit": ""
   },
   {
-    "id": "npcf_latch_drone_support",
-    "name": "LATCH DRONE",
+    "id": "npcf_surgery_suite",
+    "name": "SURGERY SUITE",
     "origin": {
       "type": "Class",
       "name": "SUPPORT",
       "base": false
     },
     "locked": false,
-    "type": "System",
-    "effect": "Latch Drone (Size 1/2, HP {5/10/15}, Evasion 10, E-Defense 10, Tags: Drone)<br>This self-deploying drone clamps onto a character within Range 3, occupying the same space and moving with them. While the drone is attached, the target regains {5/8/10} HP at the start of each of their turns and gains +1 Accuracy on all checks, saves, and attacks. Enemies can target the drone with attacks.",
-    "tags": [{
-        "id": "tg_drone"
-      },
+    "type": "Weapon",
+    "effect": "Aux Melee, Threat 1, 2 AP Kinetic damage, On hit: the target clears one Condition or Status, or ends the effect of a tech action on the target of the Support's choice. This effect always applies after damage and the Support must always choose an option if able.",
+    "tags": [
       {
-        "id": "tg_recharge",
-        "val": 6
-      },
-      {
-        "id": "tg_full_action"
+        "id": "tg_ap"
       }
-    ]
+    ],
+    "weapon_type": "Auxiliary Melee",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "Kinetic",
+      "damage": [
+        2,
+        2,
+        2
+      ]
+    }],
+    "range": [{
+      "type": "Threat",
+      "val": 1
+    }],
+    "on_hit": ""
   },
   {
     "id": "npcf_tear_down_witch",
