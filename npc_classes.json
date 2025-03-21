@@ -2518,8 +2518,8 @@
     "name": "SPECTER",
     "role": "striker",
     "info": {
-      "flavor": "The principle behind the development of Specter-archetype mechs is a simple one: not being hit is better than the strongest armor. Specters employ cutting-edge optical-electronic camouflage to vanish from the battlefield and enemy scans. They flicker in and out of vision, confusing the eye and the radar. That’s what makes them so deadly, though their weapons certainly help.",
-      "tactics": "Specters are mobile strikers that shine against foes that make the mistake of being caught alone. Use Prowl along with their high Threat and Speed to get them across the front lines so they can find vulnerable solo targets, like snipers and artillery. Specters are permanently Invisible, which is key to their survivability; they aren’t very resilient, but they can Hide any time."
+      "flavor": "",
+      "tactics": "Specters are mobile strikers that shine against foes that make the mistake of being caught alone. Their survivability is very contingent on them remaining Invisible and Hidden, so they will do their best to stay clear of any allies that may disrupt their Tactical Cloak, and will need to choose their targets carefully to benefit from their Hunt trait."
     },
     "stats": {
       "armor": [
@@ -2534,33 +2534,33 @@
       ],
       "evade": [
         10,
-        14,
-        18
+        10,
+        10
       ],
       "edef": [
         8,
-        10,
-        12
+        8,
+        8
       ],
       "heatcap": [
-        7,
-        7,
-        7
-      ],
-      "speed": [
-        4,
-        5,
-        7
-      ],
-      "sensor": [
         5,
         5,
         5
       ],
+      "speed": [
+        5,
+        5,
+        5
+      ],
+      "sensor": [
+        10,
+        10,
+        10
+      ],
       "save": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "hull": [
         -2,
@@ -2569,18 +2569,18 @@
       ],
       "agility": [
         3,
-        5,
-        6
+        3,
+        3
       ],
       "systems": [
         1,
-        2,
-        3
+        1,
+        1
       ],
       "engineering": [
         0,
-        1,
-        1
+        0,
+        0
       ],
       "size": [
         [
@@ -2600,17 +2600,15 @@
       ]
     },
     "base_features": [
-      "npcf_monowire_sword_specter",
-      "npcf_prowl_specter",
-      "npcf_tactical_cloak_specter",
-      "npcf_hunt_specter"
+      "npcf_monowire_sword",
+      "npcf_tactical_cloak",
+      "npcf_hunt"
     ],
     "optional_features": [
-      "npcf_fortress_specter",
-      "npcf_drain_systems_specter",
-      "npcf_step_specter",
-      "npcf_machine_pistol_specter",
-      "npcf_weakness_analyzer_specter"
+      "npcf_stalk",
+      "npcf_what_was_that?",
+      "npcf_must've_been_the_wind",
+      "npcf_weakness_analyzer"
     ],
     "power": 100
   },
