@@ -5402,8 +5402,8 @@
     "tags": []
   },
   {
-    "id": "npcf_tear_down_witch",
-    "name": "TEAR DOWN",
+    "id": "npcf_fugue_state",
+    "name": "FUGUE STATE",
     "origin": {
       "type": "Class",
       "name": "WITCH",
@@ -5411,33 +5411,171 @@
     },
     "locked": false,
     "type": "Tech",
-    "effect": "The Witch makes a tech attack against a character within Sensors. On a success, the target takes {1/2/3} heat immediately and then a further 4 Heat at the start of the Witch’s next turn.",
+    "effect": "This character makes a tech attack against a character within Sensors. On a hit, the target expends its reaction to move its Speed in a direction of this character's choice. The target may ignore this effect, but take 3 Heat and becomes Slowed and unable to take reactions until the end of their next turn.",
     "tags": [{
       "id": "tg_quick_tech"
     }],
     "tech_type": "Quick",
     "attack_bonus": [
-      2,
-      4,
-      6
-    ],
-    "accuracy": [
       1,
       1,
       1
+    ],
+    "accuracy": [
+      0,
+      0,
+      0
     ]
   },
   {
-    "id": "npcf_blind_witch",
-    "name": "BLIND",
+    "id": "npcf_blur",
+    "name": "BLUR",
     "origin": {
       "type": "Class",
       "name": "WITCH",
       "base": true
     },
     "locked": false,
+    "type": "Trait",
+    "effect": "This character is Invisible during their turn.",
+    "tags": []
+  },
+  {
+    "id": "npcf_radiative_thanatocode",
+    "name": "RADIATIVE THANATOCODE",
+    "origin": {
+      "type": "Class",
+      "name": "WITCH",
+      "base": true
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "When this character is destroyed, it creats a Burst 2 area centered around itself that persists until the end of the scene. This area is treated as Dangerous Terrain that deals Heat instead of damage.",
+    "tags": []
+  },
+  {
+    "id": "npcf_heat_spike",
+    "name": "HEAT SPIKE",
+    "origin": {
+      "type": "Class",
+      "name": "WITCH",
+      "base": true
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "This weapon cannot deal bonus damage.",
+    "tags": [],
+    "weapon_type": "Main Melee",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "Heat",
+      "damage": [
+        3,
+        3,
+        3
+      ]
+    }],
+    "range": [
+    {
+      "type": "Threat",
+      "val": 1
+    }
+  ]
+},
+  {
+    "id": "npcf_tear_down",
+    "name": "TEAR DOWN",
+    "origin": {
+      "type": "Class",
+      "name": "WITCH",
+      "base": false
+    },
+    "locked": false,
     "type": "Tech",
-    "effect": "The Witch makes a tech attack against a character within Sensors. On a success, the target only has line of sight to adjacent spaces until the end of their next turn.",
+    "effect": "This character makes a tech attack against a character in Sensors. On a hit, the target's reactor is cursed, represented by a d6 starting at 1, and increasing by 1 each time the target takes heat from any source, up to a maximum of 6; if the target already has this curse from any source, they instead take 1 heat. At the end of each of the target's turns, they take heat equal to the value of the curse d6. This effect ends if the target's heat is reduced to 0 by any effect or if this character is destroyed.",
+    "tags": [{
+      "id": "tg_quick_tech"
+    }],
+    "tech_type": "Quick",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "accuracy": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "npcf_spread_suffering",
+    "name": "SPREAD SUFFERING",
+    "origin": {
+      "type": "Class",
+      "name": "WITCH",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "1/round when this character uses a Quick tech or Full tech, they can repeat the option they chose as a free action targeting any character adjacent to the original target. The new target must still be a valid target for this action (e.g. Line of Sight, Sensors, etc).",
+    "tags": [{
+        "id": "tg_round",
+        "val": 1
+      },
+      {
+        "id": "tg_free_action"
+      }
+    ]
+  },
+  {
+    "id": "npcf_inductive_talons",
+    "name": "INDUCTIVE TALONS",
+    "origin": {
+      "type": "Class",
+      "name": "WITCH",
+      "base": false
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "This weapon deals +4 bonus damage against Exposed targets.",
+    "tags": [],
+    "weapon_type": "Main Melee",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "Kinetic",
+      "damage": [
+        4,
+        4,
+        4
+      ]
+    }],
+    "range": [
+    {
+      "type": "Threat",
+      "val": 1
+    }
+  ]
+},
+  {
+    "id": "npcf_blind",
+    "name": "BLIND",
+    "origin": {
+      "type": "Class",
+      "name": "HAG",
+      "base": true
+    },
+    "locked": false,
+    "type": "Tech",
+    "effect": "This character makes a tech attack against a character within Sensors. On a hit, the target can only draw line of sight to adjacent spaces until the end of their next turn.",
     "tags": [{
         "id": "tg_quick_tech"
       },
@@ -5449,159 +5587,155 @@
     "tech_type": "Quick",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "accuracy": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "npcf_predatory_logic",
+    "name": "PREDATORY LOGIC",
+    "origin": {
+      "type": "Class",
+      "name": "HAG",
+      "base": true
+    },
+    "locked": false,
+    "type": "Tech",
+    "effect": "This character makes a tech attack against a character in Sensors. On a hit, the target uses its reaction to use a non-Superheavy, non-Ordnance weapon chosen by this character to attack a valid character of this character's choice.",
+    "tags": [{
+        "id": "tg_quick_tech"
+      },
+      {
+        "id": "tg_limited",
+        "val": 1
+      }
+    ],
+    "tech_type": "Quick",
+    "attack_bonus": [
       1,
       1,
       1
     ]
   },
   {
-    "id": "npcf_predatory_logic_witch",
-    "name": "PREDATORY LOGIC",
-    "origin": {
-      "type": "Class",
-      "name": "WITCH",
-      "base": true
-    },
-    "locked": false,
-    "type": "Tech",
-    "effect": "The Witch makes a tech attack against a character within Sensors. On a success, the target immediately and as a reaction uses a weapon chosen by the Witch to attack a character within Range chosen by the Witch.",
-    "tags": [{
-        "id": "tg_quick_tech"
-      },
-      {
-        "id": "tg_recharge",
-        "val": 6
-      }
-    ],
-    "tech_type": "Quick",
-    "attack_bonus": [
-      2,
-      4,
-      6
-    ]
-  },
-  {
-    "id": "npcf_blur_witch",
-    "name": "BLUR",
-    "origin": {
-      "type": "Class",
-      "name": "WITCH",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "During the Witch’s turn, they are Invisible.",
-    "tags": []
-  },
-  {
-    "id": "npcf_spread_suffering_witch",
-    "name": "SPREAD SUFFERING",
-    "origin": {
-      "type": "Class",
-      "name": "WITCH",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "1/round, when the Witch uses Quick Tech or Full Tech, they can repeat the option they chose as a free action targeting any character adjacent to the primary target.",
-    "tags": [{
-        "id": "tg_round",
-        "val": 1
-      },
-      {
-        "id": "tg_free_action"
-      }
-    ]
-  },
-  {
-    "id": "npcf_dark_cloud_witch",
-    "name": "DARK CLOUD",
-    "origin": {
-      "type": "Class",
-      "name": "WITCH",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The additional heat dealt by Tear Down on the Witch’s next turn increases to 7 heat if the target is in the Danger Zone.",
-    "tags": []
-  },
-  {
     "id": "npcf_chain_witch",
     "name": "CHAIN",
     "origin": {
       "type": "Class",
-      "name": "WITCH",
-      "base": false
+      "name": "HAG",
+      "base": true
     },
     "locked": false,
     "type": "Tech",
-    "effect": "The Witch makes a tech attack against a character within Sensors. On a hit, the Witch chains their target’s systems to a space within range 3 of the target. If the target moves more than 3 spaces from that point (voluntarily or otherwise), they take {2/3/4} Heat and become Jammed until the end of their next turn, but the effect ends. Otherwise, they are chained until the Witch is destroyed or Stunned, or for the rest of the scene.",
+    "effect": "This character makes a tech attack against a character within Sensors. On a hit, the target's space is marked until the end of their next turn, at which point this effect ends. If they move further than 4 spaces away from that space before then, they become Jammed until the end of their next turn.",
     "tags": [{
       "id": "tg_quick_tech"
     }],
     "tech_type": "Quick",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ]
   },
   {
-    "id": "npcf_petrify_witch",
+    "id": "npcf_petrify",
     "name": "PETRIFY",
     "origin": {
       "type": "Class",
-      "name": "WITCH",
+      "name": "HAG",
       "base": false
     },
     "locked": false,
     "type": "Tech",
-    "effect": "The Witch makes a tech attack against a character within Sensors. On a success, the target becomes Slowed. On their next turn, they also become Immobilized. On their following turn, they also become Stunned. All conditions end at the end of that turn.",
+    "effect": "This character makes a tech attack against a character within Sensors. On a hit, the target becomes Slowed until the of the their next turn. At the start of their next turn, if they are still Slowed, they become Immbolized until the end of their next turn. On their following turn, if they are still Immobilized, they also become Stunned until the end of the current turn.",
     "tags": [{
         "id": "tg_full_tech"
       },
       {
-        "id": "tg_recharge",
-        "val": 6
+        "id": "tg_limited",
+        "val": 1
       }
     ],
     "tech_type": "Full",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ]
   },
   {
-    "id": "npcf_pain_transference_witch",
+    "id": "npcf_pain_transference",
     "name": "PAIN TRANSFERENCE",
     "origin": {
       "type": "Class",
-      "name": "WITCH",
+      "name": "HAG",
       "base": false
     },
     "locked": false,
     "type": "Tech",
-    "effect": "The Witch makes a tech attack against a character within Sensors. On a success, any time the target gains heat until the end of the Witch’s next turn, all of their allied characters within range 5 also gain the same amount of heat.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
+    "effect": "This character makes a tech attack against a character within Sensors. On a hit, the target is infected with a contagious virus until the end of the scene or until they pass a Systems save as a Quick Action. While affected this way any time the target takes heat, all allied characters within Range 5 take half that amount of heat as well.",
+    "tags": [
       {
         "id": "tg_quick_tech"
       }
     ],
     "tech_type": "Quick",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ]
+  },
+  {
+    "id": "npcf_paralytic_engram",
+    "name": "PARALYTIC ENGRAM",
+    "origin": {
+      "type": "Class",
+      "name": "HAG",
+      "base": false
+    },
+    "locked": false,
+    "type": "Tech",
+    "effect": "This character makes a tech attack against a character in Sensors. On a hit, the target is Immobilized until the end of their next turn. When the target clears Immobilized by any means, they must pass a Systems save or become Impaired and Slowed until the end of their next turn.",
+    "tags": [
+      {
+        "id": "tg_quick_tech"
+      },
+      {
+        "id": "tg_limited",
+        "val": 1
+      }
+    ],
+    "tech_type": "Quick",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "npcf_amygdala_spike",
+    "name": "AMYGDALA SPIKE",
+    "origin": {
+      "type": "Class",
+      "name": "HAG",
+      "base": false
+    },
+    "locked": false,
+    "type": "Tech",
+    "effect": "All hostile characters within a Burst 2 area must pass a Systems save or immediately use their reaction to move a distance equal to their Speed as far away from this character as possible. This movement provokes reactions.",
+    "tags": [
+      {
+        "id": "tg_quick_tech"
+      }
+    ],
+    "tech_type": "Quick"
   },
   {
     "id": "npcf_ranged_weapon_human",

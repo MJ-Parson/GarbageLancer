@@ -2922,10 +2922,10 @@
   {
     "id": "npcc_witch",
     "name": "WITCH",
-    "role": "controller",
+    "role": "striker",
     "info": {
-      "flavor": "Witch-archetype chassis can always be found in the eye of a systemic storm, where they are adept at generating realspace and legionspace terrors to blanket battlefields. At any given time, they are likely to be operating in both the physical battlefield and the tempest of the omninet. To handle the chaotic swirl of inputs and outputs that results from this split perception, Witches often pair with personality-clone NHPs, splitting tasks along parallel tracks to increase combat efficacy.",
-      "tactics": "Witches are no-nonsense controllers that use Tear Down to inflict heat and Blind to shut down ranged attackers. Predatory Logic gives them a tool to use against characters with heavy weapons, which can also aid their allies. Targets generally have an opportunity to mitigate their heat somewhat, since Witches deal most of their heat on their next turn."
+      "flavor": "",
+      "tactics": "Witches are heat-based strikers that pressure players to carefully mind their heat caps while it is on the field. While relatively fragile for a striker, they are fast and benefit from Invisibility on their turn, allowing them to slip in and threaten to expose players who tread too close to their heatcap, as they can deal a staggering burst of heat if they get into melee and can trigger their Overwatch with Fugue State on the same turn."
     },
     "stats": {
       "armor": [
@@ -2934,7 +2934,7 @@
         0
       ],
       "hp": [
-        12,
+        14,
         14,
         14
       ],
@@ -2949,56 +2949,53 @@
         20
       ],
       "heatcap": [
-        8,
-        8,
-        8
+        5,
+        5,
+        5
       ],
       "speed": [
-        6,
-        6,
-        6
+        5,
+        5,
+        5
       ],
       "sensor": [
-        15,
-        15,
-        20
+        10,
+        10,
+        10
       ],
       "save": [
         12,
-        15,
-        18
+        12,
+        12
       ],
       "hull": [
         -2,
-        -1,
+        -2,
         -2
       ],
       "agility": [
         1,
-        2,
-        3
+        1,
+        1
       ],
       "systems": [
         3,
-        5,
-        6
+        3,
+        3
       ],
       "engineering": [
-        0,
-        0,
-        0
+        -2,
+        -2,
+        -2
       ],
       "size": [
         [
-          0.5,
           1
         ],
         [
-          0.5,
           1
         ],
         [
-          0.5,
           1
         ]
       ],
@@ -3009,17 +3006,114 @@
       ]
     },
     "base_features": [
-      "npcf_tear_down_witch",
-      "npcf_blind_witch",
-      "npcf_predatory_logic_witch",
-      "npcf_blur_witch"
+      "npcf_heat_spike",
+      "npcf_fugue_state",
+      "npcf_blur",
+      "npcf_radiative_thanatocode"
     ],
     "optional_features": [
-      "npcf_spread_suffering_witch",
-      "npcf_dark_cloud_witch",
-      "npcf_chain_witch",
-      "npcf_petrify_witch",
-      "npcf_pain_transference_witch"
+      "npcf_tear_down",
+      "npcf_spread_suffering",
+      "npcf_inductive_talons"
+    ],
+    "power": 100
+  },
+  {
+    "id": "npcc_hag",
+    "name": "HAG",
+    "role": "controller",
+    "info": {
+      "flavor": "",
+      "tactics": "Hags are unorthodox controllers that utilize an array of peculiar tools to frustrate their enemies' turns, from ruining line of sight, to discharging loading weapons, to forcing players to choose between movement and attacking."
+    },
+    "stats": {
+      "armor": [
+        0,
+        0,
+        0
+      ],
+      "hp": [
+        12,
+        12,
+        12
+      ],
+      "evade": [
+        10,
+        10,
+        14
+      ],
+      "edef": [
+        13,
+        13,
+        13
+      ],
+      "heatcap": [
+        5,
+        5,
+        5
+      ],
+      "speed": [
+        5,
+        5,
+        5
+      ],
+      "sensor": [
+        15,
+        15,
+        15
+      ],
+      "save": [
+        12,
+        12,
+        12
+      ],
+      "hull": [
+        -2,
+        -2,
+        -2
+      ],
+      "agility": [
+        1,
+        1,
+        1
+      ],
+      "systems": [
+        3,
+        3,
+        3
+      ],
+      "engineering": [
+        -2,
+        -2,
+        -2
+      ],
+      "size": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "activations": [
+        1,
+        1,
+        1
+      ]
+    },
+    "base_features": [
+      "npcf_blind",
+      "npcf_predatory_logic",
+      "npcf_chain"
+    ],
+    "optional_features": [
+      "npcf_petrify",
+      "npcf_pain_transference",
+      "npcf_paralytic_engram",
+      "npcf_amygdala_spike"
     ],
     "power": 100
   },
