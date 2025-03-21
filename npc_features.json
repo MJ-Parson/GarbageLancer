@@ -4118,7 +4118,7 @@
     ]
   },
   {
-    "id": "npcf_grav_grenade_launcher_seeder",
+    "id": "npcf_grav_grenade_launcher",
     "name": "GRAV-GRENADE LAUNCHER",
     "origin": {
       "type": "Class",
@@ -4138,16 +4138,16 @@
     ],
     "weapon_type": "Main Launcher",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ],
     "damage": [{
       "type": "Explosive",
       "damage": [
         2,
-        3,
-        4
+        2,
+        2
       ]
     }],
     "range": [{
@@ -4162,7 +4162,20 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_hopping_mines_seeder",
+    "id": "npcf_skeleton_key",
+    "name": "SKELETON KEY",
+    "origin": {
+      "type": "Class",
+      "name": "SEEDER",
+      "base": true
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "This character does not trigger mines.",
+    "tags":[]
+  },
+  {
+    "id": "npcf_hopping_mines",
     "name": "HOPPING MINES",
     "origin": {
       "type": "Class",
@@ -4171,11 +4184,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Mines deployed with Lay Mines also activate when hostile characters fly or move up to 10 spaces above them, jumping up to 10 spaces high to detonate next to the first character they run into.",
+    "effect": "Minefields deployed with Lay Mines also trigger when a character flies up to 10 spaces above them. If they trigger this way, they do not detonate in their original location, but instead detonate in a Blast 1 centered on the triggering character.",
     "tags": []
   },
   {
-    "id": "npcf_tripwires_seeder",
+    "id": "npcf_tripwires",
     "name": "TRIPWIRES",
     "origin": {
       "type": "Class",
@@ -4184,11 +4197,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Lay Mines gains Recharge 5+. Mines deployed with Lay Mines now occupy a line3 area and detonate from the closest space when hostile characters move into or across the affected area.",
+    "effect": "This character may deploy minefields as a Line 4 instead of a Blast 1. All spaces of the area must still be free.",
     "tags": []
   },
   {
-    "id": "npcf_speed_deployer_seeder",
+    "id": "npcf_speed_deployer",
     "name": "SPEED DEPLOYER",
     "origin": {
       "type": "Class",
@@ -4197,11 +4210,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Lay Mines deploys two mines at a time, not one.",
+    "effect": "Lay Mines becomes 2/turn and restrictions on duplicate actions are ignored for activating it for a second time on a turn.",
     "tags": []
   },
   {
-    "id": "npcf_grav_spike_seeder",
+    "id": "npcf_grav_spike",
     "name": "GRAV SPIKE",
     "origin": {
       "type": "Class",
@@ -4210,7 +4223,7 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "A character within line of sight and range 5 must succeed on a Systems save, or a grav spike attaches itself to them. The Seeder can detonate all grav spikes as a protocol, causing targets to automatically take {4/6/8} AP Explosive damage and be pulled 3 spaces in a direction chosen by the Seeder. A quick action and passed Systems save removes a grav spike.",
+    "effect": "A character within range 5 must succeed on a Systems save or have a grav spike attack to them. This character can detonate all attached grav spikes as a protocol, causing targets to take 4 AP Explosive damage and be pulled 3 spaces in a direction chosen by this character. Affected characters may pass a Systems save as a Quick Action to remove all grav spikes.",
     "tags": [{
       "id": "tg_quick_action"
     }]
@@ -4225,15 +4238,31 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "Up to three characters in line of sight and range 5 must succeed on an Systems save, or a det spike attaches itself to them. At the start of the Seeder’s next turn, all det spikes detonate, creating Burst 1 explosions that deals {3/5/7} Explosive damage to all affected characters. Characters can take damage from more than one spike if the affected areas overlap.",
+    "effect": "Up to three characters within range 5 must succeed on a Systems save or have a det spike attach to them. At the start of this character's next turn, all det spikes detonate, creating Burst 1 explosions that deal 3 Explosive damage to all affected characters. Characters can take damage from more than one spike if the affected areas overlap. When this character reloads all weapons, they regain one use of this system.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 5
+        "id": "tg_limited",
+        "val": 1
+      },
+      {
+        "id": "tg_loading"
       },
       {
         "id": "tg_full_action"
       }
     ]
+  },
+  {
+    "id": "npcf_chaos_mines",
+    "name": "CHAOS MINES",
+    "origin": {
+      "type": "Class",
+      "name": "SEEDER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "The type of minefield deployed by Lay Mines is instead determined when they are triggered by rolling a d4 and using the respective entry in Lay Mines.",
+    "tags": []
   },
   {
     "id": "npcf_combat_shotgun_sentinel",

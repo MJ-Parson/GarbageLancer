@@ -2217,8 +2217,8 @@
     "name": "SEEDER",
     "role": "controller",
     "info": {
-      "flavor": "Seeder-archetype mechs are sappers, adept at deploying defensive nets of mines and traps. Laden with ordnance and bristling with sensor suites, Seeders operate in small teams: together, they blanket battlefields in traps and pitfalls, planting mines and other area-denial systems to guide the enemy into kill-boxes.",
-      "tactics": "Seeders specialize in area denial, controlling enemy movement with their mines. Since Seeders can place a mine each turn, they can quickly turn part of the battlefield into a mess when left to their own devices. Allied characters don’t trigger Seeders’ mines, but are affected by them if they’re caught in the explosion. Seeders can take optional systems that force characters to spread out or take additional damage."
+      "flavor": "",
+      "tactics": "Seeders specialize in area denial, controlling enemy movement with their mines. Since Seeders can place a mine each turn, they can quickly turn part of the battlefield into a mess when left to their own devices. Allied characters can trigger the Seeder's mines, so they will generally use them to create space between vulnerable allies and aggressive enemies."
     },
     "stats": {
       "armor": [
@@ -2228,23 +2228,23 @@
       ],
       "hp": [
         12,
-        14,
-        16
+        12,
+        12
       ],
       "evade": [
         7,
-        8,
-        9
+        7,
+        7
       ],
       "edef": [
         10,
         10,
-        11
+        10
       ],
       "heatcap": [
-        10,
-        10,
-        10
+        6,
+        6,
+        6
       ],
       "speed": [
         4,
@@ -2258,13 +2258,13 @@
       ],
       "save": [
         12,
-        15,
-        18
+        12,
+        12
       ],
       "hull": [
         0,
-        1,
-        2
+        0,
+        0
       ],
       "agility": [
         0,
@@ -2273,8 +2273,8 @@
       ],
       "systems": [
         2,
-        3,
-        4
+        2,
+        2
       ],
       "engineering": [
         0,
@@ -2299,15 +2299,17 @@
       ]
     },
     "base_features": [
-      "npcf_lay_mines_seeder",
-      "npcf_grav_grenade_launcher_seeder"
+      "npcf_lay_mines",
+      "npcf_grav_grenade_launcher",
+      "npcf_skeleton_key"
     ],
     "optional_features": [
-      "npcf_hopping_mines_seeder",
-      "npcf_tripwires_seeder",
-      "npcf_speed_deployer_seeder",
-      "npcf_grav_spike_seeder",
-      "npcf_det_spike_seeder"
+      "npcf_hopping_mines",
+      "npcf_tripwires",
+      "npcf_speed_deployer",
+      "npcf_grav_spike",
+      "npcf_det_spike",
+      "npcf_chaos_mines"
     ],
     "power": 100
   },
