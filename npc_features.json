@@ -3974,7 +3974,7 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_marker_rifle_scout",
+    "id": "npcf_marker_rifle",
     "name": "MARKER RIFLE",
     "origin": {
       "type": "Class",
@@ -3989,9 +3989,9 @@
     }],
     "weapon_type": "Main Rifle",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ],
     "accuracy": [
       2,
@@ -4003,10 +4003,10 @@
       "type": "Range",
       "val": 15
     }],
-    "on_hit": "Target receives Lock On. For as long as they have Lock On, they are also Shredded, and can’t Hide or become Invisible."
+    "on_hit": "The target receives Lock On and loses Hidden and Invisible and cannot benefit from either status until the end of their next turn."
   },
   {
-    "id": "npcf_sight_scout",
+    "id": "npcf_sight",
     "name": "SIGHT",
     "origin": {
       "type": "Class",
@@ -4015,12 +4015,12 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Scout ignores Hidden and Invisible – they know the precise location of all characters within Sensors.",
+    "effect": "This character ignores Hidden and Invisible for the purposes of targeting hostile characters.",
     "tags": []
   },
   {
-    "id": "npcf_rebound_scan_scout",
-    "name": "REBOUND SCAN",
+    "id": "npcf_complementary_targeting",
+    "name": "COMPLEMENTARY TARGETING",
     "origin": {
       "type": "Class",
       "name": "SCOUT",
@@ -4028,13 +4028,11 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "All characters of the Scout’s choice within range 5 must make a Systems save. On a failure, they immediately lose Hidden and Invisible, and can’t regain either status or benefit from any cover until the start of the Scout’s next turn.",
-    "tags": [{
-      "id": "tg_full_action"
-    }]
+    "effect": "When an allied character makes an attack that consumes Lock On while adjacent to this character, their target is Shredded for the duration of the attack. If the character makes multiple attacks, only attacks that benefit from the Lock On gain this effect.",
+    "tags": []
   },
   {
-    "id": "npcf_cloaking_field_scout",
+    "id": "npcf_cloaking_field",
     "name": "CLOAKING FIELD",
     "origin": {
       "type": "Class",
@@ -4043,10 +4041,10 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Scout generates a Burst 3 cloaking field that lasts until the end of their next turn. The Scout and allied characters within the affected area are Invisible, but the Scout is Immobilized while it is active.",
+    "effect": "This character generates a Burst 3 cloaking field that lasts until the end of their next turn. While active, this character is Immobilized, and it and allied characters in the Burst 3 are Invisible.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 6
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
@@ -4054,47 +4052,8 @@
     ]
   },
   {
-    "id": "npcf_system_flayer_scout",
-    "name": "SYSTEM FLAYER",
-    "origin": {
-      "type": "Class",
-      "name": "SCOUT",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Characters that fail to save against Rebound Scan also receive Lock On and take {2/3/4} Heat.",
-    "tags": []
-  },
-  {
-    "id": "npcf_spotter_scout",
-    "name": "SPOTTER",
-    "origin": {
-      "type": "Class",
-      "name": "SCOUT",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "While adjacent to the Scout, allied characters gain +1 Accuracy on all attack rolls.",
-    "tags": []
-  },
-  {
-    "id": "npcf_expose_weakness_scout",
-    "name": "EXPOSE WEAKNESS",
-    "origin": {
-      "type": "Class",
-      "name": "SCOUT",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Characters that are successfully attacked with the Marker Rifle take +{4/6/8} bonus damage the next time they are successfully hit with a ranged or melee attack. If it isn’t triggered, this effect lasts for the rest of the scene.",
-    "tags": []
-  },
-  {
-    "id": "npcf_dataveil_scout",
-    "name": "DATAVEIL",
+    "id": "npcf_decoy",
+    "name": "DECOY",
     "origin": {
       "type": "Class",
       "name": "SCOUT",
@@ -4102,30 +4061,38 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "By default, the Scout is Invisible and can transfer this status to another character within line of sight as a quick action. When they do so, the Scout ceases to be Invisible, and only regains the status when they transfer it back as a quick action or transfer it to another character; otherwise, this effect lasts until the Scout is destroyed.",
-    "tags": [{
-      "id": "tg_quick_action"
-    }]
-  },
-  {
-    "id": "npcf_orbital_strike_scout",
-    "name": "ORBITAL STRIKE",
-    "origin": {
-      "type": "Class",
-      "name": "SCOUT",
-      "base": false
-    },
-    "locked": false,
-    "type": "System",
-    "effect": "The Scout chooses a space on the ground, within line of sight and range 20; all characters know that it has been chosen. The Scout calls in an orbital bombardment that hits at the end of the next round, creating a Burst 2 explosion. Characters in the affected area must make Agility saves. On a fail, they take {12/16/20} Energy damage and are knocked Prone. On a pass, they take half damage and remain standing.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
+    "effect": "Full Action, This character and up to one adjacent ally move up to this character's speed, but must end adjacent to each other. This movement ignores engagement and does not provoke reactions.",
+    "tags": [
       {
         "id": "tg_full_action"
       }
     ]
+  },
+  {
+    "id": "npcf_see_through_reality",
+    "name": "SEE THROUGH REALITY",
+    "origin": {
+      "type": "Class",
+      "name": "SCOUT",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "Damage from attacks benefitting from Complementary Targeting now cannot be reduced in any way.",
+    "tags": []
+  },
+  {
+    "id": "npcf_thermite_marker",
+    "name": "THERMITE MARKER",
+    "origin": {
+      "type": "Class",
+      "name": "SCOUT",
+      "base": false
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "Mod, This character's Marker Rifle deals 1 Burn on hit, but cannot ever benefit from bonus damage.",
+    "tags": []
   },
   {
     "id": "npcf_lay_mines_seeder",
@@ -4137,7 +4104,7 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Seeder deploys one of the mines below in a free space within range 3. Once deployed, the Seeder’s mines detonate when a hostile character moves over them, creating a Blast 1 explosion that affects both allied and hostile characters.<ul><li>Stun Mine: Characters in the area that fail an Engineering save become Stunned until the end of their next turn.</li><li>Explosive Mine: Characters in the area take {8/12/16} Explosive damage, or half if they pass an Agility save.</li><li>Sealant Mine: Characters in the area that fail a Hull save become Immobilized until the end of their next turn, then Slowed until the end of their subsequent turn.</li><li>Shock Mine: Characters in the area that fail a Systems save become Jammed until the end of their next turn, then Impaired until the end of their subsequent turn.</li></ul><br>The Seeder’s mines are Invisible and cannot be targeted, but hostile characters within Sensors can reveal them by succeeding on a Systems check. Characters can disarm them by succeeding on a Systems check as a quick action while in the same space; however, on a failure, the mine detonates.",
+    "effect": "<p>This character deploys a minefield into a free Blast 1 area centered within range 3. All characters are aware of this area. This minefield arms at the end of the current turn, and is immediately triggered when any character moves into any of its spaces for the first time. When triggered, the mines have one of the four following effects, determined when they are placed:</p> <p>- Stun Mine: Characters in the area must pass an Engineering save or become Stunned until the start of their next turn. </p> <p>- Explosive Mine: Characters in the area take 8 Explosive damage or half if they pass an Agility save. </p> <p>- Sealant Mine: Characters in the area must pass a Hull save or become Immobilized until the end of the their next turn, then Slowed until the end of their subsequent turn. If Immobilized is cleared by some other method, the target does not become Slowed.</p> <p>- Shock Mine: Characters in the area must pass a Systems save or become Jammed until the end of their next turn, then Impaired until the end of their subsequent turn. If Jammed is cleared by some other method, the target does not become Impaired. </p> <p> Minefields may be disarmed by making a Systems check as a Quick Action in an adjacent space or by making any attack with a Blast, Burst, Cone, or Line template that includes at least one space of the minefield, the latter of which immediately causes the minefield to detonate. </p> <p> Any system or trait that interacts with mines also interacts with this terrain.",
     "tags": [{
         "id": "tg_mine"
       },

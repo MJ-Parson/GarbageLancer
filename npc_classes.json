@@ -2117,8 +2117,8 @@
     "name": "SCOUT",
     "role": "support",
     "info": {
-      "flavor": "The most devastating mechanized-warfare strategies call for the active, close, and aggressive application of orbital, atmospheric, and terrestrial fire-support. Enter Scout-class mechs and their pilots. Using advanced targeting systems, Scouts are equal parts tactical coordinator and artillery commander, working with allies to map the battlescape and accurately place direct-targeted and autonomous fire.",
-      "tactics": "Scouts are support mechs designed to increase the damage dealt by their allies. They deal no damage themselves, but Marker Rifle and Cloaking Field allow them to both keep allied characters alive and prevent enemies from hiding. They are especially adept at revealing Invisible characters but need to get close to their targets to take full advantage of this ability. Like most support mechs, Scouts aren’t especially resilient on their own."
+      "flavor": "",
+      "tactics": "Scouts are support mechs designed to increase the damage dealt by their allies. They deal no damage themselves, but Marker Rifle and Cloaking Field allow them to both keep allied characters alive and prevent enemies from hiding. They are most effective when serving as a stationary spotter next to an artillery unit, but they are mobile enough to provide support in even the most frenetic skirmishes."
     },
     "stats": {
       "armor": [
@@ -2133,13 +2133,13 @@
       ],
       "evade": [
         12,
-        15,
-        18
+        12,
+        12
       ],
       "edef": [
         10,
-        13,
-        18
+        10,
+        10
       ],
       "heatcap": [
         6,
@@ -2148,8 +2148,8 @@
       ],
       "speed": [
         6,
-        7,
-        8
+        6,
+        6
       ],
       "sensor": [
         20,
@@ -2158,8 +2158,8 @@
       ],
       "save": [
         11,
-        13,
-        15
+        11,
+        11
       ],
       "hull": [
         -2,
@@ -2168,31 +2168,28 @@
       ],
       "agility": [
         2,
-        4,
-        5
+        2,
+        2
       ],
       "systems": [
         3,
-        4,
-        5
+        3,
+        3
       ],
       "engineering": [
         -1,
         -1,
-        0
+        -1
       ],
       "size": [
         [
-          0.5,
-          1
+          0.5
         ],
         [
-          0.5,
-          1
+          0.5
         ],
         [
-          0.5,
-          1
+          0.5
         ]
       ],
       "activations": [
@@ -2202,17 +2199,16 @@
       ]
     },
     "base_features": [
-      "npcf_marker_rifle_scout",
-      "npcf_sight_scout",
-      "npcf_rebound_scan_scout",
-      "npcf_cloaking_field_scout"
+      "npcf_marker_rifle",
+      "npcf_sight",
+      "npcf_complementary_targeting",
+      "npcf_cloaking_field",
+      "npcf_dataveil"
     ],
     "optional_features": [
-      "npcf_system_flayer_scout",
-      "npcf_spotter_scout",
-      "npcf_expose_weakness_scout",
-      "npcf_dataveil_scout",
-      "npcf_orbital_strike_scout"
+      "npcf_decoy",
+      "npcf_see_through_reality",
+      "npcf_thermite_marker"
     ],
     "power": 100
   },
