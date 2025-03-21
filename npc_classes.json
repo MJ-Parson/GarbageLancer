@@ -2813,6 +2813,113 @@
     "power": 100
   },
   {
+    "id": "npcc_strider",
+    "name": "STRIDER",
+    "role": "striker",
+    "info": {
+      "flavor": "",
+      "tactics": "Striders are versatile, mode-swapping units that attempt to dance between two or more roles. When building Striders, you may wish to remove one or more of its base kits in favor of optional ones to cut back on the number of options available while running combats; each kit comes with a kit swap bonus and all options that have that kit name listed (e.g. Marksman, Skirmisher, etc.)."
+    },
+    "stats": {
+      "armor": [
+        0,
+        0,
+        0
+      ],
+      "hp": [
+        14,
+        14,
+        14
+      ],
+      "evade": [
+        8,
+        8,
+        8
+      ],
+      "edef": [
+        8,
+        8,
+        8
+      ],
+      "heatcap": [
+        6,
+        6,
+        6
+      ],
+      "speed": [
+        5,
+        5,
+        5
+      ],
+      "sensor": [
+        10,
+        10,
+        10
+      ],
+      "save": [
+        10,
+        10,
+        10
+      ],
+      "hull": [
+        1,
+        1,
+        1
+      ],
+      "agility": [
+        1,
+        1,
+        1
+      ],
+      "systems": [
+        0,
+        0,
+        0
+      ],
+      "engineering": [
+        1,
+        1,
+        1
+      ],
+      "size": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "activations": [
+        1,
+        1,
+        1
+      ]
+    },
+    "base_features": [
+      "npcf_swap_kit",
+      "npcf_marksman_kit_swap_bonus",
+      "npcf_ranger_long_rifle_(marksman)",
+      "npcf_skirmisher_kit_swap_bonus",
+      "npcf_explosive_rifle_(skirmisher)",
+      "npcf_duck_and_weave_(skirmisher)"
+    ],
+    "optional_features": [
+      "npcf_sweet_spot",
+      "npcf_siege_kit_swap_bonus",
+      "npcf_shoulder_mortar_(siege)",
+      "npcf_siege_armor (siege)",
+      "npcf_sapper_kit_swap_bonus",
+      "npcf_mag_shotgun_(sapper)",
+      "npcf_jamming_pylons_(sapper)",
+      "npcf_nihil_kit_swap_bonus",
+      "npcf_annihilation_(nihil)"
+    ],
+    "power": 100
+  },
+  {
     "id": "npcc_witch",
     "name": "WITCH",
     "role": "controller",

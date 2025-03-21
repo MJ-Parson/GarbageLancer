@@ -5067,6 +5067,341 @@
     "on_hit": ""
   },
   {
+    "id": "npcf_swap_kit",
+    "name": "SWAP KIT",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": true
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "This character swaps its active kit, changing its available systems, weapons, etc. Each kit has a bonus effect that triggers when it is swapped to. When one of this character's weapons or systems are destroyed, it must choose from its active kit. This character cannot use options from multiple kits during a turn. This character starts combat with an active kit of its choice but only gains the Kit Swap Bonus when it takes this action.",
+    "tags": [{
+      "id": "tg_quick_action"
+    }]
+  },
+  {
+    "id": "npcf_marksman_kit_swap_bonus",
+    "name": "MARKSMAN KIT SWAP BONUS",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": true
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "When this character swaps to the Marksman kit, it may reload its Ranger Long Rifle and Boost as a free action. It cannot take this free action while Slowed or Immobilized.",
+    "tags": []
+  },
+  {
+    "id": "npcf_duck_and_weave_(skirmisher)",
+    "name": "DUCK AND WEAVE (SKIRMISHER)",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": true
+    },
+    "locked": false,
+    "type": "Reaction",
+    "effect": "The attack automatically misses.",
+    "tags": [
+      {
+        "id": "tg_reaction"
+      },
+      {
+        "id": "tg_round",
+        "val": 1
+      },
+      {
+        "id": "tg_limited",
+        "val": 1
+      }
+    ],
+    "trigger": "This character is hit by an attack originating within 8 spaces."
+  },
+  {
+    "id": "npcf_skirmisher_kit_swap_bonus",
+    "name": "SKIRMISHER KIT SWAP BONUS",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": true
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "When this character swaps to the Skirmisher kit, it regains one use of Duck and Weave and reloads its Explosive Rifle as a free action and ignores difficult terrain and engagement and doesn't provoke reactions until the end of this turn.",
+    "tags": []
+  },
+  {
+    "id": "npcf_ranger_long_rifle_(marksman)",
+    "name": "RANGER LONG RIFLE (MARKSMAN)",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": true
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "",
+    "tags": [
+      {
+        "id": "tg_loading"
+      }
+    ],
+    "weapon_type": "Heavy Rifle",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "Kinetic",
+      "damage": [
+        3,
+        3,
+        3
+      ]
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 12
+    }],
+    "on_hit": "This weapon deals 9 Kinetic damage instead if its target is further than range 8."
+  },
+  {
+    "id": "npcf_explosive_rifle_(skirmisher)",
+    "name": "EXPLOSIVE RIFLE (SKIRMISHER)",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": true
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "",
+    "tags": [
+      {
+        "id": "tg_knockback",
+        "val": 3
+      },
+      {
+        "id": "tg_loading"
+      }
+    ],
+    "weapon_type": "Heavy CQB",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "Explosive",
+      "damage": [
+        6,
+        6,
+        6
+      ]
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 3
+    },
+    {
+      "type": "Threat",
+      "val": 3
+    }
+  ],
+    "on_hit": ""
+  },
+  {
+    "id": "npcf_siege_kit_swap_bonus",
+    "name": "SIEGE KIT SWAP BONUS",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "When this character swaps to this kit, it reloads its Shoulder Mortar, and the next attack it makes with the Shoulder Mortar this turn causes the attack area to become Difficult Terrain for the rest of the scene.",
+    "tags": []
+  },
+  {
+    "id": "npcf_siege_armor_(siege)",
+    "name": "SIEGE ARMOR (SIEGE)",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "This character has Resistance to damage and heat from ranged attacks originating beyond Range 3.",
+    "tags": []
+  },
+  {
+    "id": "npcf_shoulder_mortar_(siege)",
+    "name": "SHOULDER MORTAR (SIEGE)",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "",
+    "tags": [
+      {
+        "id": "tg_arcing"
+      },
+      {
+        "id": "tg_loading"
+      }
+    ],
+    "weapon_type": "Main Launcher",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "Explosive",
+      "damage": [
+        4,
+        4,
+        4
+      ]
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 10
+    },
+    {
+      "type": "Blast",
+      "val": 2
+    }
+  ],
+    "on_hit": ""
+  },
+  {
+    "id": "npcf_sapper_kit_swap_bonus",
+    "name": "SAPPER KIT SWAP BONUS",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "When this character swaps to this kit, it may launch a flash grenade at a character within line of sight and range 5 as a free action. The target must pass an Agility save or be able to draw line of sight to only adjacent spaces until the end of its next turn.",
+    "tags": []
+  },
+  {
+    "id": "npcf_mag_shotgun_(sapper)",
+    "name": "MAG SHOTGUN (SAPPER)",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Weapon",
+    "effect": "",
+    "tags": [],
+    "weapon_type": "Main CQB",
+    "attack_bonus": [
+      1,
+      1,
+      1
+    ],
+    "damage": [{
+      "type": "Kinetic",
+      "damage": [
+        2,
+        2,
+        2
+      ]
+    }],
+    "range": [{
+      "type": "Range",
+      "val": 5
+    },
+    {
+      "type": "Threat",
+      "val": 3
+    }
+  ],
+    "on_hit": "The target receives Lock On."
+  },
+  {
+    "id": "npcf_jamming_pylons_(sapper)",
+    "name": "JAMMING PYLONS (SAPPER)",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "JAMMING PYLON (Size 1, 5 HP, 5 Evasion, 5 E-Def) This pylon generates a Burst 2 zone of static. All characters within the affected area are Jammed until they are no longer in the zone. Pylons remain active even if this character swaps kits, but are deactivated if this character is destroyed.",
+    "tags": [
+      {
+        "id": "tg_quick_action"
+      },
+      {
+        "id": "tg_deployable"
+      },
+      {
+        "id": "tg_limited",
+        "val": 2
+      }
+    ]
+  },
+  {
+    "id": "npcf_nihil_kit_swap_bonus",
+    "name": "SAPPER KIT SWAP BONUS",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "When this character swaps to this kit, they may boost as a free action.",
+    "tags": []
+  },
+  {
+    "id": "npcf_annihilation_(nihil)",
+    "name": "ANNIHILATION (NIHIL)",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": false
+    },
+    "locked": false,
+    "type": "System",
+    "effect": "This system automatically activates at the start of any of this character's turns or when it is destroyed. This character immediately self-destructs as per Reactor Meltdown.",
+    "tags": [
+      {
+        "id": "tg_protocol"
+      }
+    ]
+  },
+  {
+    "id": "npcf_sweet_spot",
+    "name": "SWEET SPOT",
+    "origin": {
+      "type": "Class",
+      "name": "STRIDER",
+      "base": false
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "This character's weapon attacks deal 3 bonus Burn damage against targets at maximum range (AoE weapons treat the greatest of their listed values as their maximum range, e.g. Range 10 Blast 2 would be at benefit at Range 10, but a Cone 5 would benefit at Range 5).",
+    "tags": []
+  },
+  {
     "id": "npcf_tear_down_witch",
     "name": "TEAR DOWN",
     "origin": {
