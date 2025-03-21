@@ -1918,8 +1918,8 @@
     "name": "RONIN",
     "role": "striker",
     "info": {
-      "flavor": "Ronin frames differ from those favored by Berserkers and Demolishers in that they aren’t retrofitted or improvised for creative tactical applications – they are purpose-built to excel in melee combat by boutique fabricators. Although they are seen as somewhat antique by many commentators, the rise of stasis- and mag-based defensive technologies has made Ronins more viable in modern combat.<br>Ronin are common among both martial cultures and performance-combat firms, where their superb melee abilities elevate them above the competition. They see less use in cultures that have a preference for ranged combat, but there is a certain prestige accorded to pilots who adopt ancient weapons and survive to do it again. The mythic lancer Susanoo elevated this archetype to legendary status when she endorsed the GRAMtech Strike-1 chassis, which she piloted alongside numerous Albatross wings during the Neo-Celestine Disappointment.",
-      "tactics": "Ronins are no-nonsense, high-damage melee strikers. Rebound makes it dangerous for enemies to attack Ronins with ranged weapons, but they tend to suffer against armored enemies and are heavily reliant on Accuracy."
+      "flavor": "",
+      "tactics": "Ronins are strikers that excel at dueling artillery, shrugging off the hardest hitting attacks with Rebound while they advance on vulnerable targets. They are heavily reliant on this defensive trait, so appropriate team coordination may be required to hit them while there guard is down, or disable their reactions entirely."
     },
     "stats": {
       "armor": [
@@ -1929,13 +1929,13 @@
       ],
       "hp": [
         18,
-        20,
-        22
+        18,
+        18
       ],
       "evade": [
         10,
-        13,
-        16
+        10,
+        10
       ],
       "edef": [
         7,
@@ -1943,14 +1943,14 @@
         7
       ],
       "heatcap": [
-        7,
-        7,
-        7
+        6,
+        6,
+        6
       ],
       "speed": [
         5,
         5,
-        6
+        5
       ],
       "sensor": [
         10,
@@ -1959,18 +1959,18 @@
       ],
       "save": [
         10,
-        13,
-        15
+        10,
+        10
       ],
       "hull": [
         1,
-        2,
-        4
+        1,
+        1
       ],
       "agility": [
         2,
-        4,
-        5
+        2,
+        2
       ],
       "systems": [
         -1,
@@ -2000,15 +2000,15 @@
       ]
     },
     "base_features": [
-      "npcf_carbon_fiber_sword_ronin",
-      "npcf_rebound_ronin"
+      "npcf_carbon_fiber_sword",
+      "npcf_rebound",
+      "npcf_echo_edge"
     ],
     "optional_features": [
-      "npcf_charged_slash_ronin",
-      "npcf_chaff_launchers_ronin",
-      "npcf_echo_edge_ronin",
-      "npcf_instinct_mode_ronin",
-      "npcf_extended_blade_ronin"
+      "npcf_charged_slash",
+      "npcf_shinobi_haze",
+      "npcf_instinct_mode",
+      "npcf_extended_blade"
     ],
     "power": 100
   },

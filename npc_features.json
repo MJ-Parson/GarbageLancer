@@ -3675,7 +3675,7 @@
     "tags": []
   },
   {
-    "id": "npcf_carbon_fiber_sword_ronin",
+    "id": "npcf_carbon_fiber_sword",
     "name": "CARBON FIBER SWORD",
     "origin": {
       "type": "Class",
@@ -3684,18 +3684,18 @@
     },
     "locked": false,
     "type": "Weapon",
-    "effect": "On Critical Hits: Deal +1d6 Kinetic damage.<br>At T2, this weapon can make two attacks at a time, targeting either the same character or two different ones. At T3, it can make three attacks at a time.",
+    "effect": "",
     "tags": [],
     "weapon_type": "Main Melee",
     "attack_bonus": [
-      2,
-      4,
-      6
-    ],
-    "accuracy": [
       1,
       1,
       1
+    ],
+    "accuracy": [
+      0,
+      0,
+      0
     ],
     "damage": [{
       "type": "Kinetic",
@@ -3712,7 +3712,7 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_rebound_ronin",
+    "id": "npcf_rebound",
     "name": "REBOUND",
     "origin": {
       "type": "Class",
@@ -3721,7 +3721,7 @@
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "They roll 1d6: on 4+, they gain Resistance to damage from that attack, and the attacker must repeat the attack against themselves.",
+    "effect": "Roll a d6. On a 4+, this character gains resistance to that damage and deals 5 Variable damage of the same type as the primary damage of the initial attack to the attacker.",
     "tags": [{
         "id": "tg_shield"
       },
@@ -3733,10 +3733,10 @@
         "id": "tg_reaction"
       }
     ],
-    "trigger": "The Ronin takes damage from a ranged attack."
+    "trigger": "This character takes damage from a ranged attack."
   },
   {
-    "id": "npcf_charged_slash_ronin",
+    "id": "npcf_charged_slash",
     "name": "CHARGED SLASH",
     "origin": {
       "type": "Class",
@@ -3745,19 +3745,16 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "All characters adjacent to the Ronin take {6/9/12} kinetic damage, half if they pass an Agility save.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
+    "effect": "This character charges a powerful slash. The first time an adjacent hostile character takes any action or begins a movement on their turn, this character first unleashes the slash as a reaction. All adjacent characters take 9 Kinetic damage or half if they pass an Agility save.",
+    "tags": [
       {
         "id": "tg_full_action"
       }
     ]
   },
   {
-    "id": "npcf_chaff_launchers_ronin",
-    "name": "CHAFF LAUNCHERS",
+    "id": "npcf_shinobi_haze",
+    "name": "SHINOBI HAZE",
     "origin": {
       "type": "Class",
       "name": "RONIN",
@@ -3765,24 +3762,24 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "The Ronin gains soft cover until the start of their next turn whenever they Boost.",
+    "effect": "This character gains soft cover until the start of their next turn whenever they Boost.",
     "tags": []
   },
   {
-    "id": "npcf_echo_edge_ronin",
+    "id": "npcf_echo_edge",
     "name": "ECHO EDGE",
     "origin": {
       "type": "Class",
       "name": "RONIN",
-      "base": false
+      "base": true
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Characters damaged by the Ronin gain a Ronin’s Mark. At the start of the Ronin’s turn, the Ronin can clear all Ronin’s Marks as a free action, automatically dealing 1d6 AP Kinetic damage to all characters that have a Ronin’s Mark cleared in this way.",
+    "effect": "Characters damaged by this character gain a Ronin's Mark. At the start of this character's turn, it may clear all Ronin's Marks as a protocol, automatically dealing 1d6 AP Kinetic damage to all characters that have a Ronin's Mark cleared this way.",
     "tags": []
   },
   {
-    "id": "npcf_instinct_mode_ronin",
+    "id": "npcf_instinct_mode",
     "name": "INSTINCT MODE",
     "origin": {
       "type": "Class",
@@ -3791,10 +3788,10 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "Until the end of the Ronin’s next turn, the first time each turn that they are targeted by an attack, the Ronin may first use the Carbon Fiber Sword to attack a character within Range as a reaction.",
+    "effect": "Until the end of this character's next turn, the first time each turn that they are targeted by an attack, they may first use the Carbon Fiber Sword to make a single attack against a character within Range as a reaction.",
     "tags": [{
-        "id": "tg_recharge",
-        "val": 5
+        "id": "tg_limited",
+        "val": 1
       },
       {
         "id": "tg_quick_action"
@@ -3802,7 +3799,7 @@
     ]
   },
   {
-    "id": "npcf_extended_blade_ronin",
+    "id": "npcf_extended_blade",
     "name": "EXTENDED BLADE",
     "origin": {
       "type": "Class",
@@ -3811,7 +3808,7 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Ronin’s Carbon Fiber Sword becomes Threat 3. The first time each turn that the Ronin performs a critical hit with it, all characters within Threat take {2/3/4} kinetic damage – including the target.",
+    "effect": "This character's Carbon Fiber Sword becomes Threat 3. The first time each turn that this character performs a critical hit with it, all characters within Threat take 2 Kinetic damage, including the target.",
     "tags": []
   },
   {
