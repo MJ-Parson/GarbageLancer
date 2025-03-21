@@ -1720,19 +1720,19 @@
     "name": "PYRO",
     "role": "defender",
     "info": {
-      "flavor": "First popularized in the wake of the Hercynian Crisis by the lancer Flama and their aptly named Devil Corps, Pyro frames are reviled across the galaxy as the embodiment of the pure destructive power held by militarized states and corpro-states. Their use is common within organizations for which the ends justify the means. Pyros are well-armored, and better insulated than most chassis of similar gross weight, designed to manage incredible internal heat while projecting volatile mixes of chemicals and flame toward their enemies. Pyros are often used in urban and jungle warfare, where they can be used to root out entrenched defenders.",
-      "tactics": "Pyros are slow, resilient mechs that are especially potent against characters already suffering from Burn. If players don’t keep their distance, Pyros can use Explosive Vent to dump an enormous amount of heat on right on them. Position Pyros so they can protect allies against incoming fire with Firebreak Shield. Note, however, that players can move around shields to reduce their effectiveness to zero, or they can deactivate them by hitting Pyros with Stunned or Knockback weapons."
+      "flavor": "",
+      "tactics": "Pyros are slow, tough, and threatening defenders that interfere with ranged attacks coming in from a specific direction. They are quite threatening up close, so they serve largely as a deterrent to ingress on their position, although they lack tools that interefere with player movement."
     },
     "stats": {
       "armor": [
         3,
         3,
-        4
+        3
       ],
       "hp": [
         10,
-        13,
-        15
+        10,
+        10
       ],
       "evade": [
         8,
@@ -1747,12 +1747,12 @@
       "heatcap": [
         12,
         12,
-        16
+        12
       ],
       "speed": [
-        2,
-        2,
-        2
+        3,
+        3,
+        3
       ],
       "sensor": [
         8,
@@ -1761,28 +1761,28 @@
       ],
       "save": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "hull": [
         1,
-        2,
-        3
+        1,
+        1
       ],
       "agility": [
         -1,
-        0,
-        0
+        -1,
+        -1
       ],
       "systems": [
         -1,
         -1,
-        0
+        -1
       ],
       "engineering": [
         3,
-        4,
-        5
+        3,
+        3
       ],
       "size": [
         [
@@ -1802,17 +1802,16 @@
       ]
     },
     "base_features": [
-      "npcf_flamethrower_pyro",
-      "npcf_explosive_vent_pyro",
-      "npcf_insulated_pyro",
-      "npcf_firebreak_shield_pyro"
+      "npcf_flamethrower",
+      "npcf_explosive_vent",
+      "npcf_insulated",
+      "npcf_firebreak_shield"
     ],
     "optional_features": [
-      "npcf_unshielded_reactor_pyro",
-      "npcf_siege_armor_pyro",
-      "npcf_napalm_bomb_pyro",
-      "npcf_superhot_pyro",
-      "npcf_explosive_jet_pyro"
+      "npcf_unshielded_reactor",
+      "npcf_napalm_bomb",
+      "npcf_superhot",
+      "npcf_hellbird_transformation"
     ],
     "power": 100
   },
