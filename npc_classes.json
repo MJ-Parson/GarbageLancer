@@ -2017,7 +2017,7 @@
     "name": "SCOURER",
     "role": "striker",
     "info": {
-      "flavor": "Scourer-class mechs are distinctive for carrying deadly Energy damage weapons powered by massive-output recursive power plants. These mechs are found across the galaxy in specialist roles, supporting conventional ground troops with powerful beam attacks that stop electronic threats as easily as they stop enemy soldiers.",
+      "flavor": "",
       "tactics": "Scourers deal a great deal of damage when they focus on single targets, attacking them multiple times. They can be used to crack tough or slow moving opponents very easily. However, they are much less effective when forced to switch targets, and need to stay still to make the most of their weapons."
     },
     "stats": {
@@ -2028,13 +2028,13 @@
       ],
       "hp": [
         10,
-        13,
-        15
+        10,
+        10
       ],
       "evade": [
         8,
-        9,
-        10
+        8,
+        8
       ],
       "edef": [
         8,
@@ -2044,7 +2044,7 @@
       "heatcap": [
         8,
         8,
-        12
+        8
       ],
       "speed": [
         4,
@@ -2058,28 +2058,28 @@
       ],
       "save": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "hull": [
         1,
-        2,
-        3
+        1,
+        1
       ],
       "agility": [
         0,
-        1,
-        1
+        0,
+        0
       ],
       "systems": [
         0,
         0,
-        1
+        0
       ],
       "engineering": [
         1,
-        2,
-        4
+        1,
+        1
       ],
       "size": [
         [
@@ -2099,17 +2099,16 @@
       ]
     },
     "base_features": [
-      "npcf_thermal_lance_scourer",
-      "npcf_focus_down_scourer",
-      "npcf_cooling_module_scourer",
-      "npcf_ablative_shielding_scourer"
+      "npcf_thermal_lance",
+      "npcf_focus_down",
+      "npcf_cooling_module",
+      "npcf_ablative_shielding"
     ],
     "optional_features": [
-      "npcf_supercharged_scourer",
-      "npcf_emergency_vent_scourer",
-      "npcf_pulse_laser_scourer",
-      "npcf_flash_lens_scourer",
-      "npcf_melt_scourer"
+      "npcf_supercharged",
+      "npcf_emergency_vent",
+      "npcf_melt",
+      "npcf_blastwave_reverberator"
     ],
     "power": 100
   },
