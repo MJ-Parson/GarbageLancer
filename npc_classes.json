@@ -2318,8 +2318,8 @@
     "name": "SENTINEL",
     "role": "defender",
     "info": {
-      "flavor": "Sentinel archetypes are typically employed as guards and escorts, often in the retinues of commanders or posted in defense of artillery. These mechs and their pilots employ advanced suites of technology to ensure their wards stay alive and operational, even if that costs their own chassis – or lives. Unlike the heavier Bastion archetypes, Sentinels are quick and light: they practice active defense, preemptively striking with suites of advanced technical, systemic, and direct weaponry to protect their charges.",
-      "tactics": "Sentinels are fast defenders that focus on protecting their allies with Overwatch. They are fairly short-range attackers, relying on positioning to get the most from their kit, and aren’t as resilient as other defenders."
+      "flavor": "",
+      "tactics": "Sentinels are fast defenders that focus on protecting their allies with Overwatch and the In Your Face trait. They are fairly short-range attackers, relying on positioning to get the most from their kit, and aren’t as resilient as other defenders, but are capable of repositioning if characters attempt to push past them after their Overwatch is expended."
     },
     "stats": {
       "armor": [
@@ -2329,28 +2329,28 @@
       ],
       "hp": [
         16,
-        20,
-        24
+        16,
+        16
       ],
       "evade": [
-        8,
-        11,
-        13
-      ],
-      "edef": [
-        8,
-        11,
-        13
-      ],
-      "heatcap": [
         8,
         8,
         8
       ],
+      "edef": [
+        8,
+        8,
+        8
+      ],
+      "heatcap": [
+        6,
+        6,
+        6
+      ],
       "speed": [
         5,
         5,
-        6
+        5
       ],
       "sensor": [
         10,
@@ -2359,28 +2359,28 @@
       ],
       "save": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "hull": [
         2,
-        3,
-        4
+        2,
+        2
       ],
       "agility": [
         1,
-        2,
-        3
+        1,
+        1
       ],
       "systems": [
-        1,
-        2,
-        3
+        -1,
+        -1,
+        -1
       ],
       "engineering": [
         1,
-        2,
-        3
+        1,
+        1
       ],
       "size": [
         [
@@ -2400,18 +2400,16 @@
       ]
     },
     "base_features": [
-      "npcf_combat_shotgun_sentinel",
-      "npcf_retractable_sword_sentinel",
-      "npcf_eye_of_midnight_sentinel",
-      "npcf_guardian_sentinel"
+      "npcf_combat_shotgun",
+      "npcf_flying_knee",
+      "npcf_in_your_face",
+      "npcf_get_back_here"
     ],
     "optional_features": [
-      "npcf_punisher_ammunition_sentinel",
-      "npcf_wrath_lock_sentinel",
-      "npcf_impaler_sentinel",
-      "npcf_rapid_response_sentinel",
-      "npcf_bodyguard_sentinel",
-      "npcf_reflexive_blow_sentinel"
+      "npcf_punisher_ammunition",
+      "npcf_wrath_lock",
+      "npcf_impaler",
+      "npcf_eye_of_midnight"
     ],
     "power": 100
   },

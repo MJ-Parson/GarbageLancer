@@ -4265,7 +4265,7 @@
     "tags": []
   },
   {
-    "id": "npcf_combat_shotgun_sentinel",
+    "id": "npcf_combat_shotgun",
     "name": "COMBAT SHOTGUN",
     "origin": {
       "type": "Class",
@@ -4279,15 +4279,15 @@
     "weapon_type": "Main CQB",
     "attack_bonus": [
       1,
-      2,
-      3
+      1,
+      1
     ],
     "damage": [{
       "type": "kinetic",
       "damage": [
         6,
-        8,
-        10
+        6,
+        6
       ]
     }],
     "range": [{
@@ -4302,8 +4302,8 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_retractable_sword_sentinel",
-    "name": "RETRACTABLE SWORD",
+    "id": "npcf_flying_knee",
+    "name": "FLYING KNEE",
     "origin": {
       "type": "Class",
       "name": "SENTINEL",
@@ -4312,19 +4312,24 @@
     "locked": false,
     "type": "Weapon",
     "effect": "",
-    "tags": [],
+    "tags": [
+      {
+        "id": "tg_knockback",
+        "val": 2
+      }
+    ],
     "weapon_type": "Main Melee",
     "attack_bonus": [
-      2,
-      4,
-      6
+      1,
+      1,
+      1
     ],
     "damage": [{
       "type": "kinetic",
       "damage": [
-        4,
-        6,
-        8
+        1,
+        1,
+        1
       ]
     }],
     "range": [{
@@ -4334,23 +4339,23 @@
     "on_hit": ""
   },
   {
-    "id": "npcf_eye_of_midnight_sentinel",
+    "id": "npcf_eye_of_midnight",
     "name": "EYE OF MIDNIGHT",
     "origin": {
       "type": "Class",
       "name": "SENTINEL",
-      "base": true
+      "base": false
     },
     "locked": false,
     "type": "System",
-    "effect": "The Sentinel becomes Slowed but can take Overwatch 1/turn, instead of 1/round. Once activated, this effect lasts until it is deactivated as a quick action.",
+    "effect": "This character becomes Slowed and its Overwatch triggers when hostile characters enter or leave any space within its Threat. This effect lasts until this character deactivates it as a Quick Action.",
     "tags": [{
       "id": "tg_quick_action"
     }]
   },
   {
-    "id": "npcf_guardian_sentinel",
-    "name": "GUARDIAN",
+    "id": "npcf_in_your_face",
+    "name": "IN YOUR FACE",
     "origin": {
       "type": "Class",
       "name": "SENTINEL",
@@ -4358,11 +4363,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Allied characters can use the Sentinel for hard cover.",
+    "effect": "Hostile characters within Threat of any of this character's weapons make ranged attacks as though they are engaged.",
     "tags": []
   },
   {
-    "id": "npcf_punisher_ammunition_sentinel",
+    "id": "npcf_punisher_ammunition",
     "name": "PUNISHER AMMUNITION",
     "origin": {
       "type": "Class",
@@ -4371,11 +4376,11 @@
     },
     "locked": false,
     "type": "Trait",
-    "effect": "Characters damaged by the Sentinel’s Overwatch attacks also become Slowed until the end of their next turn.",
+    "effect": "Characters hit by this unit's Overwatch are Slowed until the end of the current turn.",
     "tags": []
   },
   {
-    "id": "npcf_wrath_lock_sentinel",
+    "id": "npcf_wrath_lock",
     "name": "WRATH-LOCK",
     "origin": {
       "type": "Class",
@@ -4384,13 +4389,13 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "The Sentinel arms this system. Once armed, the Sentinel attacks twice the next time they attack with their Combat Shotgun, instead of one.",
+    "effect": "The next time this character attacks with their Combat Shotgun, they attack twice instead of once.",
     "tags": [{
       "id": "tg_full_action"
     }]
   },
   {
-    "id": "npcf_impaler_sentinel",
+    "id": "npcf_impaler",
     "name": "IMPALER",
     "origin": {
       "type": "Class",
@@ -4399,63 +4404,31 @@
     },
     "locked": false,
     "type": "System",
-    "effect": "When the Sentinel hits with Overwatch, their target must pass a Hull save or become Immobilized and Jammed until the end of their next turn.",
+    "effect": "The next time this character hits with their Flying Knee, the target is Immbolized and Shredded until the end of their next turn.",
     "tags": [{
-      "id": "tg_round",
-      "val": 1
+      "id": "tg_quick_action"
     }]
   },
   {
-    "id": "npcf_rapid_response_sentinel",
-    "name": "RAPID RESPONSE",
+    "id": "npcf_get_back_here",
+    "name": "GET BACK HERE",
     "origin": {
       "type": "Class",
       "name": "SENTINEL",
-      "base": false
+      "base": true
     },
     "locked": false,
     "type": "Reaction",
-    "effect": "After the movement the Sentinel may Boost.",
+    "effect": "This character may Boost after the triggering action has resolved.",
     "tags": [{
       "id": "tg_reaction"
-    }],
-    "trigger": "An enemy character in line of sight moves."
-  },
-  {
-    "id": "npcf_bodyguard_sentinel",
-    "name": "BODYGUARD",
-    "origin": {
-      "type": "Class",
-      "name": "SENTINEL",
-      "base": false
     },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Sentinel chooses an allied character within range 5 as their ward and gains the Reflexive Blow reaction.",
-    "tags": [{
-        "id": "tg_protocol"
-      },
-      {
-        "id": "tg_reaction"
-      }
-    ],
-    "trigger": ""
-  },
-  {
-    "id": "npcf_reflexive_blow_sentinel",
-    "name": "REFLEXIVE BLOW",
-    "origin": {
-      "type": "Class",
-      "name": "SENTINEL",
-      "base": false
-    },
-    "locked": false,
-    "type": "Reaction",
-    "effect": "The Sentinel first attacks the inciting character with Overwatch.",
-    "tags": [{
-      "id": "tg_reaction"
-    }],
-    "trigger": "Someone attacks the Sentinel’s ward."
+    {
+      "id": "tg_round",
+      "val": 1
+    }
+  ],
+    "trigger": "A hostile character within Threat of any of this characters's weapons moves."
   },
   {
     "id": "npcf_anti_materiel_rifle_sniper",
