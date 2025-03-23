@@ -5738,380 +5738,19 @@
     "tech_type": "Quick"
   },
   {
-    "id": "npcf_ranged_weapon_human",
-    "name": "RANGED WEAPON",
+    "id": "npcf_carbine_with_bayonet",
+    "name": "CARBINE WITH BAYONET",
     "origin": {
       "type": "Class",
-      "name": "HUMAN",
-      "base": false
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "",
-    "tags": [],
-    "weapon_type": "",
-    "attack_bonus": [
-      1,
-      2,
-      3
-    ],
-    "damage": [{
-      "type": "kinetic",
-      "damage": [
-        1,
-        2,
-        3
-      ]
-    }],
-    "range": [{
-      "type": "Range",
-      "val": 5
-    }],
-    "on_hit": ""
-  },
-  {
-    "id": "npcf_melee_weapon_human",
-    "name": "MELEE WEAPON",
-    "origin": {
-      "type": "Class",
-      "name": "HUMAN",
-      "base": false
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "",
-    "tags": [],
-    "weapon_type": "",
-    "attack_bonus": [
-      1,
-      2,
-      3
-    ],
-    "damage": [{
-      "type": "kinetic",
-      "damage": [
-        1,
-        2,
-        3
-      ]
-    }],
-    "range": [{
-      "type": "Threat",
-      "val": 1
-    }],
-    "on_hit": ""
-  },
-  {
-    "id": "npcf_anti_armor_weapon_human",
-    "name": "ANTI-ARMOR WEAPON",
-    "origin": {
-      "type": "Class",
-      "name": "HUMAN",
-      "base": false
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "",
-    "tags": [],
-    "weapon_type": "",
-    "attack_bonus": [
-      1,
-      2,
-      3
-    ],
-    "damage": [{
-      "type": "variable",
-      "damage": [
-        3,
-        4,
-        5
-      ]
-    }],
-    "range": [{
-      "type": "Range",
-      "val": 8
-    }],
-    "on_hit": ""
-  },
-  {
-    "id": "npcf_veteran_human",
-    "name": "VETERAN",
-    "origin": {
-      "type": "Class",
-      "name": "HUMAN",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "+{2/4/6} HP",
-    "tags": [],
-    "bonus": {
-      "hp": "2/+4/+6"
-    }
-  },
-  {
-    "id": "npcf_armored_human",
-    "name": "ARMORED",
-    "origin": {
-      "type": "Class",
-      "name": "HUMAN",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "+1–2 Armor",
-    "tags": [],
-    "bonus": {
-      "armor": "1-2"
-    }
-  },
-  {
-    "id": "npcf_soldiers_squad",
-    "name": "SOLDIERS",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Squad acts as one character, but it represents a group of soldiers acting together. When the Squad takes a certain amount of damage, it results in the narrative death of one or more of those soldiers. Eventually, this reduces the number of attacks the Squad can make each turn, as listed in the relevant weapon profiles. By default, the Squad is made up of 10 members, each with 1 HP.",
-    "tags": []
-  },
-  {
-    "id": "npcf_rank_and_file_squad",
-    "name": "RANK AND FILE",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Squad can’t take the Grunt, Veteran, or Ultra templates, and can never gain Structure.",
-    "tags": []
-  },
-  {
-    "id": "npcf_strength_in_numbers_squad",
-    "name": "STRENGTH IN NUMBERS",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Squad has Resistance to all damage from attacks that aren’t line, Cone, Burst or Blast , and is Immune to Grapple, Ram, Knockback, and Stunned.",
-    "tags": []
-  },
-  {
-    "id": "npcf_spread_out_squad",
-    "name": "SPREAD OUT",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Instead of tracking the position of individual soldiers, the Squad’s members are assumed to move freely within the space it occupies. Other characters can freely move through and end their turn in spaces occupied by the Squad, and as long as the Squad occupies at least 2 free spaces it can end its turn overlapping obstructions, cover, or other characters. As its size doesn’t reflect its mass, the Squad cannot Grapple or Ram.",
-    "tags": []
-  },
-  {
-    "id": "npcf_undersize_squad",
-    "name": "UNDERSIZE",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Individual soldiers can easily duck behind cover, but the sheer force of mech-scale weapons limits how effectively they can be shielded. The squad always has soft cover, even in the open, but can’t benefit from hard cover.",
-    "tags": []
-  },
-  {
-    "id": "npcf_primary_weapon_squad",
-    "name": "PRIMARY WEAPON",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
+      "name": "LEGIONNAIRE",
       "base": true
     },
     "locked": false,
     "type": "Weapon",
-    "effect": "This weapon can make two attacks at a time; if the Squad loses more than half its HP, it can only make one attack at a time.",
+    "effect": "This weapon can be used as either a Ranged or Melee Weapon. If used as a Melee weapon, it gains Armor Piercing.",
     "tags": [],
     "weapon_type": "Main Rifle",
     "attack_bonus": [
-      2,
-      4,
-      6
-    ],
-    "damage": [{
-      "type": "variable",
-      "damage": [
-        2,
-        3,
-        4
-      ]
-    }],
-    "range": [{
-      "type": "Range",
-      "val": 5
-    }],
-    "on_hit": ""
-  },
-  {
-    "id": "npcf_anti_armor_weapon_squad",
-    "name": "ANTI-ARMOR WEAPON",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": true
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "",
-    "tags": [{
-      "id": "tg_ap"
-    }],
-    "weapon_type": "Heavy Cannon",
-    "attack_bonus": [
-      1,
-      2,
-      3
-    ],
-    "damage": [{
-      "type": "variable",
-      "damage": [
-        5,
-        6,
-        7
-      ]
-    }],
-    "range": [{
-      "type": "Range",
-      "val": 10
-    }],
-    "on_hit": ""
-  },
-  {
-    "id": "npcf_armored_squad",
-    "name": "ARMORED",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Squad gains +1 Armor.",
-    "tags": [],
-    "bonus": {
-      "armor": 1
-    }
-  },
-  {
-    "id": "npcf_ambushers_squad",
-    "name": "AMBUSHERS",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Squad gains +2 Accuracy on all attacks, saves, and checks during the first round of combat.",
-    "tags": []
-  },
-  {
-    "id": "npcf_duck_and_cover_squad",
-    "name": "DUCK AND COVER",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": false
-    },
-    "locked": false,
-    "type": "Reaction",
-    "effect": "The Squad gains Resistance to the damage but becomes Immobilized until the end of their next turn.",
-    "tags": [{
-      "id": "tg_reaction"
-    }],
-    "trigger": "The Squad is hit by an attack."
-  },
-  {
-    "id": "npcf_rapid_insertion_squad",
-    "name": "RAPID INSERTION",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Squad may fly whenever it moves or Boosts.",
-    "tags": []
-  },
-  {
-    "id": "npcf_disciplined_squad",
-    "name": "DISCIPLINED",
-    "origin": {
-      "type": "Class",
-      "name": "SQUAD",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Losing HP doesn’t affect the number of attacks the Squad can make each turn.",
-    "tags": []
-  },
-  {
-    "id": "npcf_unique_physiology_monstrosity",
-    "name": "UNIQUE PHYSIOLOGY",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "If the Monstrosity has Structure (because it is an Elite or Ultra, for example), it rolls on the Monstrosity Structure Damage table when it takes structure damage.<br><b>Monstrosity Structure Damage Table</b><ul><li>5-6: Glancing Hit. The Monstrosity flinches in pain; it’s Impaired until the end of its next turn.</li><li>3-4: Powerful Hit. The Monstrosity is knocked Prone by the force of the blow.</li><li>2: Dismemberment. The attack blows a limb or chunk off the Monstrosity; it takes 1d6 Kinetic damage and becomes Slowed for the rest of the scene.</li><li>1: Direct Hit. The result depends on the Monstrosity’s remaining Structure:<ul><li>3+ Structure: The Monstrosity is smacked in the head and Stunned until the end of its next turn.</li><li>2 Structure: The Monstrosity must succeed on a Hull save or be destroyed.</li><li>1 Structure: The Monstrosity is destroyed.</li></ul></li><li>Multiple 1s: Fatal Hit. The Monstrosity is destroyed.</li></ul>",
-    "tags": []
-  },
-  {
-    "id": "npcf_deadliest_game_monstrosity",
-    "name": "DEADLIEST GAME",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": true
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Monstrosity has at least one optional mutation.",
-    "tags": []
-  },
-  {
-    "id": "npcf_claws_monstrosity",
-    "name": "CLAWS",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": true
-    },
-    "locked": false,
-    "type": "Weapon",
-    "effect": "",
-    "tags": [],
-    "weapon_type": "",
-    "attack_bonus": [
-      2,
-      4,
-      6
-    ],
-    "accuracy": [
       1,
       1,
       1
@@ -6119,213 +5758,59 @@
     "damage": [{
       "type": "Kinetic",
       "damage": [
-        6,
-        8,
-        12
+        2,
+        2,
+        2
       ]
     }],
-    "range": [{
+    "range": [
+      {
+        "type": "Range",
+        "val": 10
+      },
+    {
       "type": "Threat",
       "val": 1
-    }],
-    "on_hit": ""
-  },
+    }
+  ]
+},
   {
-    "id": "npcf_acid_spittle_monstrosity",
-    "name": "ACID SPITTLE",
+    "id": "npcf_legion",
+    "name": "LEGION",
     "origin": {
       "type": "Class",
-      "name": "MONSTROSITY",
+      "name": "LEGIONNAIRE",
+      "base": true
+    },
+    "locked": false,
+    "type": "Trait",
+    "effect": "Legionnaires always deploy in groups of 4, called Units. All characters in a Unit take their turns at the same time, starting and ending their turn simultaneously. A single Character in the Unit has to completely resolve all its own actions before another Legionnaire may. Each Legionnaire may only perform a single Quick Action and may only perform Boost, Skirmish, and Overwatch but take no other actions. Legionnaires may never be Grunts, Elites, Commanders, Veterans or Ultras.",
+    "tags": []
+  },
+{
+  "id": "npcf_cohesion",
+  "name": "COHESION",
+  "origin": {
+    "type": "Class",
+    "name": "LEGIONNAIRE",
+    "base": true
+  },
+  "locked": false,
+  "type": "Trait",
+  "effect": "At the start of the Unit's turn any Legionnaires that are not within the Sensor Range of at least one other Legionnaire of the same Unit become Jammed until the end of their turn. This does not apply if the Unit only contains one Legionnaire.",
+  "tags": []
+},
+  {
+    "id": "npcf_sqr_shield",
+    "name": "SQR SHIELD",
+    "origin": {
+      "type": "Class",
+      "name": "LEGIONNAIRE",
       "base": false
     },
     "locked": false,
-    "type": "Weapon",
+    "type": "System",
     "effect": "",
-    "tags": [],
-    "weapon_type": "Main Cannon",
-    "attack_bonus": [
-      1,
-      2,
-      3
-    ],
-    "damage": [{
-      "type": "Energy",
-      "damage": [
-        3,
-        4,
-        5
-      ]
-    }],
-    "range": [{
-      "type": "Range",
-      "val": 10
-    }],
-    "on_hit": "Target is Shredded until the end of its next turn."
-  },
-  {
-    "id": "npcf_adhesive_secretions_monstrosity",
-    "name": "ADHESIVE SECRETIONS",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The first character damaged by the Monstrosity each turn must succeed on an Engineering save or become Slowed. This effect lasts until the target regains any HP, or for the rest of the scene.",
-    "tags": []
-  },
-  {
-    "id": "npcf_burrower_monstrosity",
-    "name": "BURROWER",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Monstrosity burrows into the ground, as long as the surface is sufficiently malleable. While burrowed, it counts as Invisible, and can freely move through spaces occupied by characters and other obstructions; however, it can only move, Boost, or emerge into a free space (as a quick action). When the Monstrosity emerges, all characters adjacent to it must succeed on a Hull save or be knocked Prone.",
-    "tags": [{
-      "id": "tg_quick_action"
-    }]
-  },
-  {
-    "id": "npcf_corrosive_bite_monstrosity",
-    "name": "CORROSIVE BITE",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "A character adjacent to the Monstrosity must succeed on a Hull save or take {4/5/6} Burn. Succeed or fail, they become Shredded until they regain any HP.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
-      {
-        "id": "tg_full_action"
-      }
-    ]
-  },
-  {
-    "id": "npcf_grasping_claws_monstrosity",
-    "name": "GRASPING CLAWS",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Monstrosity gains +1 Accuracy to Grapple, +1 Accuracy when attacking targets Grappled by it, and gains the ability to Boost and take reactions while grappling.",
-    "tags": []
-  },
-  {
-    "id": "npcf_natural_camouflage_monstrosity",
-    "name": "NATURAL CAMOUFLAGE",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Monstrosity is Invisible while adjacent to any terrain or cover, and treats soft cover as hard cover.",
-    "tags": []
-  },
-  {
-    "id": "npcf_rampage_monstrosity",
-    "name": "RAMPAGE",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Monstrosity moves spaces equal to Speed in a straight line, ignoring reactions and engagement and moving freely through spaces occupied by other characters. Characters it passes through or adjacent to must succeed on an Agility save or take {4/6/8} kinetic damage.",
-    "tags": [{
-        "id": "tg_recharge",
-        "val": 5
-      },
-      {
-        "id": "tg_quick_action"
-      }
-    ]
-  },
-  {
-    "id": "npcf_regenerator_monstrosity",
-    "name": "REGENERATOR",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "At the end of its turn, the Monstrosity regains 1/4 of its total HP. It doesn’t regain any HP if it has taken Energy damage during the same round.",
-    "tags": []
-  },
-  {
-    "id": "npcf_spined_monstrosity",
-    "name": "SPINED",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "After the Monstrosity takes damage from a melee weapon, it automatically deals {1/2/3} AP kinetic damage to the attacker.",
-    "tags": []
-  },
-  {
-    "id": "npcf_swift_monstrosity",
-    "name": "SWIFT",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "Once per round, the Monstrosity can Boost during its turn as a free action.",
-    "tags": [{
-        "id": "tg_free_action"
-      },
-      {
-        "id": "tg_round",
-        "val": 1
-      }
-    ]
-  },
-  {
-    "id": "npcf_tempered_hide_monstrosity",
-    "name": "TEMPERED HIDE",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Monstrosity gains Resistance to any two of the following damage types: kinetic damage, Energy damage, and Explosive damage. If it is reduced to half of its total HP or less, it loses this Resistance. If it has any Structure, it regains Resistance when its HP returns to full.",
-    "tags": []
-  },
-  {
-    "id": "npcf_winged_monstrosity",
-    "name": "WINGED",
-    "origin": {
-      "type": "Class",
-      "name": "MONSTROSITY",
-      "base": false
-    },
-    "locked": false,
-    "type": "Trait",
-    "effect": "The Monstrosity may fly whenever it moves, and doesn’t need to land at the end of movements.",
     "tags": []
   },
   {

@@ -3118,12 +3118,12 @@
     "power": 100
   },
   {
-    "id": "npcc_human",
-    "name": "HUMAN",
-    "role": "biological",
+    "id": "npcc_legionnaire",
+    "name": "LEGIONNAIRE",
+    "role": "striker",
     "info": {
-      "flavor": "All kinds of people end up on the battlefield, including pilots, VIPs, and bystanders.<br>You will mostly use Human NPCs when someone climbs out of their mech mid-battle; if you want a proper group of infantry, use the Squad class instead. Humans can never take other templates, and cannot gain structure.",
-      "tactics": ""
+      "flavor": "",
+      "tactics": "Legionnaires are versatile footsoldiers with a variety of potential loadouts. Their role is primarily to flesh out the 'lesser combatants' that might be part of an opfor, serving as chaff, but not being either too powerful or too irrelevant. It is highly recommended to invent optionals that fit the theme of whichever faction they represent, but options have been "
     },
     "stats": {
       "armor": [
@@ -3132,105 +3132,9 @@
         0
       ],
       "hp": [
-        6,
-        6,
-        6
-      ],
-      "evade": [
-        10,
-        10,
-        10
-      ],
-      "edef": [
-        10,
-        10,
-        10
-      ],
-      "heatcap": [
-        0,
-        0,
-        0
-      ],
-      "speed": [
         4,
         4,
         4
-      ],
-      "sensor": [
-        5,
-        5,
-        5
-      ],
-      "save": [
-        10,
-        10,
-        10
-      ],
-      "hull": [
-        1,
-        2,
-        3
-      ],
-      "agility": [
-        1,
-        2,
-        3
-      ],
-      "systems": [
-        1,
-        2,
-        3
-      ],
-      "engineering": [
-        1,
-        2,
-        3
-      ],
-      "size": [
-        [
-          0.5
-        ],
-        [
-          0.5
-        ],
-        [
-          0.5
-        ]
-      ],
-      "activations": [
-        1,
-        1,
-        1
-      ]
-    },
-    "base_features": [],
-    "optional_features": [
-      "npcf_ranged_weapon_human",
-      "npcf_melee_weapon_human",
-      "npcf_anti_armor_weapon_human",
-      "npcf_veteran_human",
-      "npcf_armored_human"
-    ],
-    "power": 100
-  },
-  {
-    "id": "npcc_squad",
-    "name": "SQUAD",
-    "role": "biological",
-    "info": {
-      "flavor": "Although individual pilots and other non-mechanized soldiers might not present much of a threat to most mechs, a squad of infantry with the right gear and training can be dangerous in their own right.<br>Squads are exactly what they sound like: small groups of five to ten armed and armored soldiers represented as one character on the battlefield.",
-      "tactics": ""
-    },
-    "stats": {
-      "armor": [
-        0,
-        0,
-        0
-      ],
-      "hp": [
-        10,
-        15,
-        20
       ],
       "evade": [
         8,
@@ -3238,14 +3142,14 @@
         8
       ],
       "edef": [
-        8,
-        8,
-        8
+        6,
+        6,
+        6
       ],
       "heatcap": [
-        0,
-        0,
-        0
+        2,
+        2,
+        2
       ],
       "speed": [
         4,
@@ -3253,44 +3157,44 @@
         4
       ],
       "sensor": [
-        5,
-        5,
-        5
+        8,
+        8,
+        8
       ],
       "save": [
         10,
-        12,
-        14
+        10,
+        10
       ],
       "hull": [
-        2,
-        4,
-        6
+        0,
+        0,
+        0
       ],
       "agility": [
-        2,
-        4,
-        6
+        0,
+        0,
+        0
       ],
       "systems": [
-        2,
-        4,
-        6
+        0,
+        0,
+        0
       ],
       "engineering": [
-        2,
-        4,
-        6
+        0,
+        0,
+        0
       ],
       "size": [
         [
-          4
+          1
         ],
         [
-          4
+          1
         ],
         [
-          4
+          1
         ]
       ],
       "activations": [
@@ -3300,131 +3204,22 @@
       ]
     },
     "base_features": [
-      "npcf_soldiers_squad",
-      "npcf_rank_and_file_squad",
-      "npcf_strength_in_numbers_squad",
-      "npcf_spread_out_squad",
-      "npcf_undersize_squad",
-      "npcf_primary_weapon_squad",
-      "npcf_anti_armor_weapon_squad"
+      "npcf_carbine_with_bayonet",
+      "npcf_legion",
+      "npcf_cohesion"
     ],
     "optional_features": [
-      "npcf_armored_squad",
-      "npcf_ambushers_squad",
-      "npcf_duck_and_cover_squad",
-      "npcf_rapid_insertion_squad",
-      "npcf_disciplined_squad"
-    ],
-    "power": 100
-  },
-  {
-    "id": "npcc_monstrosity",
-    "name": "MONSTROSITY",
-    "role": "biological",
-    "info": {
-      "flavor": "Monstrosities are especially large or horrifying natural predators. Although they are usually wild, some monstrosities can be domesticated and trained for combat: such creatures are in high demand along the furthest reaches of the galaxy.",
-      "tactics": ""
-    },
-    "stats": {
-      "armor": [
-        1,
-        1,
-        1
-      ],
-      "hp": [
-        14,
-        16,
-        18
-      ],
-      "evade": [
-        10,
-        12,
-        15
-      ],
-      "edef": [
-        10,
-        10,
-        10
-      ],
-      "heatcap": [
-        0,
-        0,
-        0
-      ],
-      "speed": [
-        6,
-        7,
-        8
-      ],
-      "sensor": [
-        10,
-        10,
-        10
-      ],
-      "save": [
-        10,
-        12,
-        15
-      ],
-      "hull": [
-        3,
-        4,
-        6
-      ],
-      "agility": [
-        2,
-        3,
-        4
-      ],
-      "systems": [
-        -2,
-        -2,
-        -2
-      ],
-      "engineering": [
-        -2,
-        -2,
-        -2
-      ],
-      "size": [
-        [
-          1,
-          2
-        ],
-        [
-          1,
-          2
-        ],
-        [
-          1,
-          2,
-          3
-        ]
-      ],
-      "activations": [
-        1,
-        1,
-        1
-      ]
-    },
-    "base_features": [
-      "npcf_unique_physiology_monstrosity",
-      "npcf_deadliest_game_monstrosity",
-      "npcf_claws_monstrosity"
-    ],
-    "optional_features": [
-      "npcf_acid_spittle_monstrosity",
-      "npcf_adhesive_secretions_monstrosity",
-      "npcf_burrower_monstrosity",
-      "npcf_corrosive_bite_monstrosity",
-      "npcf_grasping_claws_monstrosity",
-      "npcf_natural_camouflage_monstrosity",
-      "npcf_rampage_monstrosity",
-      "npcf_regenerator_monstrosity",
-      "npcf_spined_monstrosity",
-      "npcf_swift_monstrosity",
-      "npcf_tempered_hide_monstrosity",
-      "npcf_winged_monstrosity"
+      "npcf_sqr_shield",
+      "npcf_spit_and_shine",
+      "npcf_line_formation",
+      "npcf_bayonet_charge",
+      "npcf_support_weapon",
+      "npcf_commandos",
+      "npcf_cannon_fodder",
+      "npcf_suppress",
+      "npcf_moving_target",
+      "npcf_survival_instincts",
+      "npcf_combat_shield"
     ],
     "power": 100
   }
